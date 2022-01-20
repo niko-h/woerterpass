@@ -1,0 +1,29 @@
+@font-face {
+  font-family: 'Patrick';
+  src: url('../fonts/Patrick_Hand/PatrickHand-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Mono';
+  src: url('../fonts/PT_Mono/PTMono-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('../fonts/Roboto/Roboto-Thin.ttf') format('truetype');
+  font-weight: light;
+}
+@font-face {
+  font-family: 'Roboto';
+  src: url('../fonts/Roboto/Roboto-Light.ttf') format('truetype');
+  font-weight: medium;
+}
+@font-face {
+  font-family: 'Roboto';
+  src: url('../fonts/Roboto/Roboto-Bold.ttf') format('truetype');
+  font-weight: bold;
+}
+
+.bold {
+  font-weight: bold !important;
+}

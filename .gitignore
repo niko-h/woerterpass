@@ -1,0 +1,11 @@
+.DS_Store
+node_modules
+/.svelte-kit
+/package
+src/static/.sass-cache
+src/static/sass/.sass-cache
+src/static/fonts/Patrick_Hand
+src/static/fonts/PT_Mono
+src/static/fonts/Roboto
+build
+static/assets

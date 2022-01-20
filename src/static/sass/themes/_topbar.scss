@@ -1,0 +1,48 @@
+.topbar {
+    // background-color: $lightgreen;
+    border-radius: $radius-4;
+    height: $headerheight;
+    & h1 {
+        float: left;
+        line-height: 60px;
+    }
+    & .stats {
+        float: right;
+
+        & .stat {
+            display: inline-block;
+            color: $black;
+            background-color: $lightgreen;
+            border-radius: $radius-3;
+            text-align: center;
+            height: 60px;
+            
+            & .br {
+                border-right: 1px solid $darker;
+            }
+    
+            & .prop {
+                font-size: .8rem;
+                display: block;
+                z-index: 1;
+                position: relative;
+            }
+            & .icon-star {
+                color: #ecec00;
+                position: absolute;
+                z-index: -1;
+                top: 50%;
+                left: 50%;
+                transform: translate(-55%, -50%);
+            }
+            & .val {
+                font-size: 2rem;
+                display: block;
+                line-height: 1;
+                font-family:'Patrick', sans-serif;
+                z-index: 1;
+                position: relative;
+            }
+        }
+    }
+}

@@ -1,0 +1,40 @@
+.laenge__hilfe {
+    position: absolute;
+    display: block;
+    padding: .2rem;
+    left: 45%;
+    top: -15px;
+    box-shadow: 0 0 0 2px $white;
+    border-radius: 50% 50% 50% 5px;
+    width: 35px;
+    height: 35px;
+    border: 2px solid #ccc;
+    background: #f2f2ff;
+    z-index: 1;
+    box-shadow: 0 0 0 2px $white;
+    cursor: default;
+    transform: rotate(-45deg) translate3d(-25%, -25%, 0);
+    .btn {
+        transform: rotate(45deg);
+        width: 25px;
+        height: 25px;
+        line-height: 15px;
+    }
+    @media (max-width:576px){
+        top: 50%;
+        left: unset;
+        right: 20px;
+        width: 40px;
+        height: 40px;
+        transform: rotate(45deg) translate3d(-50%, -20%, 0);
+        .btn {
+            transform: rotate(-45deg);
+            width: 30px;
+            height: 30px;
+            line-height: 17px;
+        }
+        &.hide-sm {
+            display: none;
+        }
+    }
+}
