@@ -1,0 +1,42 @@
+/* ==========================================================================
+   MASTER-VARIABLES FILE
+   ========================================================================== */
+
+// ONLY VARIABLES GO IN HERE!  Always suffix them with !default so they don't get overwritten if importing more than once.
+// Example: $header-background-color: white !default;
+
+/**
+ * COLORS
+ */
+$white: #fff;
+$black: #000;
+$darkgrey: #666;
+$mediumgrey: #999;
+$lightgrey: #ccc;
+$lightgreen: #e5f7e5; //rgb(180, 230, 180);
+$bright: rgba(255,255,255,.7);
+$darker: rgba(0,0,0,.1);
+$shadow: rgba(0,0,0,.3);
+
+/**
+ * Base
+ */
+
+$text: $black !default;
+$radius-1: .25rem;
+$radius-2: .5rem;
+$radius-3: 1rem;
+$radius-4: 1.5rem;
+
+/**
+ * Sizes
+ */
+$headerheight: 75px;
+
+/**
+ * Breakpoints
+ */
+$breakpoint-papa: 1200px;
+$breakpoint-mama: 930px;
+$breakpoint-baby: 650px;
+$breakpoint-flunder: 500px;

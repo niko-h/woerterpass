@@ -1,0 +1,88 @@
+
+.form {
+    background-color: $lightgreen;
+    border-radius: $radius-4;
+    border: 3px solid rgb(180, 230, 180);
+}
+
+.word {
+    margin-top: -90px;
+
+    .word__img {
+        position: relative;
+        width: 200px;
+        height: 200px;
+        background-color: $white;
+        overflow: hidden;
+        border-radius: 50%;
+        top: 0;
+        box-shadow: 0 1px 3px $shadow;
+        transition: top .2s, box-shadow .2s;
+        outline: none;
+        border: none;
+        margin-bottom: 1rem;
+        padding: 0;
+        
+        & .icon-headphones {
+            bottom: 15px;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 1.5rem;
+            padding: 6px 7px 8px;
+            border-radius: 50%;
+            background-color: #eef;
+            box-shadow: 0 0 0 0 5px #eef;
+            transition: background-color .3s, box-shadow .5s;
+        }
+
+        &:hover {
+            top: -1px;
+            box-shadow: 0 2px 6px $shadow;
+            transition: top .2s, box-shadow .2s;
+            & > .icon-headphones {
+                background-color: #ddf;
+                box-shadow: 0 0 0 5px #eef;
+                transition: background-color .3s, box-shadow .3s;
+            }
+        }
+    }
+    
+}
+
+.eraseBtn {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.input__canvas {
+    font-family: 'Mono', 'PT-Mono', sans-serif;
+    border-bottom: 2px solid $mediumgrey;
+    border-radius: $radius-1;
+    height: 75px;
+    background-color: $bright;
+    overflow: hidden;
+    display: flex;
+
+    & > * {
+        display: flex;
+        align-items: center;
+    }
+    
+    &--double {
+        height: 105px;
+        & > * {
+            display: inline-block;
+        }
+    }
+}
+
+.alert:not(.row) {
+    border: 2px solid red !important;
+    box-shadow: 0 0 3px red;
+}
+.color-alert {
+    color: red;
+    text-shadow: 0 0 3px red;
+}
