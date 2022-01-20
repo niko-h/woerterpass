@@ -1,7 +1,8 @@
 # Wörterpass v0.1.0
 
 ## About this software
-This is a web app designed for primary school students to pracice german ortography, based on the concept of "Wörterpässe".
+This is a web app designed for pracicing german ortography, based on an educational concept named "Wörterpass".
+This app is based on svelte kit and scss.
 
 ## Development
 
