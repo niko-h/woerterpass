@@ -183,7 +183,7 @@
 
 {#if (!$showModal || $showStats) || (task.state === 'again' || task.state === 'edited') }
 	<section class="row mt-2 mt-sm-6" transition:fade>
-		<div class={`form col col-12 col-lg-${$level === 'A' ? '12' : '8'} m-auto py-4 px-3 px-sm`}>
+		<div class={`form col col-12 col-lg-${$level === 'E' ? '12' : '8'} m-auto py-4 px-3 px-sm`}>
 			<div class="word row">
 				<div class="col text-align-center">
 					<button title="Wort anhören" on:click={() => playAudio('assets/words/audio/', currentWord.wort)} class="btn btn-lg btn-light word__img inline-block">
@@ -193,7 +193,7 @@
 			</div>
 			
 			<div class="row">
-				<div class={`col col-12 ${$level === 'A' ? 'col-lg-6' : ''} px-sm`}>
+				<div class={`col col-12 ${$level === 'E' ? 'col-lg-6' : ''} px-sm`}>
 					<div class="input__container my-3">
 						<div class="table">
 							<div class="row kasten">
@@ -356,7 +356,7 @@
 						</div>
 					</div>
 				</div>
-				{#if $level === 'A'}	
+				{#if $level === 'E'}	
 					<hr class="show--sm">
 					<div class="col col-12 col-lg-6 px-sm">
 						<div class="input__container mt-3">
