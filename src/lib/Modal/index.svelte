@@ -23,7 +23,19 @@
         "grossgeschrieben": "7"
     }
     let tooltip = 0;
+    let key;
+	let keyCode;
+
+	function handleKeydown(event) {
+        key = event.key;
+		if ($showModal && $showStats && key === 'Escape') {
+            showStats.set(false);
+            showModal.set(false);
+        }
+    };
 </script>
+
+<svelte:window on:keydown={handleKeydown}/>
 
 {#if $showModal }
     <div class="modal">
