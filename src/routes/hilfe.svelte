@@ -43,7 +43,7 @@
 	<h2 id="wiebenutzeichdieseseite">Wie benutze ich die App?</h2>
 	<div class="row mt-2">
 		<div class="col-12 col-md-4 col-lg-3 px-sm-0">
-			<img src="assets/img/help/0-1-Modulauswahl.png" alt="Modulauswahl">
+			<img src="assets/help/img/0-1-Modulauswahl.png" alt="Modulauswahl">
 		</div>
 		<div class="col px-sm-0">
 			<p>
@@ -52,7 +52,7 @@
 	</div>
 	<div class="row mt-2">
 		<div class="col-12 col-md-4 col-lg-3 px-sm-0">
-			<img src="assets/img/help/0-1-Kurzstatistik.png" alt="Kurzstatistik">
+			<img src="assets/help/img/0-1-Kurzstatistik.png" alt="Kurzstatistik">
 		</div>
 		<div class="col px-sm-0">
 			<p>
@@ -61,7 +61,7 @@
 	</div>
 	<div class="row mt-2">
 		<div class="col-12 col-md-4 col-lg-3 px-sm-0">
-			<img src="assets/img/help/0-1-Auswertung.png" alt="Auswertung">
+			<img src="assets/help/img/0-1-Auswertung.png" alt="Auswertung">
 		</div>
 		<div class="col px-sm-0">
 			<p>
@@ -75,7 +75,7 @@
 	<h3 id="modul1">Modul 1: Silbenbögen</h3>
 	<div class="row mt-2">
 		<div class="col-12 col-md-4 col-lg-3 px-sm-0">
-			<img src="assets/img/help/1-1-Banane.png" alt="Modul 1">
+			<img src="assets/help/img/1-1-Banane.png" alt="Modul 1">
 		</div>
 		<div class="col px-sm-0">
 			<p>
@@ -89,7 +89,7 @@
 	<h3 id="modul2">Modul 2: lange und kurze Vokale</h3>
 	<div class="row mt-2">
 		<div class="col-12 col-md-4 col-lg-3 px-sm-0">
-			<img src="assets/img/help/2-1-Schule.png" alt="Modul 2">
+			<img src="assets/help/img/2-1-Schule.png" alt="Modul 2">
 		</div>
 		<div class="col px-sm-0">
 			<p>
@@ -106,7 +106,7 @@
 	<h3 id="modul3">Modul 3: Wortfabrik</h3>
 	<div class="row mt-2">
 		<div class="col-12 col-md-4 col-lg-3 px-sm-0">
-			<img src="assets/img/help/3-1-Finger.png" alt="Modul 3">
+			<img src="assets/help/img/3-1-Finger.png" alt="Modul 3">
 		</div>
 		<div class="col px-sm-0">
 			<p>Zuerst musst du wieder die Silbenbögen aufschreiben. Du kannst bei <a href="#modul1">Modul 1</a> nachlesen, wie das geht. Klicke danach auf den Pfeil.</p>
@@ -143,7 +143,7 @@
 	<h3 id="modul4">Modul 4: Mini-Wörterpass</h3>
 	<div class="row mt-2">
 		<div class="col-12 col-md-4 col-lg-3 px-sm-0">
-			<img src="assets/img/help/4-1-Ente.png" alt="Modul 4">
+			<img src="assets/help/img/4-1-Ente.png" alt="Modul 4">
 		</div>
 		<div class="col px-sm-0">
 			<p>Das Wort im Bild ist &bdquo;Ente&ldquo;. In der ersten Zeile klickst du die richtige Fabrik an (lies bei <a href="#modul3">Modul 3</a> nach, wie das geht).</p>
@@ -158,7 +158,7 @@
 	<h3 id="modul5">Modul 5: Kleiner Wörterpass</h3>
 	<div class="row mt-2">
 		<div class="col-12 col-md-4 col-lg-3 px-sm-0">
-			<img src="assets/img/help/5-1-Kinder.png" alt="Modul 5">
+			<img src="assets/help/img/5-1-Kinder.png" alt="Modul 5">
 		</div>
 		<div class="col px-sm-0">
 			<p>Alles ist genau wie im <a href="#modul4">Modul 4</a>, da kannst du noch einmal nachlesen, wenn du etwas vergessen hast.</p>
@@ -169,7 +169,7 @@
 	</div>
 	<div class="row mt-2">
 		<div class="col-12 col-md-4 col-lg-3 px-sm-0">
-			<img src="assets/img/help/5-1-essen.png" alt="Modul 5">
+			<img src="assets/help/img/5-1-essen.png" alt="Modul 5">
 		</div>
 		<div class="col px-sm-0">
 			<p>Manchmal hörst du zwischen dem kurzen Vokal und der Nasensilbe keinen zweiten Buchstaben. Z.B. bei &bdquo;<mark>ES</mark>sen&ldquo; kommt als erster Vokal &bdquo;e&ldquo; und in die Nasensilbe &bdquo;sen&ldquo;. Aber zwischen &bdquo;e?sen&ldquo; hörst du keinen zweiten Buchstaben, nur das &bdquo;s&ldquo;. Also muss der Kopierer das &bdquo;s&ldquo; aus der Nasensilbe kopieren, das ist der Pfeil über dem Kästchen. Nun hat das Wort also zwei &bdquo;s&ldquo;. Deswegen ist es ja eine Kopierersilbe.</p>
@@ -214,7 +214,7 @@
 	<h3 id="modul7">Modul 7: Großer Wörterpass</h3>
 	<div class="row mt-2">
 		<div class="col-12 col-md-4 col-lg-3 px-sm-0">
-			<img src="assets/img/help/7-1-unfreundlich.png" alt="Modul 7">
+			<img src="assets/help/img/7-1-unfreundlich.png" alt="Modul 7">
 		</div>
 		<div class="col px-sm-0">
 			<p>Hier gibt es zwei Arten von Übungen. Manchmal siehst du eine große Tabelle, manchmal zwei Tabellen. Ganz oben zerlegst du das Wort: In das erste Kästchen schreibst du die Vorsilbe (wenn es eine gibt), in das letzte Kästchen die Nachsilbe und in die Mitte den Rest. Wenn du zwei Tabellen siehst, dann sollst du ein zusammengesetztes Wort untersuchen. Die erste Tabelle ist dann für den ersten Teil des Wortes, die zweite Tabelle für den zweiten Teil.</p>
@@ -224,7 +224,7 @@
 
 	<div class="row mt-2">
 		<div class="col-12 col-md-4 col-lg-3 px-sm-0">
-			<img src="assets/img/help/7-2-unfreundlich.png" alt="Modul 7">
+			<img src="assets/help/img/7-2-unfreundlich.png" alt="Modul 7">
 		</div>
 		<div class="col px-sm-0">
 			<p>Nun überlegst du, ob dir ein paar Rechtschreib-Strategien weiterhelfen: Kann man das Wort ableiten (z.B. &bdquo;Blätter&ldquo; von &bdquo;Blatt&ldquo;, also mit &bdquo;ä&ldquo;)? Kann man es weiterschwingen (&bdquo;Freund, Freun<strong>de</strong>&ldquo;, also mit &bdquo;d&ldquo;)? Hilft dir der Wortstamm weiter?</p>

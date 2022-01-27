@@ -39,7 +39,7 @@
 	<p>Es gibt insgesamt 7 Module. Sie bauen aufeinander auf, daher ist es ratsam, bei Modul 1 oder 2 zu beginnen.</p>
 	<p>An unserer Schule haben wir uns überlegt, die Wörterpässe schrittweise ab der ersten Klasse einzuführen und dann in jeder Klassenstufe um einen neuen Baustein zu erweitern. Im Idealfall würden die Kinder am Ende der ersten Klasse Modul 1 und 2 beherrschen, und sich dann in Klasse 2 mit Modul 3 beschäftigen. In Klasse 3 dann Modul 4, in Klasse 4 Modul 5 und so weiter.</p>
 	<p>Natürlich kann man auch in Klasse 5 noch mit Modul 1 einsteigen. Deswegen nennen wir sie &bdquo;Modul 1&ldquo; und nicht &bdquo;Klasse 1&ldquo; …</p>
-	<p><img src="assets/img/help/1-2-Modulfarbe.png" class="float-left" alt="Modulfarbe"> Jedes Modul hat eine eigene Farbe. Sie finden sie während des Übens in der rechten oberen Ecke. So können Sie aus der Entfernung sehen, ob jemand versehentlich ein falsches Modul bearbeitet.</p>
+	<p><img src="assets/help/img/1-2-Modulfarbe.png" class="float-left" alt="Modulfarbe"> Jedes Modul hat eine eigene Farbe. Sie finden sie während des Übens in der rechten oberen Ecke. So können Sie aus der Entfernung sehen, ob jemand versehentlich ein falsches Modul bearbeitet.</p>
 
 	<h3 id="alleModule">Überblick über die Module</h3>
 	<table>
@@ -244,7 +244,7 @@
 	<h2 id="vokallaenge">Vokallänge</h2>
 	<div class="row mt-2">
 		<div class="col-12 col-md-4 col-lg-3 px-sm-0">
-			<img src="assets/img/help/2-1-Schule.png" class="float-left" alt="Vokallänge">
+			<img src="assets/help/img/2-1-Schule.png" class="float-left" alt="Vokallänge">
 		</div>
 		<div class="col px-sm-0">
 			<p>In Modul 2 wird die Vokallänge eingeführt. Vielen Kindern bereitet es anfangs Schwierigkeiten zu hören, ob ein Vokal lang oder kurz ist. Zur Unterstützung ist unter der Aufgabe eine Reihe mit allen Vokalen dargestellt. Wenn man einen Buchstaben anklickt, hört man den jeweiligen Vokal einmal lang und einmal kurz gesprochen, so wie wir es in der Klasse üben (z.B. &bdquo;Uuuu wie Uhr, U wie Unterhose.&ldquo;)</p>
@@ -254,7 +254,7 @@
 	<h2 id="statistik">Statistik</h2>
 	<div class="row mt-2">
 		<div class="col-12 col-md-4 col-lg-3 px-sm-0">
-			<img src="assets/img/help/0-1-Kurzstatistik.png" alt="Kurzstatistik">
+			<img src="assets/help/img/0-1-Kurzstatistik.png" alt="Kurzstatistik">
 		</div>
 		<div class="col px-sm-0">
 			<p>Bei jedem Wort hat das Kind zwei Versuche, anschließend wird ein neues Wort angezeigt. Oben rechts ist eine Anzeige, wie viele Wörter bisher in dieser Aufgabe bearbeitet wurden und wie viele davon richtig beantwortet wurden (egal ob beim ersten oder zweiten Versuch). So können Sie den Kindern sagen, sie sollen z.B. 10 Wörter auf Stufe A beantworten (oder 10 Wörter richtig beantworten), und danach bei Stufe B weiterarbeiten. In unserem Beispiel wurden bisher drei Wörter bearbeitet, davon wurden zwei korrekt gelöst.</p>
@@ -262,7 +262,7 @@
 	</div>
 	<div class="row mt-2">
 		<div class="col-12 col-md-4 col-lg-3 px-sm-0">
-			<img src="assets/img/help/0-1-Auswertung.png" alt="Auswertung">
+			<img src="assets/help/img/0-1-Auswertung.png" alt="Auswertung">
 		</div>
 		<div class="col px-sm-0">
 			<p>Wenn man auf diese Anzeige oben rechts klickt, kommt man zu einer detaillierte Fehleranalyse. Dort sehen Sie sämtliche Aufgabenbereiche des Wörterpasses, sowie eine Angabe, wie viele richtige Antworten bei welcher Anzahl von Versuchen gegeben wurde. Im Beispiel sehen Sie, dass bei Silbenbögen &bdquo;5 von 5&ldquo; korrekt waren. Sie wurden also alle beim ersten Versuch richtig gelöst; das Kind beherrscht das gut. Bei Vokalen wurden &bdquo;6 von 7&ldquo; richtig gelöst, es gab also nur kurz eine kleine Unsicherheit, so dass das Kind einen zweiten Versuch benötigt hat, um den Fehler zu finden. Die Längen hingegen wurden nur in &bdquo;3 von 7&ldquo; Fällen korrekt gelöst, das Kind muss das also besonders trainieren.</p>
