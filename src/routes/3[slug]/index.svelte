@@ -155,6 +155,20 @@
 			audio.play();
 		}
 	}
+
+	function inputFabrik(e, fabrik) {
+		popInput('fabrik');
+		addInput('fabrik', fabrik);
+
+		// ugly fix: focus onClick for iOS
+		if(fabrik === "2" || fabrik === "23") {
+			e.target.parentNode.focus();
+		} else if (fabrik === "12") {
+			e.target.parentNode.parentNode.focus();
+		} else {
+			e.target.parentNode.parentNode.parentNode.focus();
+		}
+	}
 </script>
 
 {#if task.step === 0 && ((!$showModal || $showStats) || (!checkInput('silbenboegen') && (task.state === 'again' || task.state === 'edited'))) }
@@ -211,16 +225,16 @@
 			<div class="input__container my-3">
 				<h3 class="ml-3">Fabrik</h3>
 				<div class="row">
-					<div class="col h-center v-center">
+					<div class="col h-center v-center flex-wrap p-0">
 						{#if ['B'].indexOf($level) < 0}
-							<button class="btn btn-lg btn-light v-center mx-2" on:click={() => {popInput('fabrik');addInput('fabrik', '2');}} title="Das Wort hat nur eine Silbe, z.B. &quot;Hund&quot;."><i class="icon-rhythmus-2 icon-xlarge"></i> </button>
+							<button class="btn btn-lg btn-light v-center m-2" on:click={(e) => {inputFabrik(e, '2')}} title="Das Wort hat nur eine Silbe, z.B. &quot;Hund&quot;."><i class="icon-rhythmus-2 icon-xlarge"></i> </button>
 						{/if}
-							<button class="btn btn-lg btn-light v-center mx-2" on:click={() => {popInput('fabrik');addInput('fabrik', '23');}} title="Bei dem Wort wird die letzte Silbe betont (laut) gesprochen, z.B. &quot;paKET&quot;."><i class="icon-rhythmus-12 icon-xlarge"></i> </button>
+							<button class="btn btn-lg btn-light v-center m-2" on:click={(e) => {inputFabrik(e, '23')}} title="Bei dem Wort wird die letzte Silbe betont (laut) gesprochen, z.B. &quot;paKET&quot;."><i class="icon-rhythmus-12 icon-xlarge"></i> </button>
 						{#if ['A'].indexOf($level) < 0}
-							<button class="btn btn-lg btn-light v-center mx-2" on:click={() => {popInput('fabrik');addInput('fabrik', '12');}} title="Das Wort hat zwei Silben, die betonte (laute) Silbe ist am Anfang, z.B. &quot;AUto&quot;."><span class="icon-rhythmus-23 icon-xlarge"><span class="path1"></span><span class="path2"></span></span> </button>
+							<button class="btn btn-lg btn-light v-center m-2" on:click={(e) => {inputFabrik(e, '12')}} title="Das Wort hat zwei Silben, die betonte (laute) Silbe ist am Anfang, z.B. &quot;AUto&quot;."><span class="icon-rhythmus-23 icon-xlarge"><span class="path1"></span><span class="path2"></span></span> </button>
 						{/if}
 						{#if ['A','B'].indexOf($level) < 0}
-							<button class="btn btn-lg btn-light v-center mx-2" on:click={() => {popInput('fabrik');addInput('fabrik', '123');}} title="Bei dem Wort wird die vorletzte Silbe betont (laut) gesprochen, z.B. &quot;heliKOPter&quot;."><span class="icon-rhythmus-123 icon-xlarge"><span class="path1"></span><span class="path2"><span class="path3"></span></span> </button>
+							<button class="btn btn-lg btn-light v-center m-2" on:click={(e) => {inputFabrik(e, '123')}} title="Bei dem Wort wird die vorletzte Silbe betont (laut) gesprochen, z.B. &quot;heliKOPter&quot;."><span class="icon-rhythmus-123 icon-xlarge"><span class="path1"></span><span class="path2"><span class="path3"></span></span> </button>
 						{/if}
 					</div>
 				</div>
@@ -244,5 +258,8 @@
 	.input__canvas > i {
 		width: 34px;
 		font-size: 50px;
+	}
+	.flex-wrap {
+		flex-wrap: wrap;
 	}
 </style>
