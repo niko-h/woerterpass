@@ -89,38 +89,38 @@ blockquote p {
   display: inline; }
 
 .moduleBg-1 {
-  background-color: #ef476fff !important;
-  border-color: #ef476fff !important;
+  background-color: #ef476f !important;
+  border-color: #ef476f !important;
   color: white !important; }
 
 .moduleBg-2 {
-  background-color: #f5683dff !important;
-  border-color: #f5683dff !important;
+  background-color: #f5683d !important;
+  border-color: #f5683d !important;
   color: white !important; }
 
 .moduleBg-3 {
-  background-color: #e09d00ff !important;
-  border-color: #e09d00ff !important;
+  background-color: #e09d00 !important;
+  border-color: #e09d00 !important;
   color: white !important; }
 
 .moduleBg-4 {
-  background-color: #05c793ff !important;
-  border-color: #05c793ff !important;
+  background-color: #0cb35f !important;
+  border-color: #0cb35f !important;
   color: white !important; }
 
 .moduleBg-5 {
-  background-color: #0b9991ff !important;
-  border-color: #0b9991ff !important;
+  background-color: #007a4b !important;
+  border-color: #007a4b !important;
   color: white !important; }
 
 .moduleBg-6 {
-  background-color: #1082a8ff !important;
-  border-color: #1082a8ff !important;
+  background-color: #1082a8 !important;
+  border-color: #1082a8 !important;
   color: white !important; }
 
 .moduleBg-7 {
-  background-color: #073b4cff !important;
-  border-color: #073b4cff !important;
+  background-color: #084c63 !important;
+  border-color: #084c63 !important;
   color: white !important; }
 
 @font-face {
@@ -486,7 +486,7 @@ textarea {
 
 @media (max-width: 1200px) {
   .h1, h1 {
-    font-size: calc(1.35rem + 1.2vw); } }
+    font-size: calc(1.35rem + 1.75vw); } }
 .h2, h2 {
   font-size: 28px;
   font-size: 1.7rem; }
