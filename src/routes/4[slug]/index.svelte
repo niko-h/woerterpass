@@ -119,6 +119,9 @@
 			task.message = 'Richtig!';
 			task.sub = 'Weiter so.';
 			task.state = 'correct';
+			setTimeout(() => {
+                nextStep();
+            }, 3000);
 		} else if(task.state === 'undefined') {
 			task.message = 'Ups';
 			task.sub = 'Da war etwas falsch.';
