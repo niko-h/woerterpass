@@ -1,5 +1,6 @@
 <script>
     import { showModal, showStats, stats } from '../../stores/stores.js';
+    import Spinner from '$lib/Spinner/index.svelte';
     
     export let message = '';
     export let sub = '';
@@ -53,7 +54,10 @@
                 <h1>{message}</h1>
                 <h2>{sub}</h2>
             </center>
-            <button class="btn btn-primary weiter" on:click={() => nextStep()}>{state === 'again' ? 'Nochmal versuchen': 'Weiter'}</button>
+            <div class="bottom">
+                {#if state === 'correct' } <Spinner />{/if}
+                <button class="btn btn-primary" on:click={() => nextStep()}>{state === 'again' ? 'Nochmal versuchen': 'Weiter'}</button>
+            </div>
         {/if}
     </div>
 {/if}
@@ -102,10 +106,20 @@
         position: absolute;
         right: 0;
     }
-	.modal .btn.weiter {
+	.modal .bottom {
+        position: absolute;
+        width: 100%;
 		bottom: 0;
-		margin: 2rem;
+        left: 0;
+        text-align: right;
+		padding: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
 	}
+    .modal .bottom .btn {
+        position: relative;
+    }
     .modal .btn.icon-close {
         top: 0;
         margin: 1rem;
