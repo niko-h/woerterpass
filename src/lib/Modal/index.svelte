@@ -147,6 +147,11 @@
     }
     @media (max-width:1200px){
         .modal .h1,h1{
+            font-size:calc(1.375rem + 2vw)
+        }
+    }
+    @media (max-width:768px){
+        .modal .h1,h1{
             font-size:calc(1.375rem + 3.5vw)
         }
     }
