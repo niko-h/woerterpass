@@ -134,6 +134,10 @@
 				stat.progress += 1;
 			}
 		};
+		
+		if(!task.naseCK) {
+			task.steps[task.step]['naseCK'] = true;
+		}
 
 		if(Object.values(task.steps[task.step]).every(item => item)) {
 			task.message = 'Richtig!';
