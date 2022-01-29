@@ -135,6 +135,7 @@
 			}
 		};
 		
+		// disable check for 'naseCK' except for modules 5C and 5E
 		if(!task.naseCK) {
 			task.steps[task.step]['naseCK'] = true;
 		}
