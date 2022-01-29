@@ -135,8 +135,8 @@
 			}
 		};
 		
-		// disable check for 'naseCK' except for modules 5C and 5E
-		if(!task.naseCK) {
+		// disable check for 'naseCK' except for words from list Ck5
+		if(!isCk5) {
 			task.steps[task.step]['naseCK'] = true;
 		}
 
