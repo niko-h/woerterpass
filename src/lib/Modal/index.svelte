@@ -43,7 +43,7 @@
             <button class="btn btn-secondary icon-close" on:click={() => {showStats.set(false);showModal.set(false);}}></button>
             <h2 class="mb-4">Auswertung</h2>
             {#each $stats as stat, index}
-                <!-- Sonderfall für Module 5C und 5E -->
+                <!-- Sonderfall für Module 5C, 5E und 6B -->
                 {#if naseCK || stat.handle !== 'naseCK'}
                     <div class="row v-center pt-2 pb-2">
                         <div class="col col-5 h-center">

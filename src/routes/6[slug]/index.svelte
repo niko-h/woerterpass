@@ -19,10 +19,12 @@
 	wortProgress.set(0);
 	
 	let currentWord;
+	let isCk5;
 	function getWordList() {
 		const stage = `${$modul}${$level}`.toLowerCase();
 		const activeLists = data.modules[stage];
 		const current_list_id = Math.floor(Math.random() * activeLists.length);
+		isCk5 = Object.values(activeLists)[current_list_id].indexOf("ck5") > -1;
 		return data[activeLists[current_list_id]];
 	}
 	function getCurrentWord() {
@@ -43,12 +45,14 @@
 				mainVokal: false,
 				nase: false,
 				kopierersilbe: false,
+				naseCK: false,
 				wort: false
 			}
 		];
 		task.state = 'undefined';
 		task.step = 0;
 		task.kopierer = 2;
+		task.naseCK = $level === 'B';
 	}
 	resetTask();
 	
@@ -59,6 +63,7 @@
 		inputs.mainVokal = [''];
 		inputs.nase = [''];
 		inputs.kopierersilbe = [''];
+		inputs.naseCK = [''];
 		inputs.wort = [''];
 	}
 	resetInputs();
@@ -90,6 +95,11 @@
 			progress: 0
 		},
 		{
+			handle: 'naseCK',
+			score: 0,
+			progress: 0
+		},
+		{
 			handle: 'wort',
 			score: 0,
 			progress: 0
@@ -115,13 +125,21 @@
 
 	function validate() {
 		for(const key in task.steps[task.step]) {
-			let stat = $stats.find(stat => stat.handle === key);
-			task.steps[task.step][key] = checkInput(key);
-			if(task.steps[task.step][key]) {
-				stat.score += 1;
+			// Sonderfall für Module 6B
+			if(isCk5 || key !== 'naseCK') {
+				let stat = $stats.find(stat => stat.handle === key);
+				task.steps[task.step][key] = checkInput(key);
+				if(task.steps[task.step][key]) {
+					stat.score += 1;
+				}
+				stat.progress += 1;
 			}
-			stat.progress += 1;
 		};
+
+		// disable check for 'naseCK' except for words from list Ck5
+		if(!isCk5) {
+			task.steps[task.step]['naseCK'] = true;
+		}
 
 		if(Object.values(task.steps[task.step]).every(item => item)) {
 			task.message = 'Richtig!';
@@ -276,7 +294,11 @@
 						</div>
 						<div class="col">
 							<div class="vokale input__container">
-								<input type="text" class="vokaleInput {task.state === 'again' && !checkInput('nase') ? 'alert' : ''}" bind:value={inputs.nase[0]} maxlength="4" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+								{#if isCk5}
+									<input type="text" class="vokaleInput {task.state === 'again' && !checkInput('nase') ? 'alert' : ''}" bind:value={inputs.nase[0]} on:input="{() => inputs.naseCK[0] = inputs.nase[0]}" maxlength="4" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+								{:else}
+									<input type="text" class="vokaleInput {task.state === 'again' && !checkInput('nase') ? 'alert' : ''}" bind:value={inputs.nase[0]} maxlength="4" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+								{/if}
 							</div>
 						</div>
 						<div class="col">&nbsp;</div>
@@ -296,9 +318,15 @@
 							</div>
 						</div>
 						<div class="col">
-							<p>
-								{inputs.nase[0] ?? ''}
-							</p>
+							{#if isCk5}
+								<div class="vokale input__container">
+									<input type="text" class="vokaleInput {task.state === 'again' && !checkInput('naseCK') ? 'alert' : ''}" bind:value={inputs.naseCK[0]} maxlength="4" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+								</div>
+							{:else}
+								<p>
+									{inputs.nase[0] ?? ''}
+								</p>
+							{/if}
 						</div>
 						<div class="col">&nbsp;</div>
 					</div>
