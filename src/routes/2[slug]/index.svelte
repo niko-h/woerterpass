@@ -2,9 +2,10 @@
 	export const prerender = true;
 	import { page } from '$app/stores';
 	import { fade } from 'svelte/transition';
-	import { modul, level, wortScore, wortProgress, showModal, showStats, stats } from '../../stores/stores.js';
+	import { modul, level, wortScore, wortProgress, showModal, showStats, showLaengeHilfe, stats } from '../../stores/stores.js';
 	import * as data from '$lib/data-live.js';
 	import Modal from '$lib/Modal/index.svelte';
+	import LaengeHelp from '$lib/LaengeHelp/index.svelte';
 	
 	// on reload determine module and level from slug
 	let slug;
@@ -260,24 +261,11 @@
 						</div>
 					</div>
 					<div class="col v-center">
+						<div class="laenge__hilfe">
+							<button class="btn btn-primary btn-icon-round icon-question" on:click={() => $showLaengeHilfe ? showLaengeHilfe.set(false) : showLaengeHilfe.set(true) }></button>
+						</div>
 						<button class="btn btn-lg btn-light v-center mr-1" disabled={inputs['laenge'].length >= currentWord.laenge.length ? 'disabled' : ''} on:click={() => (addInput('laenge', 'l'))} title="langer Vokal (Selbstlaut, Silbenkönig)"><i class="icon-laenge-l icon-large"></i> </button>
 						<button class="btn btn-lg btn-light v-center" disabled={inputs['laenge'].length >= currentWord.laenge.length ? 'disabled' : ''} on:click={() => (addInput('laenge', 'k'))} title="kurzer Vokal (Selbstlaut, Silbenkönig)"><i class="icon-laenge-k icon-large"></i> </button>
-					</div>
-				</div>
-			</div>
-
-			<div class="row mt-4 mb-1">
-				<div class="col">
-					<div class="helpBox">
-						<span class="label icon-headphones" title="Wie klingt ein langes oder kurzes … ?"></span>
-						<button class="btn btn-secondary" on:click={() => playAudio('../assets/help/laenge/', 'a')}><b>A</b></button>
-						<button class="btn btn-secondary" on:click={() => playAudio('../assets/help/laenge/', 'e')}><b>E</b></button>
-						<button class="btn btn-secondary" on:click={() => playAudio('../assets/help/laenge/', 'i')}><b>I</b></button>
-						<button class="btn btn-secondary" on:click={() => playAudio('../assets/help/laenge/', 'o')}><b>O</b></button>
-						<button class="btn btn-secondary" on:click={() => playAudio('../assets/help/laenge/', 'u')}><b>U</b></button>
-						<button class="btn btn-secondary" on:click={() => playAudio('../assets/help/laenge/', 'ae')}><b>Ä</b></button>
-						<button class="btn btn-secondary" on:click={() => playAudio('../assets/help/laenge/', 'oe')}><b>Ö</b></button>
-						<button class="btn btn-secondary" on:click={() => playAudio('../assets/help/laenge/', 'ue')}><b>Ü</b></button>
 					</div>
 				</div>
 			</div>
@@ -291,6 +279,7 @@
 	</section>
 {/if}
 
+<LaengeHelp />
 <Modal {...task} {nextStep} />
 
 <style>
@@ -350,31 +339,4 @@
 		left: -11px;
 	}
 
-	.helpBox {
-		border-radius: 5px;
-		border: 2px solid #ccc;
-		background: #f2f2ff;
-		box-shadow: 0 0 0 2px #fff;
-		padding: .5rem 0 0 3rem;
-		position: relative;
-	}
-	.helpBox .btn {
-		margin: 0 .15rem .5rem;
-		min-width: 2rem;
-	}
-	.label {
-		font-size: 1.5rem;
-		line-height: 100%;
-		color: #555;
-		margin: 0;
-		background: #e0e0e0;
-		border-radius: 2px 0 0 2px;
-		padding: 0.5rem;
-		top: 0;
-		left: 0;
-		position: absolute;
-		height: 100%;
-		display: flex;
-		align-items: center;
-	}
 </style>
