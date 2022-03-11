@@ -63,6 +63,13 @@
             {/each}
         {:else }
             <center>
+                {#if state === 'correct'}
+                    <img src="assets/img/smiley-happy.svg" alt="Happy smiley">
+                {:else if state === 'again'}
+                    <img src="assets/img/smiley-ok.svg" alt="Ok happy smiley">
+                {:else}
+                    <img src="assets/img/smiley-sad.svg" alt="Sad smiley">
+                {/if}
                 <h1>{message}</h1>
                 <h2>{sub}</h2>
             </center>
@@ -154,5 +161,11 @@
         .modal .h1,h1{
             font-size:calc(1.375rem + 3.5vw)
         }
+    }
+    .smiley-mouth {
+        fill:#ffffff;
+        stroke:#000000;
+        stroke-width:11;
+        stroke-linecap:round
     }
 </style>
