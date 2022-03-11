@@ -177,6 +177,12 @@
 			audio.play();
 		}
 	}
+
+	function init(el, index){
+		if(index === 0) {
+			el.focus();
+		}
+	}
 </script>
 
 {#if task.step === 0 && ((!$showModal || $showStats) || (!checkInput('silbenboegen') && (task.state === 'again' || task.state === 'edited'))) }
@@ -238,7 +244,7 @@
 						<div class="input__canvas input__canvas--double p-2 my-2">
 							<div class="vokale input__container">
 								{#each currentWord.vokale as {}, i}
-									<input type="text" class="vokaleInput {task.state === 'again' && !singleChecks['vokale'][i] ? 'alert' : ''}" bind:value={inputs['vokale'][i]} maxlength="2" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+									<input type="text" use:init={i} class="vokaleInput {task.state === 'again' && !singleChecks['vokale'][i] ? 'alert' : ''}" bind:value={inputs['vokale'][i]} maxlength="2" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
 								{/each}
 							</div>
 							<div class="laenge input__container">
@@ -294,9 +300,9 @@
 	}
 	.input__container input {
 		text-align: center;
-		background: transparent;
+		background: rgba(100,100,100,.05);
 		border: 0;
-		box-shadow: inset 0 0 15px rgb(100,100,100,.15);
+		box-shadow: inset 0 0 5px 1px rgb(100 100 100 / 30%);
 		border-radius: 3px;
 		height: 50px;
 		font-size: 1.5rem;
