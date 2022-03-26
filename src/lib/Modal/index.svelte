@@ -75,7 +75,7 @@
             </center>
             <div class="bottom">
                 {#if state === 'correct' } <Spinner />{/if}
-                <button class="btn btn-primary" on:click={() => nextStep()}>{state === 'again' ? 'Nochmal versuchen': 'Weiter'}</button>
+                <button class="btn btn-primary" autofocus on:click={() => nextStep()}>{state === 'again' ? 'Nochmal versuchen': 'Weiter'}</button>
             </div>
         {/if}
     </div>

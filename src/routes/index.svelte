@@ -2,6 +2,12 @@
 	export const prerender = true;
 	import { modul } from '../stores/stores.js';
 	import { captions } from '$lib/data-live.js';
+
+	function init(el, index){
+		if(index === 0) {
+			el.focus();
+		}
+	}
 </script>
 
 <svelte:head>
@@ -26,7 +32,7 @@
 			<h2 class="mb-3">Wähle ein Modul</h2>
 			<div class="input__container input__container--modul">
 				{#each captions as module, i}
-					<button aria-label="Bearbeite Modul {i+1}" class="btn btn-primary modul-btn moduleBg-{i+1}" on:click={() => modul.set(i+1)}>
+					<button aria-label="Bearbeite Modul {i+1}" use:init={i} class="btn btn-primary modul-btn moduleBg-{i+1}" on:click={() => modul.set(i+1)}>
 						<span>{i+1}</span>
 						<img src={`assets/img/modul${i+1}-w.svg`} alt="Modul {i+1}">
 					</button>
@@ -38,8 +44,8 @@
 			<h2>Wähle eine Stufe aus Modul {$modul}</h2>
 			
 			<div class="input__container my-5">
-				{#each Object.keys(captions[$modul - 1]) as stage}
-					<a sveltekit:prefetch href="{$modul}{stage.toUpperCase()}" aria-label="Bearbeite Stufe {stage.toUpperCase()}" class="btn btn-primary level-btn moduleBg-{$modul}">
+				{#each Object.keys(captions[$modul - 1]) as stage, i}
+					<a sveltekit:prefetch href="{$modul}{stage.toUpperCase()}" use:init={i} aria-label="Bearbeite Stufe {stage.toUpperCase()}" class="btn btn-primary level-btn moduleBg-{$modul}">
 						<div>{stage.toUpperCase()}</div><div class="caption">({captions[$modul-1][stage]})</div>
 					</a>
 				{/each}

@@ -176,7 +176,7 @@
 		<div class="form col col-12 col-lg-6 m-auto py-4 px-3">
 			<div class="word row">
 				<div class="col text-align-center">
-					<button title="Wort anhören" on:click={() => playAudio('assets/words/audio/', currentWord.wort)} class="a word__img inline-block">
+					<button title="Wort anhören" autofocus on:click={() => playAudio('assets/words/audio/', currentWord.wort)} class="a word__img inline-block">
 						<img src={`assets/words/img/${currentWord.wort.toLowerCase()}.jpg`} alt="{currentWord.wort}">
 						<div class="icon-headphones"></div>
 					</button>
@@ -215,7 +215,7 @@
 		<div class="form col col-12 col-lg-6 m-auto py-4 px-3">
 			<div class="word row">
 				<div class="col text-align-center">
-					<button title="Wort anhören" on:click={() => playAudio('assets/words/audio/', currentWord.wort)} class="a word__img inline-block">
+					<button title="Wort anhören" autofocus on:click={() => playAudio('assets/words/audio/', currentWord.wort)} class="a word__img inline-block">
 						<img src={`assets/words/img/${currentWord.wort.toLowerCase()}.jpg`} alt="word">
 						<div class="icon-headphones"></div>
 					</button>

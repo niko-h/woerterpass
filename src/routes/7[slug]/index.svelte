@@ -186,7 +186,7 @@
 		<div class={`form col col-12 col-lg-${$level === 'E' ? '12' : '8'} m-auto py-4 px-3 px-sm`}>
 			<div class="word row">
 				<div class="col text-align-center">
-					<button title="Wort anhören" on:click={() => playAudio('assets/words/audio/', currentWord.wort)} class="btn btn-lg btn-light word__img inline-block">
+					<button title="Wort anhören" autofocus on:click={() => playAudio('assets/words/audio/', currentWord.wort)} class="btn btn-lg btn-light word__img inline-block">
 						<i class="icon-headphones"></i> Anhören
 					</button>
 				</div>
