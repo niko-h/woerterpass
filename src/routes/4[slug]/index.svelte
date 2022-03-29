@@ -19,6 +19,10 @@
 	wortProgress.set(0);
 	
 	let currentWord;
+	let imageFile;
+	async function loadImg(path) {
+		imageFile = await fetch(`${path}${currentWord.wort.toLowerCase()}.jpg`);
+	}
 	function getWordList() {
 		const stage = `${$modul}${$level}`.toLowerCase();
 		const activeLists = data.modules[stage];
@@ -29,6 +33,7 @@
 		const currentList = getWordList();
 		const currentWordId = Math.floor(Math.random() * currentList.length)+1;
 		currentWord = currentList.filter(w => w.id === currentWordId)[0];
+		loadImg('assets/words/img/');
 		playAudio('assets/words/audio/', currentWord.wort);
 	}
 	getCurrentWord();
@@ -47,6 +52,7 @@
 		];
 		task.state = 'undefined';
 		task.step = 0;
+		task.timeout = undefined;
 	}
 	resetTask();
 	
@@ -119,7 +125,7 @@
 			task.message = 'Richtig!';
 			task.sub = 'Weiter so.';
 			task.state = 'correct';
-			setTimeout(() => {
+			task.timeout = setTimeout(() => {
                 nextStep();
             }, 3000);
 		} else if(task.state === 'undefined') {
@@ -139,6 +145,7 @@
 	}
 
 	function nextStep() {
+		clearTimeout( task.timeout );
 		if(task.state === 'correct' || task.state === 'next') {
 			if(task.steps.every(step => Object.values(step).every(item => item))) {
 				wortScore.set($wortScore + 1);
@@ -180,7 +187,7 @@
 			<div class="word row">
 				<div class="col text-align-center">
 					<button title="Wort anhören" autofocus on:click={() => playAudio('assets/words/audio/', currentWord.wort)} class="a word__img inline-block">
-						<img src={`assets/words/img/${currentWord.wort.toLowerCase()}.jpg`} alt={currentWord.wort}>
+						{#if imageFile}<img src={imageFile.url} alt={currentWord.wort}>{/if}
 						<div class="icon-headphones"></div>
 					</button>
 				</div>
