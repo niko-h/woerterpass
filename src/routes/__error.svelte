@@ -1,7 +1,7 @@
 <script context="module">
 	/** @type {import('@sveltejs/kit').Load} */
 	export async function load({ page, fetch, redirect, status, error }) {
-		const validSlug = page.path.match(/^\/[0-9]-[a-g]$/i) !== null;
+		const validSlug = page.path.match(/^\/[0-9]-?[a-g]$/i) !== null;
         const newURL = `/${page.path.charAt(1)}${page.path.charAt(3).toUpperCase()}`;
 
 		if (validSlug) {
