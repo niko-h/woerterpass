@@ -16,18 +16,12 @@
 				redirect: '/'
 			};
 		}
-
-		return {
-			props: { status, error }
-		};
 	}
 </script>
 
 <script>
-	import { dev } from '$app/env';
-
 	export let status;
-	export let error;
+	// export let error;
 
 	let online = typeof navigator !== 'undefined'
 		? navigator.onLine
