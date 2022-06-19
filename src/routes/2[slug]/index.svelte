@@ -237,7 +237,7 @@
 		<div class="form col col-12 col-lg-6 m-auto py-4 px-3">
 			<div class="word row">
 				<div class="col text-align-center">
-					<button title="Wort anhören" autofocus on:click={() => playAudio('assets/words/audio/', currentWord.wort)} class="a word__img inline-block">
+					<button title="Wort anhören" on:click={() => playAudio('assets/words/audio/', currentWord.wort)} class="a word__img inline-block">
 						{#if imageFile}<img src={imageFile.url} alt={currentWord.wort}>{/if}
 						<div class="icon-headphones"></div>
 					</button>
@@ -252,7 +252,7 @@
 						<div class="input__canvas input__canvas--double p-2 my-2">
 							<div class="vokale input__container">
 								{#each currentWord.vokale as {}, i}
-									<input type="text" use:init={i} class="vokaleInput {task.state === 'again' && !singleChecks['vokale'][i] ? 'alert' : ''}" bind:value={inputs['vokale'][i]} maxlength="2" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+									<input type="text" use:init={i} autofocus="{i === 0 ? 'autofocus' : ''}" class="vokaleInput {task.state === 'again' && !singleChecks['vokale'][i] ? 'alert' : ''}" bind:value={inputs['vokale'][i]} maxlength="2" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
 								{/each}
 							</div>
 							<div class="laenge input__container">
@@ -306,7 +306,7 @@
 	}
 	.input__container input:focus,
 	.input__container input:active {
-		border: 2px solid rgba(150,150,150,.5);
+		border: 2px solid rgba(100,100,100,.7);
 	}
 	.input__canvas > i {
 		width: 34px;
