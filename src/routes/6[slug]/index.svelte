@@ -313,7 +313,7 @@
 
 					<div class="row">
 						<div class="col">
-							<img src={`assets/img/table/kopierersilbe2.svg`} alt="Kopierersilbe" title="Kopierersilbe">
+							<img src={`assets/img/table/kopierersilbe2.svg`} alt="Kopierer" title="Kopierer">
 						</div>
 						<div class="col">&nbsp;</div>
 						<div class="col input__canvas">

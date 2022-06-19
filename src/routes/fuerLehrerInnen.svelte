@@ -90,7 +90,7 @@
 					<img src="assets/img/modul5-w.svg" alt="Modul 5"> 
 				</div>
 			</td>
-			<td class="verticle-align-middle">Kleiner Wörterpass (mit Kopierersilbe)</td>
+			<td class="verticle-align-middle">Kleiner Wörterpass (mit Kopierer)</td>
 		</tr>
 		<tr>
 			<td>
