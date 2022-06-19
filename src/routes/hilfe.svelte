@@ -162,8 +162,8 @@
 		</div>
 		<div class="col px-sm-0">
 			<p>Alles ist genau wie im <a href="#modul4">Modul 4</a>, da kannst du noch einmal nachlesen, wenn du etwas vergessen hast.</p>
-			<p>Am Schluss gibt es eine neue Zeile: Das ist die Kopierer. Schau dir das Zeichen einmal genau an. Der Strich bedeutet, dass der Vokal (Selbstlaut, Silbenkönig) lang ist. Daneben steht nur ein Kästchen, du musst dann nichts weiter tun.</p>
-			<p>Aber wenn der Vokal kurz ist, dann müssen immer zwei Buchstaben geschrieben werden. Höre genau hin&nbsp;&ndash; kannst du zwischen Vokal und der Nasensilbe noch etwas anders hören? Z.B. bei &bdquo;Kin-der&ldquo; hörst du ein &bdquo;n&ldquo; und ein &bdquo;d&ldquo;. Das sind die zwei Kästchen im Bild. Das &bdquo;d&ldquo; steht schon in der Nasensilbe &bdquo;-der&ldquo;. Also schreibst du in die Kopierer das &bdquo;n&ldquo; hinter das i: &bdquo;in&ldquo;.</p>
+			<p>Am Schluss gibt es eine neue Zeile: Das ist der Kopierer. Schau dir das Zeichen einmal genau an. Der Strich bedeutet, dass der Vokal (Selbstlaut, Silbenkönig) lang ist. Daneben steht nur ein Kästchen, du musst dann nichts weiter tun.</p>
+			<p>Aber wenn der Vokal kurz ist, dann müssen immer zwei Buchstaben geschrieben werden. Höre genau hin&nbsp;&ndash; kannst du zwischen Vokal und der Nasensilbe noch etwas anders hören? Z.B. bei &bdquo;Kin-der&ldquo; hörst du ein &bdquo;n&ldquo; und ein &bdquo;d&ldquo;. Das sind die zwei Kästchen im Bild. Das &bdquo;d&ldquo; steht schon in der Nasensilbe &bdquo;-der&ldquo;. Also schreibst du in den Kopierer das &bdquo;n&ldquo; hinter das i: &bdquo;in&ldquo;.</p>
 			<p>Ganz zum Schluss schreibst du das Wort noch einmal ganz richtig auf.</p>
 		</div>
 	</div>
@@ -199,7 +199,7 @@
 		</div>
 		<div class="col px-sm-0">
 			<p>Hier funktioniert alles genauso wie im <a href="#modul5">Modul 5</a>. Da kannst du noch einmal nachlesen, wenn du etwas vergessen hast. </p>
-			<p>In diesem Modul übst du das Dehnungs-h. Dafür musst du dir die Kopierer genauer anschauen. Du musst jedesmal diese Fragen beantworten. Wenn du eine Frage mit &bdquo;nein&ldquo; beantwortest, kommt danach <strong>kein</strong> h.</p>
+			<p>In diesem Modul übst du das Dehnungs-h. Dafür musst du dir den Kopierer genauer anschauen. Du musst jedesmal diese Fragen beantworten. Wenn du eine Frage mit &bdquo;nein&ldquo; beantwortest, kommt danach <strong>kein</strong> h.</p>
 	
 			<ol>
 				<li>Ist der Vokal (Selbstlaut, Silbenkönig) lang? Wenn ja, dann:</li>
