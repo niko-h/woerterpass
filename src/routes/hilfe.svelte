@@ -172,7 +172,7 @@
 			<img src="assets/help/img/5-1-essen.png" alt="Modul 5">
 		</div>
 		<div class="col px-sm-0">
-			<p>Manchmal hörst du zwischen dem kurzen Vokal und der Nasensilbe keinen zweiten Buchstaben. Z.B. bei &bdquo;<mark>ES</mark>sen&ldquo; kommt als erster Vokal &bdquo;e&ldquo; und in die Nasensilbe &bdquo;sen&ldquo;. Aber zwischen &bdquo;e?sen&ldquo; hörst du keinen zweiten Buchstaben, nur das &bdquo;s&ldquo;. Also muss der Kopierer das &bdquo;s&ldquo; aus der Nasensilbe kopieren, das ist der Pfeil über dem Kästchen. Nun hat das Wort also zwei &bdquo;s&ldquo;. Deswegen ist es ja eine Kopierer.</p>
+			<p>Manchmal hörst du zwischen dem kurzen Vokal und der Nasensilbe keinen zweiten Buchstaben. Z.B. bei &bdquo;<mark>ES</mark>sen&ldquo; kommt als erster Vokal &bdquo;e&ldquo; und in die Nasensilbe &bdquo;sen&ldquo;. Aber zwischen &bdquo;e?sen&ldquo; hörst du keinen zweiten Buchstaben, nur das &bdquo;s&ldquo;. Also muss der Kopierer das &bdquo;s&ldquo; aus der Nasensilbe kopieren, das ist der Pfeil über dem Kästchen. Nun hat das Wort also zwei &bdquo;s&ldquo;. Deswegen ist es ja ein Kopierer.</p>
 		
 			<h4 id="hinweisezutrennungen">Hinweise zu Trennungen</h4>
 			<ol>
