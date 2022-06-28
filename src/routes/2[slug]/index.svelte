@@ -267,7 +267,7 @@
 									{#if i === currentWord.mainVokalPos}
 										<i class="icon-large icon-laenge-{inputs['mainLaenge'][0] ?? 'empty' } {task.state === 'again' && !singleChecks['mainLaenge'][0] ? 'color-alert' : ''}" />
 									{:else}
-										<i class="icon-large icon-laenge-{currentWord.laenge[i]}" />
+										<i class="icon-large icon-laenge-empty" />
 									{/if}
 								{/each}
 							</div>

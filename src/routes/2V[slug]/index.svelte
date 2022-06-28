@@ -254,11 +254,6 @@
 									{/if}
 								{/each}
 							</div>
-							<div class="laenge input__container">
-								{#each currentWord.laenge as {}, i}
-									<i class="icon-large icon-laenge-{currentWord.laenge[i]}" />
-								{/each}
-							</div>
 							<div class="boegen input__container">
 								{#each currentWord.silbenboegen as bogen}
 									<i class="icon-large icon-bogen-{bogen}" />
