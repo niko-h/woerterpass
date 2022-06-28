@@ -3,10 +3,6 @@
 	import { modul, level, showStats, wortScore, wortProgress, showModal } from '../../stores/stores.js';
 </script>
 
-<svelte:head>
-	<title>Wörterpass - Modul {$modul}{$level}</title>
-</svelte:head>
-
 <header class="container p-12 p-lg-5">
 	<div class="row">
 		<div class="col topbar py-2 px-2">
