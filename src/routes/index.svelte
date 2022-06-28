@@ -47,13 +47,13 @@
 				{#each Object.keys(captions[$modul - 1]) as stage, i}
 					{#if $modul === 2}
 						<div>
-							<a sveltekit:prefetch href="{$modul}{stage.toUpperCase()}" aria-label="Bearbeite Stufe {stage.toUpperCase()}" class="btn btn-primary level-btn-2 moduleBg-{$modul}">
+							<a sveltekit:prefetch title="Vokal und Länge üben" href="{$modul}{stage.toUpperCase()}" aria-label="Bearbeite Stufe {stage.toUpperCase()}" class="btn btn-primary level-btn-2 moduleBg-{$modul}">
 								<div>{stage.toUpperCase()}</div><div class="caption">({captions[$modul-1][stage]})</div>
 							</a>
-							<a sveltekit:prefetch href="{$modul}V{stage.toUpperCase()}" aria-label="Bearbeite Stufe {stage.toUpperCase()}" class="btn btn-primary level-btn-2-s moduleBg-{$modul}">
+							<a sveltekit:prefetch title="nur Vokal üben" href="{$modul}V{stage.toUpperCase()}" aria-label="Bearbeite Stufe {stage.toUpperCase()}" class="btn btn-primary level-btn-2-s moduleBg-{$modul}">
 								<img class="" src="assets/img/modul2v-w.svg" alt="mainVokal">
 							</a>
-							<a sveltekit:prefetch href="{$modul}L{stage.toUpperCase()}" aria-label="Bearbeite Stufe {stage.toUpperCase()}" class="btn btn-primary level-btn-2-s moduleBg-{$modul}">
+							<a sveltekit:prefetch title="nur Länge üben" href="{$modul}L{stage.toUpperCase()}" aria-label="Bearbeite Stufe {stage.toUpperCase()}" class="btn btn-primary level-btn-2-s moduleBg-{$modul}">
 								<img class="" src="assets/img/modul2l-w.svg" alt="mainLaenge">
 							</a>
 						</div>	
