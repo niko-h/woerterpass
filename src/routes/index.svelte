@@ -45,9 +45,23 @@
 			
 			<div class="input__container my-5">
 				{#each Object.keys(captions[$modul - 1]) as stage, i}
-					<a sveltekit:prefetch href="{$modul}{stage.toUpperCase()}" use:init={i} aria-label="Bearbeite Stufe {stage.toUpperCase()}" class="btn btn-primary level-btn moduleBg-{$modul}">
-						<div>{stage.toUpperCase()}</div><div class="caption">({captions[$modul-1][stage]})</div>
-					</a>
+					{#if $modul === 2}
+						<div>
+							<a sveltekit:prefetch href="{$modul}{stage.toUpperCase()}" aria-label="Bearbeite Stufe {stage.toUpperCase()}" class="btn btn-primary level-btn-2 moduleBg-{$modul}">
+								<div>{stage.toUpperCase()}</div><div class="caption">({captions[$modul-1][stage]})</div>
+							</a>
+							<a sveltekit:prefetch href="{$modul}V{stage.toUpperCase()}" aria-label="Bearbeite Stufe {stage.toUpperCase()}" class="btn btn-primary level-btn-2-s moduleBg-{$modul}">
+								<img class="" src="assets/img/modul2v-w.svg" alt="mainVokal">
+							</a>
+							<a sveltekit:prefetch href="{$modul}L{stage.toUpperCase()}" aria-label="Bearbeite Stufe {stage.toUpperCase()}" class="btn btn-primary level-btn-2-s moduleBg-{$modul}">
+								<img class="" src="assets/img/modul2l-w.svg" alt="mainLaenge">
+							</a>
+						</div>	
+					{:else}
+						<a sveltekit:prefetch href="{$modul}{stage.toUpperCase()}" use:init={i} aria-label="Bearbeite Stufe {stage.toUpperCase()}" class="btn btn-primary level-btn moduleBg-{$modul}">
+							<div>{stage.toUpperCase()}</div><div class="caption">({captions[$modul-1][stage]})</div>
+						</a>
+					{/if}
 				{/each}
 			</div>
 			
@@ -126,7 +140,7 @@
 		left: 2px !important;
 	}
  }
- .level-btn {
+ [class*="level-btn"] {
 	 font-size: 1.2rem;
 	 font-weight: 700;
 	 padding: .5rem 1rem;
@@ -136,9 +150,26 @@
 	 text-align: left;
 	 width: 90%;
 	 position: relative;
+	 height: 46px;
+ }
+ [class*="level-btn-2"] {
+	width: 70%;
+	display: inline-flex !important;
+	margin-left: 0;
+	margin-right: 0;
+	border-radius: .25rem 0 0 .25rem;
+ }
+ .level-btn-2-s {
+	width: 10%;
+	border-radius: 0;
+	padding: 0;
+	height: 46px;
+ }
+ .level-btn-2-s:last-child {
+	border-radius: 0 .25rem .25rem 0;
  }
  @media (max-width:576px){
-	.level-btn {
+	[class~="level-btn"] {
 		width: 100% !important;
 	}
  }
