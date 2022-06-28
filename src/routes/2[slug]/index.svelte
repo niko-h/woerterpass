@@ -34,6 +34,7 @@
 		const currentList = getWordList();
 		const currentWordId = Math.floor(Math.random() * currentList.length)+1;
 		currentWord = currentList.filter(w => w.id === currentWordId)[0];
+		currentWord.mainVokalPos = currentWord.silbenboegen.indexOf("g");
 		loadImg('assets/words/img/');
 		playAudio('assets/words/audio/', currentWord.wort);
 	}
@@ -47,8 +48,8 @@
 				silbenboegen: false
 			},
 			{
-				laenge: false,
-				vokale: false
+				mainLaenge: false,
+				mainVokal: false
 			}
 		];
 		task.state = 'undefined';
@@ -60,8 +61,8 @@
 	let inputs = {};
 	function resetInputs() {
 		inputs.silbenboegen = [];
-		inputs.laenge = [];
-		inputs.vokale = [];
+		inputs.mainLaenge = [];
+		inputs.mainVokal = [];
 	}
 	resetInputs();
 
@@ -72,12 +73,12 @@
 			progress: 0
 		},
 		{
-			handle: 'vokale',			
+			handle: 'mainVokal',			
 			score: 0,
 			progress: 0
 		},
 		{
-			handle: 'laenge',			
+			handle: 'mainLaenge',			
 			score: 0,
 			progress: 0
 		}
@@ -96,7 +97,7 @@
 
 	function checkInput(key) {
 		if(task.step === 1) checkSingleInputs(key);
-		if(JSON.stringify(inputs[key]).toLowerCase().replace(/[\s'"]+/g, "") === JSON.stringify(currentWord[key]).toLowerCase().replace(/[\s'"]+/g, "")) {
+		if(JSON.stringify(inputs[key]).toLowerCase().replace(/[\[\]\s'"]+/g, "") === JSON.stringify(currentWord[key]).toLowerCase().replace(/[\[\]\s'"]+/g, "")) {
 			return true;
 		}
 		return false;
@@ -248,16 +249,26 @@
 				<h3 class="ml-3 mb-0">Vokale und Vokallänge</h3>
 				<div class="row">
 					<div class="col col-11 col-lg-8 pr-0">
-						<button class="btn btn-secondary btn-icon-round icon-eraser eraseBtn" title="Länge löschen" on:click={() => (popInput('laenge'))}></button>
+						<button class="btn btn-secondary btn-icon-round icon-eraser eraseBtn" title="Länge löschen" on:click={() => (popInput('mainLaenge'))}></button>
 						<div class="input__canvas input__canvas--double p-2 my-2">
 							<div class="vokale input__container">
 								{#each currentWord.vokale as {}, i}
-									<input type="text" use:init={i} autofocus="{i === 0 ? 'autofocus' : ''}" class="vokaleInput {task.state === 'again' && !singleChecks['vokale'][i] ? 'alert' : ''}" bind:value={inputs['vokale'][i]} maxlength="2" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+									{#if i === currentWord.mainVokalPos}
+										<input type="text" autofocus class="vokaleInput {task.state === 'again' && !singleChecks['mainVokal'][0] ? 'alert' : ''}" bind:value={inputs['mainVokal'][0]} maxlength="2" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+									{:else}
+										<p class="vokale-vokal">
+											{currentWord.vokale[i]}
+										</p>
+									{/if}
 								{/each}
 							</div>
 							<div class="laenge input__container">
 								{#each currentWord.laenge as {}, i}
-									<i class="icon-large icon-laenge-{inputs['laenge'][i] ?? 'empty' } {task.state === 'again' && !singleChecks['laenge'][i] ? 'color-alert' : ''}" />
+									{#if i === currentWord.mainVokalPos}
+										<i class="icon-large icon-laenge-{inputs['mainLaenge'][0] ?? 'empty' } {task.state === 'again' && !singleChecks['mainLaenge'][0] ? 'color-alert' : ''}" />
+									{:else}
+										<i class="icon-large icon-laenge-{currentWord.laenge[i]}" />
+									{/if}
 								{/each}
 							</div>
 							<div class="boegen input__container">
@@ -271,15 +282,15 @@
 						<div class="laenge__hilfe">
 							<button class="btn btn-primary btn-icon-round icon-question" on:click={() => $showLaengeHilfe ? showLaengeHilfe.set(false) : showLaengeHilfe.set(true) }></button>
 						</div>
-						<button class="btn btn-lg btn-light v-center mr-1" disabled={inputs['laenge'].length >= currentWord.laenge.length ? 'disabled' : ''} on:click={() => (addInput('laenge', 'l'))} title="langer Vokal (Selbstlaut, Silbenkönig)"><i class="icon-laenge-l icon-large"></i> </button>
-						<button class="btn btn-lg btn-light v-center" disabled={inputs['laenge'].length >= currentWord.laenge.length ? 'disabled' : ''} on:click={() => (addInput('laenge', 'k'))} title="kurzer Vokal (Selbstlaut, Silbenkönig)"><i class="icon-laenge-k icon-large"></i> </button>
+						<button class="btn btn-lg btn-light v-center mr-1" disabled={inputs['mainLaenge'].length >= 1 ? 'disabled' : ''} on:click={() => (addInput('mainLaenge', 'l'))} title="langer Vokal (Selbstlaut, Silbenkönig)"><i class="icon-laenge-l icon-large"></i> </button>
+						<button class="btn btn-lg btn-light v-center" disabled={inputs['mainLaenge'].length >= 1 ? 'disabled' : ''} on:click={() => (addInput('mainLaenge', 'k'))} title="kurzer Vokal (Selbstlaut, Silbenkönig)"><i class="icon-laenge-k icon-large"></i> </button>
 					</div>
 				</div>
 			</div>
 
 			<div class="row mt-5 mb-1">
 				<div class="col">
-					<button class="btn btn-primary float-right" disabled={inputs['laenge'].length < 1 && inputs['vokale'].length < 1} on:click={() => validate()} title="Kontrollieren"><i class="icon-arrow-right icon-large"></i></button>
+					<button class="btn btn-primary float-right" disabled={inputs['mainLaenge'].length < 1 || inputs['mainVokal'].length < 1} on:click={() => validate()} title="Kontrollieren"><i class="icon-arrow-right icon-large"></i></button>
 				</div>
 			</div>
 		</div>
@@ -291,18 +302,23 @@
 
 <style>
 	.input__container i,
-	.input__container input {
+	.input__container input,
+	.vokale-vokal {
 		width: 40px;
 	}
-	.input__container input {
+	.input__container input,
+	.vokale-vokal {
+		display: inline-block;
 		text-align: center;
-		background: rgba(100,100,100,.05);
 		border: 0;
-		box-shadow: inset 0 0 5px 1px rgb(100 100 100 / 30%);
-		border-radius: 3px;
 		height: 50px;
 		font-size: 1.5rem;
 		margin-right: 5px;
+	}
+	.input__container input {
+		background: rgba(100,100,100,.05);
+		box-shadow: inset 0 0 5px 1px rgb(100 100 100 / 30%);
+		border-radius: 3px;
 	}
 	.input__container input:focus,
 	.input__container input:active {
