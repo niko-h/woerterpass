@@ -107,7 +107,10 @@
 	function checkSingleInputs(key) {
 		let checks = [];
 		inputs[key].forEach((input, index) => {
-			if(JSON.stringify(input).toLowerCase().replace(/[\s'"]+/g, "") === JSON.stringify(currentWord[key][index]).toLowerCase().replace(/[\s'"]+/g, "")) {
+			let parsedInput = JSON.stringify(input).toLowerCase().replace(/[\s'"]+/g, "");
+			let ref = typeof currentWord[key] === 'string' ? currentWord[key] : currentWord[key][i];
+			let parsedRef = JSON.stringify(ref).toLowerCase().replace(/[\s'"]+/g, "");
+			if(parsedInput === parsedRef) {
 				checks.push(true);
 			} else {
 				checks.push(false);
