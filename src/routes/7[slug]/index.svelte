@@ -656,10 +656,10 @@
 		margin: 0.2rem .5rem 0.2rem 1rem !important;
 	}
 	.kasten--links:before {
-		background-image: url(assets/img/modul7-puzzle-left.svg);
+		background-image: url(/assets/img/modul7-puzzle-left.svg);
 	}
 	.kasten--rechts:before {
-		background-image: url(assets/img/modul7-puzzle-right.svg);
+		background-image: url(/assets/img/modul7-puzzle-right.svg);
 	}
 	.kasten--rechts {
 		padding-left: 0;
@@ -667,7 +667,7 @@
 	.kasten--gross:before {
 		width: calc(100% + .75rem);
 		left: calc(-.375rem);
-		background-image: url(assets/img/modul7-puzzle-big.svg);
+		background-image: url(/assets/img/modul7-puzzle-big.svg);
 		background-position: center;
 		background-repeat: no-repeat;
 		background-size: 100%;
