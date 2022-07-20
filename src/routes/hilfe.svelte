@@ -205,7 +205,7 @@
 	<h3 id="modul6">Modul 6: Dehnungs-h</h3>
 	<div class="row mt-2">
 		<div class="col-12 col-md-4 col-lg-3 px-sm-0">
-<img src="assets/help/img/6-1-Regeln.png" alt="Modul 7">
+<img src="assets/help/img/6-1-Regeln.png" alt="Modul 6-1 Regeln">
 		</div>
 		<div class="col px-sm-0">
 			<p>Hier funktioniert alles genauso wie im <a href="#modul5">Modul 5</a>. Da kannst du noch einmal nachlesen, wenn du etwas vergessen hast. </p>

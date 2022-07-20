@@ -193,22 +193,22 @@
 			</div>
 			
 			<div class="row">
-				<div class={`col col-12 ${$level === 'E' ? 'col-lg-6' : ''} px-sm`}>
+				<div class={`col col-12 ${$level === 'E' ? 'col-lg-6 dual-view' : ''} px-sm`}>
 					<div class="input__container my-3">
 						<div class="table">
 							<div class="row kasten">
 								<div class="col input__canvas">
-									<div class="input__container kasten--klein">
+									<div class="input__container kasten--klein kasten--links">
 										<input type="text" maxlength="8" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
 									</div>	
 								</div>
-								<div class="col input__canvas">
+								<div class="col input__canvas z-index-1">
 									<div class="input__container kasten--gross">
 										<input type="text" maxlength="8" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
 									</div>
 								</div>
 								<div class="col input__canvas">
-									<div class="input__container kasten--klein">
+									<div class="input__container kasten--klein kasten--rechts">
 										<input type="text" maxlength="8" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
 									</div>
 								</div>
@@ -358,22 +358,22 @@
 				</div>
 				{#if $level === 'E'}	
 					<hr class="show--sm">
-					<div class="col col-12 col-lg-6 px-sm">
+					<div class={`col col-12 col-lg-6 px-sm ${$level === 'E' ? 'dual-view' : ''}`}>
 						<div class="input__container mt-3">
 							<div class="table">
 								<div class="row kasten">
 									<div class="col input__canvas">
-										<div class="input__container kasten--klein">
+										<div class="input__container kasten--klein kasten--links">
 											<input type="text" maxlength="8" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
 										</div>	
 									</div>
-									<div class="col input__canvas">
+									<div class="col input__canvas z-index-1">
 										<div class="input__container kasten--gross">
 											<input type="text" maxlength="8" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
 										</div>
 									</div>
 									<div class="col input__canvas">
-										<div class="input__container kasten--klein">
+										<div class="input__container kasten--klein kasten--rechts">
 											<input type="text" maxlength="8" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
 										</div>
 									</div>
@@ -581,6 +581,9 @@
 <Modal {...task} {nextStep} />
 
 <style>
+	.z-index-1 {
+		z-index: 1;
+	}
 	hr {
 		display: block;
     	height: 7px;
@@ -602,22 +605,30 @@
 	}
 	.input__container .kasten .input__canvas input {
 		padding: .15rem 0;
-		margin: .2rem .5rem;
-	}
-	.kasten--klein input,
-	.kasten--gross input {
 		font-size: 1rem !important;
 		height: 2.5rem;
 		padding: 1px !important;
 		box-sizing: border-box !important;
+		z-index: 1;
+	}
+	.kasten--klein {
+		height: 66%;
+	}
+	.dual-view .kasten--klein {
+		height: 1.5rem;
+	}
+	.kasten--klein input {
+		height: 100% !important;
 	}
 	.kasten--gross input {
 		font-size: 1.2rem !important;
 		min-width: 8.5ch !important;
 	}
+	.dual-view .kasten--gross input {
+		height: 2rem !important;
+	}
 	.kasten--klein:before,
 	.kasten--gross:before {
-		border: 3px solid black;
 		content: "";
 		position: absolute;
 		width: calc(100% - 1rem);
@@ -630,10 +641,37 @@
 	.kasten--klein:before {
 		margin-top: .4rem;
 		height: calc(100% - 1.2rem);
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: 100%;
+		z-index: 0;
+	}
+	.kasten--links {
+		padding-right: 0;
+	}
+	.kasten--links input {
+		margin: 0.2rem 1rem 0.2rem 0.5rem !important;
+	}
+	.kasten--rechts input {
+		margin: 0.2rem .5rem 0.2rem 1rem !important;
+	}
+	.kasten--links:before {
+		background-image: url(assets/img/modul7-puzzle-left.svg);
+	}
+	.kasten--rechts:before {
+		background-image: url(assets/img/modul7-puzzle-right.svg);
+	}
+	.kasten--rechts {
+		padding-left: 0;
 	}
 	.kasten--gross:before {
-		width: calc(100% + 1rem + 6px);
-		left: calc(-.5rem - 3px);
+		width: calc(100% + .75rem);
+		left: calc(-.375rem);
+		background-image: url(assets/img/modul7-puzzle-big.svg);
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: 100%;
+		z-index: 0;
 	}
 	.input__container .input__canvas .kasten--gross input {
 		padding: .25rem 0;
