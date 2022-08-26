@@ -6,7 +6,7 @@
 <header class="container p-12 p-lg-5">
 	<div class="row">
 		<div class="col topbar py-2 px-2">
-			<h1 class="ml-1 brand">Wörterpass<super>&nbsp;beta</super></h1>
+			<h1 class="ml-1 brand">Wörterpass</h1>
 
 			{#if ['/', '/hilfe', '/ueber', '/fuerLehrerInnen'].indexOf($page.path) < 0 }
 				<div class="stats">
