@@ -1,4 +1,4 @@
-# Wörterpass v1.0
+# Wörterpass
 
 ## About this software
 This is a web app designed for pracicing german ortography, based on an educational concept named "Wörterpass".
