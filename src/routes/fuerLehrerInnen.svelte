@@ -63,7 +63,7 @@
 					<img src="assets/img/modul2-w.svg" alt="Modul 2"> 
 				</div>
 			</td>
-			<td class="verticle-align-middle">Silbenbögen, Vokal, Vokallänge</td>
+			<td class="verticle-align-middle">Silbenbögen, Vokal, Vokallänge (der Vokal und seine Länge können auch einzeln trainiert werden)</td>
 		</tr>
 		<tr>
 			<td>
@@ -247,10 +247,17 @@
 			<img src="assets/help/img/2-1-Schule.png" class="float-left" alt="Vokallänge">
 		</div>
 		<div class="col px-sm-0">
-			<p>In Modul 2 wird die Vokallänge eingeführt. Vielen Kindern bereitet es anfangs Schwierigkeiten zu hören, ob ein Vokal lang oder kurz ist. Zur Unterstützung ist unter der Aufgabe eine Reihe mit allen Vokalen dargestellt. Wenn man einen Buchstaben anklickt, hört man den jeweiligen Vokal einmal lang und einmal kurz gesprochen, so wie wir es in der Klasse üben (z.B. &bdquo;Uuuu wie Uhr, U wie Unterhose.&ldquo;)</p>
+			<p>In Modul 2 wird die Vokallänge eingeführt. Vielen Kindern bereitet es anfangs Schwierigkeiten zu hören, ob ein Vokal lang oder kurz ist. Zur Unterstützung kann man auf das Fragezeichen über den Knöpfen für die Länge klicken. Dann öffnet sich eine Anzeige mitmit allen Vokalen. Wenn man einen Buchstaben anklickt, hört man den jeweiligen Vokal einmal lang und einmal kurz gesprochen, so wie wir es in der Klasse üben (z.B. &bdquo;Uuuu wie Uhr, U wie Unterhose.&ldquo;)</p>
 		</div>
 	</div>
-
+	<div class="row mt-2">
+		<div class="col-12 col-md-4 col-lg-3 px-sm-0">
+			<img src="assets/help/img/2-2-Parameterauswahl.png" alt="Auswahl des eingeschränkten Übungsmodus">
+		</div>
+		<div class="col px-sm-0">
+			<p>Zur weiteren Unterstützung ist es in diesem Modul möglich, nur den Vokal oder nur die Länge zu üben. Dafür klickt man in der Stufenauswahl auf den kleinen Mund bzw. das Symbol für die Länge. Wenn Sie diese reduzierten Übungen direkt verlinken möchten, müssen die Kinder am Ende der Adresse ein großes V (für die Übung der Vokale) bzw. ein großes L (zum Üben der Länge) eintippen: <a href="https://www.wörterpass.de/2aV">www.wörterpass.de/2aV</a>.</p>
+		</div>
+	</div>
 	<h2 id="statistik">Statistik</h2>
 	<div class="row mt-2">
 		<div class="col-12 col-md-4 col-lg-3 px-sm-0">
@@ -273,7 +280,7 @@
 	</div>
 
 	<h2 id="QR">QR-Codes für Arbeitsblätter</h2>
-	<p>Ihre Klasse kann die Domain auch mit ö eintippen: <a href="https://www.wörterpass.de">www.wörterpass.de</a> (aus technischen Gründen wird es zu oe umgewandelt, aber das müssen sich die Kinder nicht merken). Zudem können Sie direkt auf eine konkrete Stufe verlinken, z.B. in einer Lektion zum ck: <a href="https://www.wörterpass.de/5c">www.wörterpass.de/5c</a></p>
+	<p>Ihre Klasse kann die Domain auch mit ö eintippen: <a href="https://www.wörterpass.de">www.wörterpass.de</a> (aus technischen Gründen wird es evtl. zu oe umgewandelt, aber das müssen sich die Kinder nicht merken). Zudem können Sie direkt auf eine konkrete Stufe verlinken, z.B. in einer Lektion zum ck: <a href="https://www.wörterpass.de/5c">www.wörterpass.de/5c</a></p>
 	<p>Sie können auf Ihre Arbeitsblätter oder auf Aufkleber im Klassenzimmer (z.B. bei Stationsarbeit in einer Tablet-Klasse) auch QR-Codes drucken. Diese werden von Ihren Schülern dann mit der Handykamera gescannt und leiten direkt in eine konkrete Übung weiter. In der Tabelle finden Sie die QR-Codes für jede Übung. Achten Sie darauf, dass der Code wenigstens 3cm groß ist, damit er verlässlich gescannt werden kann.</p>
 	
 	<h3>Modul 1</h3>

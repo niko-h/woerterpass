@@ -97,7 +97,15 @@
 			<p>
 				In diesem Bild soll man &bdquo;Schule&ldquo; schreiben. &bdquo;Schule&ldquo; hat zwei Silben. Schreibe über jeden Silbenbogen den richtigen Vokal (Selbstlaut, Silbenkönig), z.B. &bdquo;u&ldquo; und &bdquo;e&ldquo;. Nun musst du genau hinhören: Ist das U bei &bdquo;Schule&ldquo; ein langes U (wie in &bdquo;Uhu&ldquo;) oder ein kurzes U (wie in &bdquo;Unterhose&ldquo;)? Für lang klickst du auf den Strich, für kurz klickst du auf den Punkt. Wenn du auf den Radiergummi klickst, wird das letzte Zeichen gelöscht.</p>
 			<p>
-				Wenn du hören möchtest, wie z.B. ein langes oder kurzes U klingt, dann klicke unten auf die blauen Buchstaben. Dann hörst du immer zuerst den langen Vokal (Selbstlaut, Silbenkönig) und dann den kurzen. Also z.B. &bdquo;Uuuuu (= lang) wie Uhr, U (=kurz) wie Unterhose&ldquo;.</p>
+				Wenn du hören möchtest, wie z.B. ein langes oder kurzes U klingt, dann klicke auf das Fragezeichen. Dann kannst du dir aussuchen, welchen Laut du lang und kurz hören möchtest. Zuerst kommt immer der lange Vokal (Selbstlaut, Silbenkönig) und dann der kurze. Also z.B. &bdquo;Uuuuu (= lang) wie Uhr, U (=kurz) wie Unterhose&ldquo;.</p>
+		</div>
+	</div>
+	<div class="row mt-2">
+		<div class="col-12 col-md-4 col-lg-3 px-sm-0">
+			<img src="assets/help/img/2-2-Parameterauswahl.png" alt="Modulauswahl zum Üben der Vokale oder Länge">
+		</div>
+		<div class="col px-sm-0">
+			<p>Wenn du nur den Vokal (Selbstlaut, Silbenkönig) oder nur die Länge üben möchtest, kannst du in der Modulauswahl auf den Mund oder auf den Punkt/Strich klicken.</p>
 
 
 		</div>
@@ -162,8 +170,8 @@
 		</div>
 		<div class="col px-sm-0">
 			<p>Alles ist genau wie im <a href="#modul4">Modul 4</a>, da kannst du noch einmal nachlesen, wenn du etwas vergessen hast.</p>
-			<p>Am Schluss gibt es eine neue Zeile: Das ist die Kopierersilbe. Schau dir das Zeichen einmal genau an. Der Strich bedeutet, dass der Vokal (Selbstlaut, Silbenkönig) lang ist. Daneben steht nur ein Kästchen, du musst dann nichts weiter tun.</p>
-			<p>Aber wenn der Vokal kurz ist, dann müssen immer zwei Buchstaben geschrieben werden. Höre genau hin&nbsp;&ndash; kannst du zwischen Vokal und der Nasensilbe noch etwas anders hören? Z.B. bei &bdquo;Kin-der&ldquo; hörst du ein &bdquo;n&ldquo; und ein &bdquo;d&ldquo;. Das sind die zwei Kästchen im Bild. Das &bdquo;d&ldquo; steht schon in der Nasensilbe &bdquo;-der&ldquo;. Also schreibst du in die Kopierersilbe das &bdquo;n&ldquo; hinter das i: &bdquo;in&ldquo;.</p>
+			<p>Am Schluss gibt es eine neue Zeile: Hier ist der Kopierer. Schau dir das Zeichen einmal genau an. Der Strich bedeutet, dass der Vokal (Selbstlaut, Silbenkönig) lang ist. Daneben steht nur ein Kästchen, wenn der Vokal lang ist, dann musst du also nichts weiter tun.</p>
+			<p>Aber wenn der Vokal kurz ist, dann müssen immer zwei Buchstaben geschrieben werden. Das sind die zwei Kästchen. Höre genau hin&nbsp;&ndash; kannst du zwischen Vokal und der Nasensilbe noch etwas anders hören? Z.B. bei &bdquo;Kin-der&ldquo; hörst du ein &bdquo;n&ldquo; und ein &bdquo;d&ldquo;. Das sind die zwei Kästchen im Bild. Das &bdquo;d&ldquo; steht schon in der Nasensilbe &bdquo;-der&ldquo;. Also schreibst du in die Kopierersilbe das &bdquo;n&ldquo; hinter das i: &bdquo;in&ldquo;.</p>
 			<p>Ganz zum Schluss schreibst du das Wort noch einmal ganz richtig auf.</p>
 		</div>
 	</div>
@@ -172,7 +180,9 @@
 			<img src="assets/help/img/5-1-essen.png" alt="Modul 5">
 		</div>
 		<div class="col px-sm-0">
-			<p>Manchmal hörst du zwischen dem kurzen Vokal und der Nasensilbe keinen zweiten Buchstaben. Z.B. bei &bdquo;<mark>ES</mark>sen&ldquo; kommt als erster Vokal &bdquo;e&ldquo; und in die Nasensilbe &bdquo;sen&ldquo;. Aber zwischen &bdquo;e?sen&ldquo; hörst du keinen zweiten Buchstaben, nur das &bdquo;s&ldquo;. Also muss der Kopierer das &bdquo;s&ldquo; aus der Nasensilbe kopieren, das ist der Pfeil über dem Kästchen. Nun hat das Wort also zwei &bdquo;s&ldquo;. Deswegen ist es ja eine Kopierersilbe.</p>
+			<p>Manchmal hörst du zwischen dem kurzen Vokal und der Nasensilbe keinen zweiten Buchstaben. Z.B. bei &bdquo;<mark>ES</mark>sen&ldquo; kommt als erster Vokal &bdquo;e&ldquo; und in die Nasensilbe &bdquo;sen&ldquo;. Aber zwischen &bdquo;e?sen&ldquo; hörst du keinen zweiten Buchstaben, nur das &bdquo;s&ldquo;. Also muss der Kopierer das &bdquo;s&ldquo; aus der Nasensilbe kopieren, das ist der Pfeil über dem Kästchen. Nun hat das Wort also zwei &bdquo;s&ldquo;. Deswegen ist es ein Kopierer.</p>
+			<p>Bei manchen Buchstaben ist der Kopierer kaputt: ein doppeltes k wird zu ck: Schnec-ke. Ein doppeltes z wird zu tz: Kat-ze</p>
+
 		
 			<h4 id="hinweisezutrennungen">Hinweise zu Trennungen</h4>
 			<ol>
@@ -195,19 +205,17 @@
 	<h3 id="modul6">Modul 6: Dehnungs-h</h3>
 	<div class="row mt-2">
 		<div class="col-12 col-md-4 col-lg-3 px-sm-0">
-
+<img src="assets/help/img/6-1-Regeln.png" alt="Modul 6-1 Regeln">
 		</div>
 		<div class="col px-sm-0">
 			<p>Hier funktioniert alles genauso wie im <a href="#modul5">Modul 5</a>. Da kannst du noch einmal nachlesen, wenn du etwas vergessen hast. </p>
-			<p>In diesem Modul übst du das Dehnungs-h. Dafür musst du dir die Kopierersilbe genauer anschauen. Du musst jedesmal diese Fragen beantworten. Wenn du eine Frage mit &bdquo;nein&ldquo; beantwortest, kommt danach <strong>kein</strong> h.</p>
-	
-			<ol>
-				<li>Ist der Vokal (Selbstlaut, Silbenkönig) lang? Wenn ja, dann:</li>
-				<li>Ist die Wortfabrik am Anfang leer? Also in der ersten Spalte steht kein blaues Kästchen? Wenn ja, dann:</li>
-				<li>&bdquo;<mark>L</mark>eg <mark>m</mark>ich <mark>n</mark>icht <mark>r</mark>ein&ldquo;: Kommt danach ein L, M, N oder R (z.B. Kohle, Bohne, Bohrer)? Wenn ja, dann:</li>
-				<li>Beginnt das Wort <strong>nicht</strong> mit P, T, V oder kr, bl, sch oder qu (z.B. Polen, Ton, Vene, Schale …)? Wenn ja:</li>
-				<li>Dann musst du nach dem Vokal ein h schreiben. Es sei denn, es ist ein Merkwort, leider (sowas wie wenn die Grundform &bdquo;kommen&ldquo; ist, dann &bdquo;kam" ohne h).</li>
-			</ol>
+			<p>In diesem Modul übst du das Dehnungs-h. Dafür musst du dir den Kopierer genauer anschauen. Es kann nur dann ein Dehnungs-h kommen, wenn der Vokal <strong>lang</strong> ist und du danach ein l/m/n/r sprichst. Du kannst dir diese vier &bdquo;Stolper-Buchstaben&ldquo; mit diesem Spruch merken: <mark>L</mark>eg <mark>m</mark>ich <mark>n</mark>icht <mark>r</mark>ein. Also musst du wenn der Vokal lang ist an &bdquo;Leg mich nicht rein&ldquo; denken und dann ein h schreiben.</p>
+
+<p>Ausnahme 1: Alle Wörter mit i/ie werden ohne h geschrieben.</p>
+
+<p>Ausnahme 2: Ohne h schreibst du, wenn das Wort mit vielen Buchstaben anfängt (kr/bl/sch/qu usw.) oder am Anfang ein p/t/v steht.</p>
+
+<p>Ausnahme 3: Wörter, bei denen die erste Silbe unbetont ist (bei denen in der ersten Fabrik ein blaues Kästchen steht), haben kein h.</p>
 		</div>
 	</div>
 

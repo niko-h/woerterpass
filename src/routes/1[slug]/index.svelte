@@ -19,6 +19,10 @@
 	wortProgress.set(0);
 	
 	let currentWord;
+	let imageFile;
+	async function loadImg(path) {
+		imageFile = await fetch(`${path}${currentWord.wort.toLowerCase()}.jpg`);
+	}
 	function getWordList() {
 		const stage = `${$modul}${$level}`.toLowerCase();
 		const activeLists = data.modules[stage];
@@ -29,6 +33,7 @@
 		const currentList = getWordList();
 		const currentWordId = Math.floor(Math.random() * currentList.length)+1;
 		currentWord = currentList.filter(w => w.id === currentWordId)[0];
+		loadImg('assets/words/img/');
 		playAudio('assets/words/audio/', currentWord.wort);
 	}
 	getCurrentWord();
@@ -38,6 +43,7 @@
 		task.message = '';
 		task.feedback = false;
 		task.state = 'undefined';
+		task.timeout = undefined;
 	}
 	resetTask();
 	
@@ -82,7 +88,7 @@
 			task.message = 'Richtig!';
 			task.sub = 'Weiter so.';
 			task.state = 'correct';
-			setTimeout(() => {
+			task.timeout = setTimeout(() => {
                 nextStep();
             }, 3000);
 		} else if(task.state === 'undefined') {
@@ -99,6 +105,7 @@
 
 	function nextStep() {
 		if(task.state === 'correct' || task.state === 'next') {
+			clearTimeout( task.timeout );
 			if(task.feedback) wortScore.set($wortScore + 1);
 			resetTask();
 			resetInput();
@@ -107,6 +114,7 @@
 		}
 		showModal.set(false);
 		showStats.set(false);
+
 	}
 
 	function playAudio(path, filename) {
@@ -134,8 +142,8 @@
 		<div class="form col col-12 col-lg-6 m-auto py-4 px-3">
 			<div class="word row">
 				<div class="col text-align-center">
-					<button title="Wort anhören" on:click={() => playAudio('assets/words/audio/', currentWord.wort)} class="a word__img inline-block">
-						<img src={`assets/words/img/${currentWord.wort.toLowerCase()}.jpg`} alt={currentWord.wort}>
+					<button title="Wort anhören" autofocus on:click={() => playAudio('assets/words/audio/', currentWord.wort)} class="a word__img inline-block">
+						{#if imageFile}<img src={imageFile.url} alt={currentWord.wort}>{/if}
 						<div class="icon-headphones"></div>
 					</button>
 				</div>

@@ -2,6 +2,12 @@
 	export const prerender = true;
 	import { modul } from '../stores/stores.js';
 	import { captions } from '$lib/data-live.js';
+
+	function init(el, index){
+		if(index === 0) {
+			el.focus();
+		}
+	}
 </script>
 
 <svelte:head>
@@ -26,7 +32,7 @@
 			<h2 class="mb-3">Wähle ein Modul</h2>
 			<div class="input__container input__container--modul">
 				{#each captions as module, i}
-					<button aria-label="Bearbeite Modul {i+1}" class="btn btn-primary modul-btn moduleBg-{i+1}" on:click={() => modul.set(i+1)}>
+					<button aria-label="Bearbeite Modul {i+1}" use:init={i} class="btn btn-primary modul-btn moduleBg-{i+1}" on:click={() => modul.set(i+1)}>
 						<span>{i+1}</span>
 						<img src={`assets/img/modul${i+1}-w.svg`} alt="Modul {i+1}">
 					</button>
@@ -38,10 +44,24 @@
 			<h2>Wähle eine Stufe aus Modul {$modul}</h2>
 			
 			<div class="input__container my-5">
-				{#each Object.keys(captions[$modul - 1]) as stage}
-					<a sveltekit:prefetch href="{$modul}{stage.toUpperCase()}" aria-label="Bearbeite Stufe {stage.toUpperCase()}" class="btn btn-primary level-btn moduleBg-{$modul}">
-						<div>{stage.toUpperCase()}</div><div class="caption">({captions[$modul-1][stage]})</div>
-					</a>
+				{#each Object.keys(captions[$modul - 1]) as stage, i}
+					{#if $modul === 2}
+						<div>
+							<a sveltekit:prefetch title="Vokal und Länge üben" href="{$modul}{stage.toUpperCase()}" aria-label="Bearbeite Stufe {stage.toUpperCase()}" class="btn btn-primary level-btn-2 moduleBg-{$modul}">
+								<div>{stage.toUpperCase()}</div><div class="caption">({captions[$modul-1][stage]})</div>
+							</a>
+							<a sveltekit:prefetch title="nur Vokal üben" href="{$modul}{stage.toUpperCase()}V" aria-label="Bearbeite Stufe {stage.toUpperCase()}" class="btn btn-primary level-btn-2-s moduleBg-{$modul}">
+								<img class="" src="assets/img/modul2v-w.svg" alt="mainVokal">
+							</a>
+							<a sveltekit:prefetch title="nur Länge üben" href="{$modul}{stage.toUpperCase()}L" aria-label="Bearbeite Stufe {stage.toUpperCase()}" class="btn btn-primary level-btn-2-s moduleBg-{$modul}">
+								<img class="" src="assets/img/modul2l-w.svg" alt="mainLaenge">
+							</a>
+						</div>	
+					{:else}
+						<a sveltekit:prefetch href="{$modul}{stage.toUpperCase()}" use:init={i} aria-label="Bearbeite Stufe {stage.toUpperCase()}" class="btn btn-primary level-btn moduleBg-{$modul}">
+							<div>{stage.toUpperCase()}</div><div class="caption">({captions[$modul-1][stage]})</div>
+						</a>
+					{/if}
 				{/each}
 			</div>
 			
@@ -120,7 +140,7 @@
 		left: 2px !important;
 	}
  }
- .level-btn {
+ [class*="level-btn"] {
 	 font-size: 1.2rem;
 	 font-weight: 700;
 	 padding: .5rem 1rem;
@@ -130,9 +150,26 @@
 	 text-align: left;
 	 width: 90%;
 	 position: relative;
+	 height: 46px;
+ }
+ [class*="level-btn-2"] {
+	width: 70%;
+	display: inline-flex !important;
+	margin-left: 0;
+	margin-right: 0;
+	border-radius: .25rem 0 0 .25rem;
+ }
+ .level-btn-2-s {
+	width: 10%;
+	border-radius: 0;
+	padding: 0;
+	height: 46px;
+ }
+ .level-btn-2-s:last-child {
+	border-radius: 0 .25rem .25rem 0;
  }
  @media (max-width:576px){
-	.level-btn {
+	[class~="level-btn"] {
 		width: 100% !important;
 	}
  }

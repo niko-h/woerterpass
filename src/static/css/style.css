@@ -339,7 +339,8 @@ body {
   line-height: 1.5;
   color: #212529;
   text-align: left;
-  background-color: #fff; }
+  background-color: #fff;
+  user-select: none; }
 
 [tabindex="-1"]:focus:not(:focus-visible) {
   outline: 0 !important; }
@@ -1760,11 +1761,11 @@ input[type=button].btn-block, input[type=reset].btn-block, input[type=submit].bt
       background-color: #eef;
       box-shadow: 0 0 0 0 5px #eef;
       transition: background-color .3s, box-shadow .5s; }
-    .word .word__img:hover {
+    .word .word__img:hover, .word .word__img:focus {
       top: -1px;
       box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
       transition: top .2s, box-shadow .2s; }
-      .word .word__img:hover > .icon-headphones {
+      .word .word__img:hover > .icon-headphones, .word .word__img:focus > .icon-headphones {
         background-color: #ddf;
         box-shadow: 0 0 0 5px #eef;
         transition: background-color .3s, box-shadow .3s; }

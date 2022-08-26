@@ -2,9 +2,10 @@
 	export const prerender = true;
 	import { page } from '$app/stores';
 	import { fade } from 'svelte/transition';
-	import { modul, level, wortScore, wortProgress, showModal, showStats, stats } from '../../stores/stores.js';
+	import { modul, level, wortScore, wortProgress, showModal, showStats, showLaengeHilfe, stats } from '../../stores/stores.js';
 	import * as data from '$lib/data-live.js';
 	import Modal from '$lib/Modal/index.svelte';
+	import LaengeHelp from '$lib/LaengeHelp/index.svelte';
 	
 	// on reload determine module and level from slug
 	let slug;
@@ -13,7 +14,7 @@
         audio = new Audio();
     }
 	page.subscribe(value => slug = value.params.slug);
-	modul.set(3); // hard-coded modul
+	modul.set(2); // hard-coded modul
 	level.set(slug.toUpperCase());
 	wortScore.set(0);
 	wortProgress.set(0);
@@ -33,6 +34,7 @@
 		const currentList = getWordList();
 		const currentWordId = Math.floor(Math.random() * currentList.length)+1;
 		currentWord = currentList.filter(w => w.id === currentWordId)[0];
+		currentWord.mainVokalPos = currentWord.silbenboegen.indexOf("g");
 		loadImg('assets/words/img/');
 		playAudio('assets/words/audio/', currentWord.wort);
 	}
@@ -46,7 +48,7 @@
 				silbenboegen: false
 			},
 			{
-				fabrik: false
+				mainLaenge: false
 			}
 		];
 		task.state = 'undefined';
@@ -58,18 +60,18 @@
 	let inputs = {};
 	function resetInputs() {
 		inputs.silbenboegen = [];
-		inputs.fabrik = [];
+		inputs.mainLaenge = [];
 	}
 	resetInputs();
 
 	stats.set([
 		{
-			handle: 'silbenboegen',
+			handle: 'silbenboegen',			
 			score: 0,
 			progress: 0
 		},
 		{
-			handle: 'fabrik',
+			handle: 'mainLaenge',			
 			score: 0,
 			progress: 0
 		}
@@ -87,10 +89,24 @@
 	}
 
 	function checkInput(key) {
-		if(JSON.stringify(inputs[key]).replace(/[\[\]'"]+/g,'') === JSON.stringify(currentWord[key]).replace(/[\[\]'"]+/g,'')) {
+		if(task.step === 1) checkSingleInputs(key);
+		if(JSON.stringify(inputs[key]).toLowerCase().replace(/[\[\]\s'"]+/g, "") === JSON.stringify(currentWord[key]).toLowerCase().replace(/[\[\]\s'"]+/g, "")) {
 			return true;
 		}
 		return false;
+	}
+
+	let singleChecks = {};
+	function checkSingleInputs(key) {
+		let checks = [];
+		inputs[key].forEach((input, index) => {
+			if(JSON.stringify(input).toLowerCase().replace(/[\s'"]+/g, "") === JSON.stringify(currentWord[key][index]).toLowerCase().replace(/[\s'"]+/g, "")) {
+				checks.push(true);
+			} else {
+				checks.push(false);
+			}
+		});
+		singleChecks[key] = checks;
 	}
 
 	function validate() {
@@ -115,7 +131,7 @@
 			task.sub = 'Da war etwas falsch.';
 			task.state = 'again';
 		} else if(task.steps.length > task.step+1) {
-			task.message = 'Das war nicht ganz richtig';
+			task.message = 'Noch nicht richtig';
 			task.sub = 'Beim nächsten mal.';
 			task.state = 'next';
 		} else {
@@ -124,11 +140,12 @@
 			task.state = 'next';
 		}
 		showModal.set(true);
+		showLaengeHilfe.set(false);
 	}
 
 	function nextStep() {
-		clearTimeout( task.timeout );
 		if(task.steps.length === task.step+1 && (task.state === 'correct' || task.state === 'next')) {
+			clearTimeout( task.timeout );
 			if(task.steps.every(step => Object.values(step).every(item => item))) {
 				wortScore.set($wortScore + 1);
 			}
@@ -143,7 +160,7 @@
 		showModal.set(false);
 		showStats.set(false);
 	}
-
+				
 	function playAudio(path, filename) {
 		if(typeof Audio != "undefined") {
 			var playPromise = audio.play();
@@ -163,17 +180,9 @@
 		}
 	}
 
-	function inputFabrik(e, fabrik) {
-		popInput('fabrik');
-		addInput('fabrik', fabrik);
-
-		// ugly fix: focus onClick for iOS
-		if(fabrik === "2" || fabrik === "23") {
-			e.target.parentNode.focus();
-		} else if (fabrik === "12") {
-			e.target.parentNode.parentNode.focus();
-		} else {
-			e.target.parentNode.parentNode.parentNode.focus();
+	function init(el, index){
+		if(index === 0) {
+			el.focus();
 		}
 	}
 </script>
@@ -202,8 +211,8 @@
 						</div>
 					</div>
 					<div class="col v-center">
-						<button class="btn btn-lg btn-light v-center mr-1" disabled={inputs['silbenboegen'].length >=5 ? 'disabled' : ''} on:click={() => (addInput('silbenboegen', 'g'))} title="großer Bogen = betonte (laute) Silbe"><i class="icon-bogen-g icon-large"></i> </button>
-						<button class="btn btn-lg btn-light v-center" disabled={inputs['silbenboegen'].length >=5 ? 'disabled' : ''} on:click={() => (addInput('silbenboegen', 'k'))} title="kleiner Bogen = unbetonte (leise) Silbe"><i class="icon-bogen-k icon-large"></i> </button>
+						<button class="btn btn-lg btn-light v-center mr-1" title="betonte (laute) Silbe" disabled={inputs['silbenboegen'].length >=5 ? 'disabled' : ''} on:click={() => (addInput('silbenboegen', 'g'))}><i class="icon-bogen-g icon-large"></i> </button>
+						<button class="btn btn-lg btn-light v-center" title="unbetonte (leise) Silbe" disabled={inputs['silbenboegen'].length >=5 ? 'disabled' : ''} on:click={() => (addInput('silbenboegen', 'k'))}><i class="icon-bogen-k icon-large"></i> </button>
 					</div>
 				</div>
 			</div>
@@ -222,7 +231,7 @@
 		<div class="form col col-12 col-lg-6 m-auto py-4 px-3">
 			<div class="word row">
 				<div class="col text-align-center">
-					<button title="Wort anhören" autofocus on:click={() => playAudio('assets/words/audio/', currentWord.wort)} class="a word__img inline-block">
+					<button title="Wort anhören" on:click={() => playAudio('assets/words/audio/', currentWord.wort)} class="a word__img inline-block">
 						{#if imageFile}<img src={imageFile.url} alt={currentWord.wort}>{/if}
 						<div class="icon-headphones"></div>
 					</button>
@@ -230,43 +239,123 @@
 			</div>
 
 			<div class="input__container my-3">
-				<h3 class="ml-3">Fabrik</h3>
+				<h3 class="ml-3 mb-0">Vokale und Vokallänge</h3>
 				<div class="row">
-					<div class="col h-center v-center flex-wrap p-0">
-						{#if ['B'].indexOf($level) < 0}
-							<button class="btn btn-lg btn-light v-center m-2" on:click={(e) => {inputFabrik(e, '2')}} title="Das Wort hat nur eine Silbe, z.B. &quot;Hund&quot;."><i class="icon-rhythmus-2 icon-xlarge"></i> </button>
-						{/if}
-							<button class="btn btn-lg btn-light v-center m-2" on:click={(e) => {inputFabrik(e, '23')}} title="Bei dem Wort wird die erste Silbe betont (laut) gesprochen, z.B. &quot;AUto&quot;."><i class="icon-rhythmus-12 icon-xlarge"></i> </button>
-						{#if ['A'].indexOf($level) < 0}
-							<button class="btn btn-lg btn-light v-center m-2" on:click={(e) => {inputFabrik(e, '12')}} title="Das Wort hat zwei Silben, die betonte (laute) Silbe ist am Ende, z.B. &quot;paKET&quot;."><span class="icon-rhythmus-23 icon-xlarge"><span class="path1"></span><span class="path2"></span></span> </button>
-						{/if}
-						{#if ['A','B'].indexOf($level) < 0}
-							<button class="btn btn-lg btn-light v-center m-2" on:click={(e) => {inputFabrik(e, '123')}} title="Bei dem Wort wird die vorletzte Silbe betont (laut) gesprochen, z.B. &quot;heliKOPter&quot;."><span class="icon-rhythmus-123 icon-xlarge"><span class="path1"></span><span class="path2"><span class="path3"></span></span> </button>
-						{/if}
+					<div class="col col-11 col-lg-8 pr-0">
+						<button class="btn btn-secondary btn-icon-round icon-eraser eraseBtn" title="Länge löschen" on:click={() => (popInput('mainLaenge'))}></button>
+						<div class="input__canvas input__canvas--double p-2 my-2">
+							<div class="vokale input__container">
+								{#each currentWord.vokale as {}, i}
+									{#if i === currentWord.mainVokalPos}
+										<input type="text" disabled class="vokaleInput--disabled" maxlength="2" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" value={currentWord.vokale[i]}>
+									{:else}
+										<p class="vokale-vokal">
+											{currentWord.vokale[i]}
+										</p>
+									{/if}
+								{/each}
+							</div>
+							<div class="laenge input__container">
+								{#each currentWord.laenge as {}, i}
+									{#if i === currentWord.mainVokalPos}
+										<i class="icon-large icon-laenge-{inputs['mainLaenge'][0] ?? 'empty' } {task.state === 'again' && !singleChecks['mainLaenge'][0] ? 'color-alert' : ''}" />
+									{:else}
+										<i class="icon-large icon-laenge-empty" />
+									{/if}
+								{/each}
+							</div>
+							<div class="boegen input__container">
+								{#each currentWord.silbenboegen as bogen}
+									<i class="icon-large icon-bogen-{bogen}" />
+								{/each}
+							</div>
+						</div>
+					</div>
+					<div class="col v-center">
+						<div class="laenge__hilfe">
+							<button class="btn btn-primary btn-icon-round icon-question" on:click={() => $showLaengeHilfe ? showLaengeHilfe.set(false) : showLaengeHilfe.set(true) }></button>
+						</div>
+						<button class="btn btn-lg btn-light v-center mr-1" disabled={inputs['mainLaenge'].length >= 1 ? 'disabled' : ''} on:click={() => (addInput('mainLaenge', 'l'))} title="langer Vokal (Selbstlaut, Silbenkönig)"><i class="icon-laenge-l icon-large"></i> </button>
+						<button class="btn btn-lg btn-light v-center" disabled={inputs['mainLaenge'].length >= 1 ? 'disabled' : ''} on:click={() => (addInput('mainLaenge', 'k'))} title="kurzer Vokal (Selbstlaut, Silbenkönig)"><i class="icon-laenge-k icon-large"></i> </button>
 					</div>
 				</div>
 			</div>
 
 			<div class="row mt-5 mb-1">
 				<div class="col">
-					<button class="btn btn-primary float-right" disabled={inputs['fabrik'].length < 1} on:click={() => validate()} title="Kontrollieren"><i class="icon-arrow-right icon-large"></i></button>
+					<button class="btn btn-primary float-right" disabled={inputs['mainLaenge'].length < 1} on:click={() => validate()} title="Kontrollieren"><i class="icon-arrow-right icon-large"></i></button>
 				</div>
 			</div>
 		</div>
 	</section>
 {/if}
 
+<LaengeHelp />
 <Modal {...task} {nextStep} />
 
 <style>
-	.input__container i {
+	.input__container i,
+	.input__container input,
+	.vokale-vokal {
 		width: 40px;
+	}
+	.input__container input,
+	.vokale-vokal {
+		display: inline-block;
+		text-align: center;
+		border: 0;
+		height: 50px;
+		font-size: 1.5rem;
+		margin-right: 5px;
+	}
+	.input__container input {
+		background: rgba(100,100,100,.05);
+		box-shadow: inset 0 0 5px 1px rgb(100 100 100 / 30%);
+		border-radius: 3px;
+	}
+	.input__container input:focus,
+	.input__container input:active {
+		border: 2px solid rgba(100,100,100,.7);
 	}
 	.input__canvas > i {
 		width: 34px;
 		font-size: 50px;
 	}
-	.flex-wrap {
-		flex-wrap: wrap;
+	.vokale {
+		z-index: 1;
 	}
+	.boegen, 
+	.laenge {
+		position: absolute;
+		z-index: 0;
+		top: 25px;
+	}
+	.laenge i {
+		bottom: 15px;
+		margin-right: 5px;
+	}
+	i.icon-laenge-empty {
+		width: 40px;
+		display: inline-block;
+		padding: 0 4px;
+	}
+	.boegen {
+		top: 35px;
+	}
+	.boegen > i {
+		color: #333;
+		font-size: 64px;
+		width: 45px;
+		display: inline-block;
+		position: relative;
+	}
+	.boegen > i:before {
+		position: absolute;
+		top: 0;
+		left: -11px;
+	}
+	.vokaleInput--disabled {
+		color: black;
+	}
+
 </style>

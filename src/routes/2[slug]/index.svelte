@@ -2,9 +2,10 @@
 	export const prerender = true;
 	import { page } from '$app/stores';
 	import { fade } from 'svelte/transition';
-	import { modul, level, wortScore, wortProgress, showModal, showStats, stats } from '../../stores/stores.js';
+	import { modul, level, wortScore, wortProgress, showModal, showStats, showLaengeHilfe, stats } from '../../stores/stores.js';
 	import * as data from '$lib/data-live.js';
 	import Modal from '$lib/Modal/index.svelte';
+	import LaengeHelp from '$lib/LaengeHelp/index.svelte';
 	
 	// on reload determine module and level from slug
 	let slug;
@@ -19,6 +20,10 @@
 	wortProgress.set(0);
 	
 	let currentWord;
+	let imageFile;
+	async function loadImg(path) {
+		imageFile = await fetch(`${path}${currentWord.wort.toLowerCase()}.jpg`);
+	}
 	function getWordList() {
 		const stage = `${$modul}${$level}`.toLowerCase();
 		const activeLists = data.modules[stage];
@@ -29,6 +34,8 @@
 		const currentList = getWordList();
 		const currentWordId = Math.floor(Math.random() * currentList.length)+1;
 		currentWord = currentList.filter(w => w.id === currentWordId)[0];
+		currentWord.mainVokalPos = currentWord.silbenboegen.indexOf("g");
+		loadImg('assets/words/img/');
 		playAudio('assets/words/audio/', currentWord.wort);
 	}
 	getCurrentWord();
@@ -41,20 +48,21 @@
 				silbenboegen: false
 			},
 			{
-				laenge: false,
-				vokale: false
+				mainLaenge: false,
+				mainVokal: false
 			}
 		];
 		task.state = 'undefined';
 		task.step = 0;
+		task.timeout = undefined;
 	}
 	resetTask();
 	
 	let inputs = {};
 	function resetInputs() {
 		inputs.silbenboegen = [];
-		inputs.laenge = [];
-		inputs.vokale = [];
+		inputs.mainLaenge = [];
+		inputs.mainVokal = [];
 	}
 	resetInputs();
 
@@ -65,12 +73,12 @@
 			progress: 0
 		},
 		{
-			handle: 'vokale',			
+			handle: 'mainVokal',			
 			score: 0,
 			progress: 0
 		},
 		{
-			handle: 'laenge',			
+			handle: 'mainLaenge',			
 			score: 0,
 			progress: 0
 		}
@@ -89,7 +97,7 @@
 
 	function checkInput(key) {
 		if(task.step === 1) checkSingleInputs(key);
-		if(JSON.stringify(inputs[key]).toLowerCase().replace(/[\s'"]+/g, "") === JSON.stringify(currentWord[key]).toLowerCase().replace(/[\s'"]+/g, "")) {
+		if(JSON.stringify(inputs[key]).toLowerCase().replace(/[\[\]\s'"]+/g, "") === JSON.stringify(currentWord[key]).toLowerCase().replace(/[\[\]\s'"]+/g, "")) {
 			return true;
 		}
 		return false;
@@ -99,7 +107,10 @@
 	function checkSingleInputs(key) {
 		let checks = [];
 		inputs[key].forEach((input, index) => {
-			if(JSON.stringify(input).toLowerCase().replace(/[\s'"]+/g, "") === JSON.stringify(currentWord[key][index]).toLowerCase().replace(/[\s'"]+/g, "")) {
+			let parsedInput = JSON.stringify(input).toLowerCase().replace(/[\s'"]+/g, "");
+			let ref = typeof currentWord[key] === 'string' ? currentWord[key] : currentWord[key][i];
+			let parsedRef = JSON.stringify(ref).toLowerCase().replace(/[\s'"]+/g, "");
+			if(parsedInput === parsedRef) {
 				checks.push(true);
 			} else {
 				checks.push(false);
@@ -122,7 +133,7 @@
 			task.message = 'Richtig!';
 			task.sub = 'Weiter so.';
 			task.state = 'correct';
-			setTimeout(() => {
+			task.timeout = setTimeout(() => {
                 nextStep();
             }, 3000);
 		} else if(task.state === 'undefined') {
@@ -144,6 +155,7 @@
 
 	function nextStep() {
 		if(task.steps.length === task.step+1 && (task.state === 'correct' || task.state === 'next')) {
+			clearTimeout( task.timeout );
 			if(task.steps.every(step => Object.values(step).every(item => item))) {
 				wortScore.set($wortScore + 1);
 			}
@@ -177,6 +189,12 @@
 			audio.play();
 		}
 	}
+
+	function init(el, index){
+		if(index === 0) {
+			el.focus();
+		}
+	}
 </script>
 
 {#if task.step === 0 && ((!$showModal || $showStats) || (!checkInput('silbenboegen') && (task.state === 'again' || task.state === 'edited'))) }
@@ -184,8 +202,8 @@
 		<div class="form col col-12 col-lg-6 m-auto py-4 px-3">
 			<div class="word row">
 				<div class="col text-align-center">
-					<button title="Wort anhören" on:click={() => playAudio('assets/words/audio/', currentWord.wort)} class="a word__img inline-block">
-						<img src={`assets/words/img/${currentWord.wort.toLowerCase()}.jpg`} alt="{currentWord.wort}">
+					<button title="Wort anhören" autofocus on:click={() => playAudio('assets/words/audio/', currentWord.wort)} class="a word__img inline-block">
+						{#if imageFile}<img src={imageFile.url} alt={currentWord.wort}>{/if}
 						<div class="icon-headphones"></div>
 					</button>
 				</div>
@@ -224,7 +242,7 @@
 			<div class="word row">
 				<div class="col text-align-center">
 					<button title="Wort anhören" on:click={() => playAudio('assets/words/audio/', currentWord.wort)} class="a word__img inline-block">
-						<img src={`assets/words/img/${currentWord.wort.toLowerCase()}.jpg`} alt="word">
+						{#if imageFile}<img src={imageFile.url} alt={currentWord.wort}>{/if}
 						<div class="icon-headphones"></div>
 					</button>
 				</div>
@@ -234,16 +252,26 @@
 				<h3 class="ml-3 mb-0">Vokale und Vokallänge</h3>
 				<div class="row">
 					<div class="col col-11 col-lg-8 pr-0">
-						<button class="btn btn-secondary btn-icon-round icon-eraser eraseBtn" title="Länge löschen" on:click={() => (popInput('laenge'))}></button>
+						<button class="btn btn-secondary btn-icon-round icon-eraser eraseBtn" title="Länge löschen" on:click={() => (popInput('mainLaenge'))}></button>
 						<div class="input__canvas input__canvas--double p-2 my-2">
 							<div class="vokale input__container">
 								{#each currentWord.vokale as {}, i}
-									<input type="text" class="vokaleInput {task.state === 'again' && !singleChecks['vokale'][i] ? 'alert' : ''}" bind:value={inputs['vokale'][i]} maxlength="2" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+									{#if i === currentWord.mainVokalPos}
+										<input type="text" autofocus class="vokaleInput {task.state === 'again' && !singleChecks['mainVokal'][0] ? 'alert' : ''}" bind:value={inputs['mainVokal'][0]} maxlength="2" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+									{:else}
+										<p class="vokale-vokal">
+											{currentWord.vokale[i]}
+										</p>
+									{/if}
 								{/each}
 							</div>
 							<div class="laenge input__container">
 								{#each currentWord.laenge as {}, i}
-									<i class="icon-large icon-laenge-{inputs['laenge'][i] ?? 'empty' } {task.state === 'again' && !singleChecks['laenge'][i] ? 'color-alert' : ''}" />
+									{#if i === currentWord.mainVokalPos}
+										<i class="icon-large icon-laenge-{inputs['mainLaenge'][0] ?? 'empty' } {task.state === 'again' && !singleChecks['mainLaenge'][0] ? 'color-alert' : ''}" />
+									{:else}
+										<i class="icon-large icon-laenge-empty" />
+									{/if}
 								{/each}
 							</div>
 							<div class="boegen input__container">
@@ -254,57 +282,50 @@
 						</div>
 					</div>
 					<div class="col v-center">
-						<button class="btn btn-lg btn-light v-center mr-1" disabled={inputs['laenge'].length >= currentWord.laenge.length ? 'disabled' : ''} on:click={() => (addInput('laenge', 'l'))} title="langer Vokal (Selbstlaut, Silbenkönig)"><i class="icon-laenge-l icon-large"></i> </button>
-						<button class="btn btn-lg btn-light v-center" disabled={inputs['laenge'].length >= currentWord.laenge.length ? 'disabled' : ''} on:click={() => (addInput('laenge', 'k'))} title="kurzer Vokal (Selbstlaut, Silbenkönig)"><i class="icon-laenge-k icon-large"></i> </button>
-					</div>
-				</div>
-			</div>
-
-			<div class="row mt-4 mb-1">
-				<div class="col">
-					<div class="helpBox">
-						<span class="label icon-headphones" title="Wie klingt ein langes oder kurzes … ?"></span>
-						<button class="btn btn-secondary" on:click={() => playAudio('../assets/help/laenge/', 'a')}><b>A</b></button>
-						<button class="btn btn-secondary" on:click={() => playAudio('../assets/help/laenge/', 'e')}><b>E</b></button>
-						<button class="btn btn-secondary" on:click={() => playAudio('../assets/help/laenge/', 'i')}><b>I</b></button>
-						<button class="btn btn-secondary" on:click={() => playAudio('../assets/help/laenge/', 'o')}><b>O</b></button>
-						<button class="btn btn-secondary" on:click={() => playAudio('../assets/help/laenge/', 'u')}><b>U</b></button>
-						<button class="btn btn-secondary" on:click={() => playAudio('../assets/help/laenge/', 'ae')}><b>Ä</b></button>
-						<button class="btn btn-secondary" on:click={() => playAudio('../assets/help/laenge/', 'oe')}><b>Ö</b></button>
-						<button class="btn btn-secondary" on:click={() => playAudio('../assets/help/laenge/', 'ue')}><b>Ü</b></button>
+						<div class="laenge__hilfe">
+							<button class="btn btn-primary btn-icon-round icon-question" on:click={() => $showLaengeHilfe ? showLaengeHilfe.set(false) : showLaengeHilfe.set(true) }></button>
+						</div>
+						<button class="btn btn-lg btn-light v-center mr-1" disabled={inputs['mainLaenge'].length >= 1 ? 'disabled' : ''} on:click={() => (addInput('mainLaenge', 'l'))} title="langer Vokal (Selbstlaut, Silbenkönig)"><i class="icon-laenge-l icon-large"></i> </button>
+						<button class="btn btn-lg btn-light v-center" disabled={inputs['mainLaenge'].length >= 1 ? 'disabled' : ''} on:click={() => (addInput('mainLaenge', 'k'))} title="kurzer Vokal (Selbstlaut, Silbenkönig)"><i class="icon-laenge-k icon-large"></i> </button>
 					</div>
 				</div>
 			</div>
 
 			<div class="row mt-5 mb-1">
 				<div class="col">
-					<button class="btn btn-primary float-right" disabled={inputs['laenge'].length < 1 && inputs['vokale'].length < 1} on:click={() => validate()} title="Kontrollieren"><i class="icon-arrow-right icon-large"></i></button>
+					<button class="btn btn-primary float-right" disabled={inputs['mainLaenge'].length < 1 || inputs['mainVokal'].length < 1} on:click={() => validate()} title="Kontrollieren"><i class="icon-arrow-right icon-large"></i></button>
 				</div>
 			</div>
 		</div>
 	</section>
 {/if}
 
+<LaengeHelp />
 <Modal {...task} {nextStep} />
 
 <style>
 	.input__container i,
-	.input__container input {
+	.input__container input,
+	.vokale-vokal {
 		width: 40px;
 	}
-	.input__container input {
+	.input__container input,
+	.vokale-vokal {
+		display: inline-block;
 		text-align: center;
-		background: transparent;
 		border: 0;
-		box-shadow: inset 0 0 15px rgb(100,100,100,.15);
-		border-radius: 3px;
 		height: 50px;
 		font-size: 1.5rem;
 		margin-right: 5px;
 	}
+	.input__container input {
+		background: rgba(100,100,100,.05);
+		box-shadow: inset 0 0 5px 1px rgb(100 100 100 / 30%);
+		border-radius: 3px;
+	}
 	.input__container input:focus,
 	.input__container input:active {
-		border: 2px solid rgba(150,150,150,.5);
+		border: 2px solid rgba(100,100,100,.7);
 	}
 	.input__canvas > i {
 		width: 34px;
@@ -344,31 +365,4 @@
 		left: -11px;
 	}
 
-	.helpBox {
-		border-radius: 5px;
-		border: 2px solid #ccc;
-		background: #f2f2ff;
-		box-shadow: 0 0 0 2px #fff;
-		padding: .5rem 0 0 3rem;
-		position: relative;
-	}
-	.helpBox .btn {
-		margin: 0 .15rem .5rem;
-		min-width: 2rem;
-	}
-	.label {
-		font-size: 1.5rem;
-		line-height: 100%;
-		color: #555;
-		margin: 0;
-		background: #e0e0e0;
-		border-radius: 2px 0 0 2px;
-		padding: 0.5rem;
-		top: 0;
-		left: 0;
-		position: absolute;
-		height: 100%;
-		display: flex;
-		align-items: center;
-	}
 </style>

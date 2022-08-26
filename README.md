@@ -4,9 +4,17 @@
 This is a web app designed for pracicing german ortography, based on an educational concept named "Wörterpass".
 This app is based on svelte kit and scss.
 
+
+## Requirements
+
+`node`/`npm` need to be running.
+
 ## Development
 
 ```bash
+# install dependencies
+> npm install
+
 # start svelte dev, including filewatcher
 > npm run dev
 

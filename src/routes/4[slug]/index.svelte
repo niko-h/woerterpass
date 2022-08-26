@@ -19,6 +19,10 @@
 	wortProgress.set(0);
 	
 	let currentWord;
+	let imageFile;
+	async function loadImg(path) {
+		imageFile = await fetch(`${path}${currentWord.wort.toLowerCase()}.jpg`);
+	}
 	function getWordList() {
 		const stage = `${$modul}${$level}`.toLowerCase();
 		const activeLists = data.modules[stage];
@@ -29,6 +33,7 @@
 		const currentList = getWordList();
 		const currentWordId = Math.floor(Math.random() * currentList.length)+1;
 		currentWord = currentList.filter(w => w.id === currentWordId)[0];
+		loadImg('assets/words/img/');
 		playAudio('assets/words/audio/', currentWord.wort);
 	}
 	getCurrentWord();
@@ -47,6 +52,7 @@
 		];
 		task.state = 'undefined';
 		task.step = 0;
+		task.timeout = undefined;
 	}
 	resetTask();
 	
@@ -119,7 +125,7 @@
 			task.message = 'Richtig!';
 			task.sub = 'Weiter so.';
 			task.state = 'correct';
-			setTimeout(() => {
+			task.timeout = setTimeout(() => {
                 nextStep();
             }, 3000);
 		} else if(task.state === 'undefined') {
@@ -139,6 +145,7 @@
 	}
 
 	function nextStep() {
+		clearTimeout( task.timeout );
 		if(task.state === 'correct' || task.state === 'next') {
 			if(task.steps.every(step => Object.values(step).every(item => item))) {
 				wortScore.set($wortScore + 1);
@@ -179,8 +186,8 @@
 		<div class="form col col-12 col-lg-8 m-auto py-4 px-3 px-sm">
 			<div class="word row">
 				<div class="col text-align-center">
-					<button title="Wort anhören" on:click={() => playAudio('assets/words/audio/', currentWord.wort)} class="a word__img inline-block">
-						<img src={`assets/words/img/${currentWord.wort.toLowerCase()}.jpg`} alt={currentWord.wort}>
+					<button title="Wort anhören" autofocus on:click={() => playAudio('assets/words/audio/', currentWord.wort)} class="a word__img inline-block">
+						{#if imageFile}<img src={imageFile.url} alt={currentWord.wort}>{/if}
 						<div class="icon-headphones"></div>
 					</button>
 				</div>
@@ -209,8 +216,8 @@
 						{/if}
 						<div class="col rythm__col height--auto">
 							<button class="btn btn-lg btn-light rythm__btn {inputs.fabrik[0] === '2' ? 'focus' : ''}" on:click={() => {popInput('fabrik');addInput('fabrik', '2');}} title="Das Wort hat nur eine Silbe, z.B. &quot;Hund&quot;."><i class="icon-rhythmus-2 icon-large"></i></button>
-							<button class="btn btn-lg btn-light rythm__btn {inputs.fabrik[0] === '23' ? 'focus' : ''}" on:click={() => {popInput('fabrik');addInput('fabrik', '23');}} title="Bei dem Wort wird die letzte Silbe betont (laut) gesprochen, z.B. &quot;paKET&quot;."><i class="icon-rhythmus-12 icon-large"></i></button>
-							<button class="btn btn-lg btn-light rythm__btn {inputs.fabrik[0] === '12' ? 'focus' : ''}" on:click={() => {popInput('fabrik');addInput('fabrik', '12');}}><i title="Das Wort hat zwei Silben, die betonte (laute) Silbe ist am Anfang, z.B. &quot;AUto&quot;."><span class="icon-rhythmus-23 icon-large"><span class="path1"></span><span class="path2"></span></span></i></button>
+							<button class="btn btn-lg btn-light rythm__btn {inputs.fabrik[0] === '23' ? 'focus' : ''}" on:click={() => {popInput('fabrik');addInput('fabrik', '23');}} title="Bei dem Wort wird die erste Silbe betont (laut) gesprochen, z.B. &quot;AUto&quot;."><i class="icon-rhythmus-12 icon-large"></i></button>
+							<button class="btn btn-lg btn-light rythm__btn {inputs.fabrik[0] === '12' ? 'focus' : ''}" on:click={() => {popInput('fabrik');addInput('fabrik', '12');}}><i title="Das Wort hat zwei Silben, die betonte (laute) Silbe ist am Ende, z.B. &quot;paKET&quot;."><span class="icon-rhythmus-23 icon-large"><span class="path1"></span><span class="path2"></span></span></i></button>
 							<button class="btn btn-lg btn-light rythm__btn {inputs.fabrik[0] === '123' ? 'focus' : ''}" on:click={() => {popInput('fabrik');addInput('fabrik', '123');}}><i title="Bei dem Wort wird die vorletzte Silbe betont (laut) gesprochen, z.B. &quot;heliKOPter&quot;."><span class="icon-rhythmus-123 icon-large"><span class="path1"></span><span class="path2"><span class="path3"></span></span></i></button>
 						</div>
 					</div>

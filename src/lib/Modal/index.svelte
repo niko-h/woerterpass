@@ -43,7 +43,7 @@
             <button class="btn btn-secondary icon-close" on:click={() => {showStats.set(false);showModal.set(false);}}></button>
             <h2 class="mb-4">Auswertung</h2>
             {#each $stats as stat, index}
-                <!-- Sonderfall für Module 5C und 5E -->
+                <!-- Sonderfall für Module 5C, 5E und 6B -->
                 {#if naseCK || stat.handle !== 'naseCK'}
                     <div class="row v-center pt-2 pb-2">
                         <div class="col col-5 h-center">
@@ -63,12 +63,19 @@
             {/each}
         {:else }
             <center>
+                {#if state === 'correct'}
+                    <img src="assets/img/smiley-happy.svg" alt="Happy smiley">
+                {:else if state === 'again'}
+                    <img src="assets/img/smiley-ok.svg" alt="Ok happy smiley">
+                {:else}
+                    <img src="assets/img/smiley-sad.svg" alt="Sad smiley">
+                {/if}
                 <h1>{message}</h1>
                 <h2>{sub}</h2>
             </center>
             <div class="bottom">
                 {#if state === 'correct' } <Spinner />{/if}
-                <button class="btn btn-primary" on:click={() => nextStep()}>{state === 'again' ? 'Nochmal versuchen': 'Weiter'}</button>
+                <button class="btn btn-primary" autofocus on:click={() => nextStep()}>{state === 'again' ? 'Nochmal versuchen': 'Weiter'}</button>
             </div>
         {/if}
     </div>
@@ -147,7 +154,18 @@
     }
     @media (max-width:1200px){
         .modal .h1,h1{
+            font-size:calc(1.375rem + 2vw)
+        }
+    }
+    @media (max-width:768px){
+        .modal .h1,h1{
             font-size:calc(1.375rem + 3.5vw)
         }
+    }
+    .smiley-mouth {
+        fill:#ffffff;
+        stroke:#000000;
+        stroke-width:11;
+        stroke-linecap:round
     }
 </style>

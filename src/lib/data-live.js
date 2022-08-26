@@ -215,7 +215,7 @@ export const saph2 = [
         "silbenboegen":      ["g"],
         "vokale":            ["au"],
         "laenge":            ["l"],
-        "mainVokal":         "au",
+        "mainVokal":         "Au",
         "mainLaenge":        "l",
         "fabrik":            "2",
         "nase":              "",
@@ -295,7 +295,7 @@ export const saph2 = [
         "silbenboegen":      ["g"],
         "vokale":            ["au"],
         "laenge":            ["l"],
-        "mainVokal":         "au",
+        "mainVokal":         "Au",
         "mainLaenge":        "l",
         "fabrik":            "2",
         "nase":              "",
@@ -311,7 +311,7 @@ export const saph2 = [
         "silbenboegen":      ["g"],
         "vokale":            ["au"],
         "laenge":            ["l"],
-        "mainVokal":         "au",
+        "mainVokal":         "Au",
         "mainLaenge":        "l",
         "fabrik":            "2",
         "nase":              "",
@@ -487,7 +487,7 @@ export const saph2 = [
         "silbenboegen":      ["g"],
         "vokale":            ["au"],
         "laenge":            ["l"],
-        "mainVokal":         "au",
+        "mainVokal":         "Au",
         "mainLaenge":        "l",
         "fabrik":            "2",
         "nase":              "",
@@ -615,7 +615,7 @@ export const saph2 = [
         "silbenboegen":      ["g"],
         "vokale":            ["au"],
         "laenge":            ["l"],
-        "mainVokal":         "au",
+        "mainVokal":         "Au",
         "mainLaenge":        "l",
         "fabrik":            "2",
         "nase":              "",
@@ -791,7 +791,7 @@ export const saph2 = [
         "silbenboegen":      ["g"],
         "vokale":            ["au"],
         "laenge":            ["l"],
-        "mainVokal":         "au",
+        "mainVokal":         "Au",
         "mainLaenge":        "l",
         "fabrik":            "2",
         "nase":              "",
@@ -1143,7 +1143,7 @@ export const saph2 = [
         "silbenboegen":      ["g"],
         "vokale":            ["au"],
         "laenge":            ["l"],
-        "mainVokal":         "au",
+        "mainVokal":         "Au",
         "mainLaenge":        "l",
         "fabrik":            "2",
         "nase":              "",
@@ -1643,7 +1643,7 @@ export const saph23 = [
         "silbenboegen":      ["g", "k"],
         "vokale":            ["au", "e"],
         "laenge":            ["l", "k"],
-        "mainVokal":         "au",
+        "mainVokal":         "Au",
         "mainLaenge":        "l",
         "fabrik":            "23",
         "nase":              "ge",
@@ -1655,22 +1655,6 @@ export const saph23 = [
 
  {         
         "id":                4,
-        "wort":              "Auto",
-        "silbenboegen":      ["g", "k"],
-        "vokale":            ["Au", "o"],
-        "laenge":            ["l", "l"],
-        "mainVokal":         "au",
-        "mainLaenge":        "l",
-        "fabrik":            "23",
-        "nase":              "to",
-        "naseCK":            "to",
-        "kopierersilbe":     "au",
-        "grossgeschrieben":  true,
-        "wortart":           "n"
-    },
-
- {         
-        "id":                5,
         "wort":              "baden",
         "silbenboegen":      ["g", "k"],
         "vokale":            ["a", "e"],
@@ -1686,12 +1670,12 @@ export const saph23 = [
     },
 
  {         
-        "id":                6,
+        "id":                5,
         "wort":              "bauen",
         "silbenboegen":      ["g", "k"],
         "vokale":            ["au", "e"],
         "laenge":            ["l", "k"],
-        "mainVokal":         "au",
+        "mainVokal":         "Au",
         "mainLaenge":        "l",
         "fabrik":            "23",
         "nase":              "en",
@@ -1702,7 +1686,7 @@ export const saph23 = [
     },
 
  {         
-        "id":                7,
+        "id":                6,
         "wort":              "Biene",
         "silbenboegen":      ["g", "k"],
         "vokale":            ["ie", "e"],
@@ -1718,7 +1702,7 @@ export const saph23 = [
     },
 
  {         
-        "id":                8,
+        "id":                7,
         "wort":              "Birne",
         "silbenboegen":      ["g", "k"],
         "vokale":            ["i", "e"],
@@ -1734,7 +1718,7 @@ export const saph23 = [
     },
 
  {         
-        "id":                9,
+        "id":                8,
         "wort":              "Blume",
         "silbenboegen":      ["g", "k"],
         "vokale":            ["u", "e"],
@@ -1750,7 +1734,7 @@ export const saph23 = [
     },
 
  {         
-        "id":                10,
+        "id":                9,
         "wort":              "Boden",
         "silbenboegen":      ["g", "k"],
         "vokale":            ["o", "e"],
@@ -1766,7 +1750,7 @@ export const saph23 = [
     },
 
  {         
-        "id":                11,
+        "id":                10,
         "wort":              "Bruder",
         "silbenboegen":      ["g", "k"],
         "vokale":            ["u", "e"],
@@ -1782,7 +1766,7 @@ export const saph23 = [
     },
 
  {         
-        "id":                12,
+        "id":                11,
         "wort":              "danken",
         "silbenboegen":      ["g", "k"],
         "vokale":            ["a", "e"],
@@ -1798,7 +1782,7 @@ export const saph23 = [
     },
 
  {         
-        "id":                13,
+        "id":                12,
         "wort":              "denken",
         "silbenboegen":      ["g", "k"],
         "vokale":            ["e", "e"],
@@ -1814,7 +1798,7 @@ export const saph23 = [
     },
 
  {         
-        "id":                14,
+        "id":                13,
         "wort":              "dunkel",
         "silbenboegen":      ["g", "k"],
         "vokale":            ["u", "e"],
@@ -1830,7 +1814,7 @@ export const saph23 = [
     },
 
  {         
-        "id":                15,
+        "id":                14,
         "wort":              "Eier",
         "silbenboegen":      ["g", "k"],
         "vokale":            ["ei", "e"],
@@ -1846,7 +1830,7 @@ export const saph23 = [
     },
 
  {         
-        "id":                16,
+        "id":                15,
         "wort":              "Eltern",
         "silbenboegen":      ["g", "k"],
         "vokale":            ["e", "e"],
@@ -1862,7 +1846,7 @@ export const saph23 = [
     },
 
  {         
-        "id":                17,
+        "id":                16,
         "wort":              "Ende",
         "silbenboegen":      ["g", "k"],
         "vokale":            ["e", "e"],
@@ -1878,7 +1862,7 @@ export const saph23 = [
     },
 
  {         
-        "id":                18,
+        "id":                17,
         "wort":              "Ente",
         "silbenboegen":      ["g", "k"],
         "vokale":            ["e", "e"],
@@ -1894,7 +1878,7 @@ export const saph23 = [
     },
 
  {         
-        "id":                19,
+        "id":                18,
         "wort":              "Erde",
         "silbenboegen":      ["g", "k"],
         "vokale":            ["e", "e"],
@@ -1910,7 +1894,7 @@ export const saph23 = [
     },
 
  {         
-        "id":                20,
+        "id":                19,
         "wort":              "Eule",
         "silbenboegen":      ["g", "k"],
         "vokale":            ["eu", "e"],
@@ -1926,23 +1910,7 @@ export const saph23 = [
     },
 
  {         
-        "id":                21,
-        "wort":              "Euro",
-        "silbenboegen":      ["g", "k"],
-        "vokale":            ["Eu", "o"],
-        "laenge":            ["l", "l"],
-        "mainVokal":         "eu",
-        "mainLaenge":        "l",
-        "fabrik":            "23",
-        "nase":              "ro",
-        "naseCK":            "ro",
-        "kopierersilbe":     "eu",
-        "grossgeschrieben":  true,
-        "wortart":           "n"
-    },
-
- {         
-        "id":                22,
+        "id":                20,
         "wort":              "fahren",
         "silbenboegen":      ["g", "k"],
         "vokale":            ["a", "e"],
@@ -1958,7 +1926,7 @@ export const saph23 = [
     },
 
  {         
-        "id":                23,
+        "id":                21,
         "wort":              "fangen",
         "silbenboegen":      ["g", "k"],
         "vokale":            ["a", "e"],
@@ -1974,7 +1942,7 @@ export const saph23 = [
     },
 
  {         
-        "id":                24,
+        "id":                22,
         "wort":              "Fenster",
         "silbenboegen":      ["g", "k"],
         "vokale":            ["e", "e"],
@@ -1990,7 +1958,7 @@ export const saph23 = [
     },
 
  {         
-        "id":                25,
+        "id":                23,
         "wort":              "finden",
         "silbenboegen":      ["g", "k"],
         "vokale":            ["i", "e"],
@@ -2006,7 +1974,7 @@ export const saph23 = [
     },
 
  {         
-        "id":                26,
+        "id":                24,
         "wort":              "Finger",
         "silbenboegen":      ["g", "k"],
         "vokale":            ["i", "e"],
@@ -2022,7 +1990,7 @@ export const saph23 = [
     },
 
  {         
-        "id":                27,
+        "id":                25,
         "wort":              "fliegen",
         "silbenboegen":      ["g", "k"],
         "vokale":            ["ie", "e"],
@@ -2038,7 +2006,7 @@ export const saph23 = [
     },
 
  {         
-        "id":                28,
+        "id":                26,
         "wort":              "Flügel",
         "silbenboegen":      ["g", "k"],
         "vokale":            ["ü", "e"],
@@ -2054,7 +2022,7 @@ export const saph23 = [
     },
 
  {         
-        "id":                29,
+        "id":                27,
         "wort":              "fragen",
         "silbenboegen":      ["g", "k"],
         "vokale":            ["a", "e"],
@@ -2070,7 +2038,7 @@ export const saph23 = [
     },
 
  {         
-        "id":                30,
+        "id":                28,
         "wort":              "freuen",
         "silbenboegen":      ["g", "k"],
         "vokale":            ["eu", "e"],
@@ -2086,7 +2054,7 @@ export const saph23 = [
     },
 
  {         
-        "id":                31,
+        "id":                29,
         "wort":              "Garten",
         "silbenboegen":      ["g", "k"],
         "vokale":            ["a", "e"],
@@ -2102,7 +2070,7 @@ export const saph23 = [
     },
 
  {         
-        "id":                32,
+        "id":                30,
         "wort":              "geben",
         "silbenboegen":      ["g", "k"],
         "vokale":            ["e", "e"],
@@ -2118,7 +2086,7 @@ export const saph23 = [
     },
 
  {         
-        "id":                33,
+        "id":                31,
         "wort":              "gehen",
         "silbenboegen":      ["g", "k"],
         "vokale":            ["e", "e"],
@@ -2134,7 +2102,7 @@ export const saph23 = [
     },
 
  {         
-        "id":                34,
+        "id":                32,
         "wort":              "gestern",
         "silbenboegen":      ["g", "k"],
         "vokale":            ["e", "e"],
@@ -2150,7 +2118,7 @@ export const saph23 = [
     },
 
  {         
-        "id":                35,
+        "id":                33,
         "wort":              "halten",
         "silbenboegen":      ["g", "k"],
         "vokale":            ["a", "e"],
@@ -2166,7 +2134,7 @@ export const saph23 = [
     },
 
  {         
-        "id":                36,
+        "id":                34,
         "wort":              "Hase",
         "silbenboegen":      ["g", "k"],
         "vokale":            ["a", "e"],
@@ -2182,7 +2150,7 @@ export const saph23 = [
     },
 
  {         
-        "id":                37,
+        "id":                35,
         "wort":              "heute",
         "silbenboegen":      ["g", "k"],
         "vokale":            ["eu", "e"],
@@ -2198,7 +2166,7 @@ export const saph23 = [
     },
 
  {         
-        "id":                38,
+        "id":                36,
         "wort":              "Hose",
         "silbenboegen":      ["g", "k"],
         "vokale":            ["o", "e"],
@@ -2214,7 +2182,7 @@ export const saph23 = [
     },
 
  {         
-        "id":                39,
+        "id":                37,
         "wort":              "hundert",
         "silbenboegen":      ["g", "k"],
         "vokale":            ["u", "e"],
@@ -2230,23 +2198,7 @@ export const saph23 = [
     },
 
  {         
-        "id":                40,
-        "wort":              "Igel",
-        "silbenboegen":      ["g", "k"],
-        "vokale":            ["i", "e"],
-        "laenge":            ["l", "k"],
-        "mainVokal":         "i",
-        "mainLaenge":        "l",
-        "fabrik":            "23",
-        "nase":              "gel",
-        "naseCK":            "gel",
-        "kopierersilbe":     "i",
-        "grossgeschrieben":  true,
-        "wortart":           "n"
-    },
-
- {         
-        "id":                41,
+        "id":                38,
         "wort":              "Junge",
         "silbenboegen":      ["g", "k"],
         "vokale":            ["u", "e"],
@@ -2262,7 +2214,7 @@ export const saph23 = [
     },
 
  {         
-        "id":                42,
+        "id":                39,
         "wort":              "Katze",
         "silbenboegen":      ["g", "k"],
         "vokale":            ["a", "e"],
@@ -2278,12 +2230,12 @@ export const saph23 = [
     },
 
  {         
-        "id":                43,
+        "id":                40,
         "wort":              "kaufen",
         "silbenboegen":      ["g", "k"],
         "vokale":            ["au", "e"],
         "laenge":            ["l", "k"],
-        "mainVokal":         "au",
+        "mainVokal":         "Au",
         "mainLaenge":        "l",
         "fabrik":            "23",
         "nase":              "fen",
@@ -2294,12 +2246,12 @@ export const saph23 = [
     },
 
  {         
-        "id":                44,
+        "id":                41,
         "wort":              "laufen",
         "silbenboegen":      ["g", "k"],
         "vokale":            ["au", "e"],
         "laenge":            ["l", "k"],
-        "mainVokal":         "au",
+        "mainVokal":         "Au",
         "mainLaenge":        "l",
         "fabrik":            "23",
         "nase":              "en",
@@ -2310,7 +2262,7 @@ export const saph23 = [
     },
 
  {         
-        "id":                45,
+        "id":                42,
         "wort":              "leise",
         "silbenboegen":      ["g", "k"],
         "vokale":            ["ei", "e"],
@@ -2326,7 +2278,7 @@ export const saph23 = [
     },
 
  {         
-        "id":                46,
+        "id":                43,
         "wort":              "lernen",
         "silbenboegen":      ["g", "k"],
         "vokale":            ["e", "e"],
@@ -2342,7 +2294,7 @@ export const saph23 = [
     },
 
  {         
-        "id":                47,
+        "id":                44,
         "wort":              "lesen",
         "silbenboegen":      ["g", "k"],
         "vokale":            ["e", "e"],
@@ -2358,7 +2310,7 @@ export const saph23 = [
     },
 
  {         
-        "id":                48,
+        "id":                45,
         "wort":              "Leute",
         "silbenboegen":      ["g", "k"],
         "vokale":            ["eu", "e"],
@@ -2374,7 +2326,7 @@ export const saph23 = [
     },
 
  {         
-        "id":                49,
+        "id":                46,
         "wort":              "liegen",
         "silbenboegen":      ["g", "k"],
         "vokale":            ["ie", "e"],
@@ -2390,7 +2342,7 @@ export const saph23 = [
     },
 
  {         
-        "id":                50,
+        "id":                47,
         "wort":              "malen",
         "silbenboegen":      ["g", "k"],
         "vokale":            ["a", "e"],
@@ -2406,23 +2358,7 @@ export const saph23 = [
     },
 
  {         
-        "id":                51,
-        "wort":              "Monat",
-        "silbenboegen":      ["g", "k"],
-        "vokale":            ["o", "a"],
-        "laenge":            ["l", "k"],
-        "mainVokal":         "o",
-        "mainLaenge":        "l",
-        "fabrik":            "23",
-        "nase":              "nat",
-        "naseCK":            "nat",
-        "kopierersilbe":     "o",
-        "grossgeschrieben":  true,
-        "wortart":           "n"
-    },
-
- {         
-        "id":                52,
+        "id":                48,
         "wort":              "Name",
         "silbenboegen":      ["g", "k"],
         "vokale":            ["a", "e"],
@@ -2438,7 +2374,7 @@ export const saph23 = [
     },
 
  {         
-        "id":                53,
+        "id":                49,
         "wort":              "Nase",
         "silbenboegen":      ["g", "k"],
         "vokale":            ["a", "e"],
@@ -2454,7 +2390,7 @@ export const saph23 = [
     },
 
  {         
-        "id":                54,
+        "id":                50,
         "wort":              "Onkel",
         "silbenboegen":      ["g", "k"],
         "vokale":            ["o", "e"],
@@ -2470,7 +2406,7 @@ export const saph23 = [
     },
 
  {         
-        "id":                55,
+        "id":                51,
         "wort":              "Ostern",
         "silbenboegen":      ["g", "k"],
         "vokale":            ["o", "e"],
@@ -2486,7 +2422,7 @@ export const saph23 = [
     },
 
  {         
-        "id":                56,
+        "id":                52,
         "wort":              "pflanzen",
         "silbenboegen":      ["g", "k"],
         "vokale":            ["a", "e"],
@@ -2502,12 +2438,12 @@ export const saph23 = [
     },
 
  {         
-        "id":                57,
+        "id":                53,
         "wort":              "Raupe",
         "silbenboegen":      ["g", "k"],
         "vokale":            ["au", "e"],
         "laenge":            ["l", "k"],
-        "mainVokal":         "au",
+        "mainVokal":         "Au",
         "mainLaenge":        "l",
         "fabrik":            "23",
         "nase":              "pe",
@@ -2518,7 +2454,7 @@ export const saph23 = [
     },
 
  {         
-        "id":                58,
+        "id":                54,
         "wort":              "rechnen",
         "silbenboegen":      ["g", "k"],
         "vokale":            ["e", "e"],
@@ -2534,7 +2470,7 @@ export const saph23 = [
     },
 
  {         
-        "id":                59,
+        "id":                55,
         "wort":              "reden",
         "silbenboegen":      ["g", "k"],
         "vokale":            ["e", "e"],
@@ -2550,7 +2486,7 @@ export const saph23 = [
     },
 
  {         
-        "id":                60,
+        "id":                56,
         "wort":              "Regen",
         "silbenboegen":      ["g", "k"],
         "vokale":            ["e", "e"],
@@ -2566,7 +2502,7 @@ export const saph23 = [
     },
 
  {         
-        "id":                61,
+        "id":                57,
         "wort":              "reisen",
         "silbenboegen":      ["g", "k"],
         "vokale":            ["ei", "e"],
@@ -2582,7 +2518,7 @@ export const saph23 = [
     },
 
  {         
-        "id":                62,
+        "id":                58,
         "wort":              "rufen",
         "silbenboegen":      ["g", "k"],
         "vokale":            ["u", "e"],
@@ -2598,7 +2534,7 @@ export const saph23 = [
     },
 
  {         
-        "id":                63,
+        "id":                59,
         "wort":              "sagen",
         "silbenboegen":      ["g", "k"],
         "vokale":            ["a", "e"],
@@ -2614,7 +2550,7 @@ export const saph23 = [
     },
 
  {         
-        "id":                64,
+        "id":                60,
         "wort":              "scheinen",
         "silbenboegen":      ["g", "k"],
         "vokale":            ["ei", "e"],
@@ -2630,7 +2566,7 @@ export const saph23 = [
     },
 
  {         
-        "id":                65,
+        "id":                61,
         "wort":              "Schere",
         "silbenboegen":      ["g", "k"],
         "vokale":            ["e", "e"],
@@ -2646,7 +2582,7 @@ export const saph23 = [
     },
 
  {         
-        "id":                66,
+        "id":                62,
         "wort":              "schlafen",
         "silbenboegen":      ["g", "k"],
         "vokale":            ["a", "e"],
@@ -2662,7 +2598,7 @@ export const saph23 = [
     },
 
  {         
-        "id":                67,
+        "id":                63,
         "wort":              "schlagen",
         "silbenboegen":      ["g", "k"],
         "vokale":            ["a", "e"],
@@ -2678,7 +2614,7 @@ export const saph23 = [
     },
 
  {         
-        "id":                68,
+        "id":                64,
         "wort":              "schneiden",
         "silbenboegen":      ["g", "k"],
         "vokale":            ["ei", "e"],
@@ -2694,7 +2630,7 @@ export const saph23 = [
     },
 
  {         
-        "id":                69,
+        "id":                65,
         "wort":              "schreiben",
         "silbenboegen":      ["g", "k"],
         "vokale":            ["ei", "e"],
@@ -2710,7 +2646,7 @@ export const saph23 = [
     },
 
  {         
-        "id":                70,
+        "id":                66,
         "wort":              "Schule",
         "silbenboegen":      ["g", "k"],
         "vokale":            ["u", "e"],
@@ -2726,7 +2662,7 @@ export const saph23 = [
     },
 
  {         
-        "id":                71,
+        "id":                67,
         "wort":              "Seife",
         "silbenboegen":      ["g", "k"],
         "vokale":            ["ei", "e"],
@@ -2742,7 +2678,7 @@ export const saph23 = [
     },
 
  {         
-        "id":                72,
+        "id":                68,
         "wort":              "sieben",
         "silbenboegen":      ["g", "k"],
         "vokale":            ["ie", "e"],
@@ -2758,7 +2694,7 @@ export const saph23 = [
     },
 
  {         
-        "id":                73,
+        "id":                69,
         "wort":              "singen",
         "silbenboegen":      ["g", "k"],
         "vokale":            ["i", "e"],
@@ -2774,7 +2710,7 @@ export const saph23 = [
     },
 
  {         
-        "id":                74,
+        "id":                70,
         "wort":              "sitzen",
         "silbenboegen":      ["g", "k"],
         "vokale":            ["i", "e"],
@@ -2790,7 +2726,7 @@ export const saph23 = [
     },
 
  {         
-        "id":                75,
+        "id":                71,
         "wort":              "sparen",
         "silbenboegen":      ["g", "k"],
         "vokale":            ["a", "e"],
@@ -2806,7 +2742,7 @@ export const saph23 = [
     },
 
  {         
-        "id":                76,
+        "id":                72,
         "wort":              "spielen",
         "silbenboegen":      ["g", "k"],
         "vokale":            ["ie", "e"],
@@ -2822,7 +2758,7 @@ export const saph23 = [
     },
 
  {         
-        "id":                77,
+        "id":                73,
         "wort":              "stehen",
         "silbenboegen":      ["g", "k"],
         "vokale":            ["e", "e"],
@@ -2838,7 +2774,7 @@ export const saph23 = [
     },
 
  {         
-        "id":                78,
+        "id":                74,
         "wort":              "Stunde",
         "silbenboegen":      ["g", "k"],
         "vokale":            ["u", "e"],
@@ -2854,7 +2790,7 @@ export const saph23 = [
     },
 
  {         
-        "id":                79,
+        "id":                75,
         "wort":              "suchen",
         "silbenboegen":      ["g", "k"],
         "vokale":            ["u", "e"],
@@ -2870,7 +2806,7 @@ export const saph23 = [
     },
 
  {         
-        "id":                80,
+        "id":                76,
         "wort":              "Tante",
         "silbenboegen":      ["g", "k"],
         "vokale":            ["a", "e"],
@@ -2886,7 +2822,7 @@ export const saph23 = [
     },
 
  {         
-        "id":                81,
+        "id":                77,
         "wort":              "Tasche",
         "silbenboegen":      ["g", "k"],
         "vokale":            ["a", "e"],
@@ -2902,7 +2838,7 @@ export const saph23 = [
     },
 
  {         
-        "id":                82,
+        "id":                78,
         "wort":              "Tochter",
         "silbenboegen":      ["g", "k"],
         "vokale":            ["o", "e"],
@@ -2918,7 +2854,7 @@ export const saph23 = [
     },
 
  {         
-        "id":                83,
+        "id":                79,
         "wort":              "tragen",
         "silbenboegen":      ["g", "k"],
         "vokale":            ["a", "e"],
@@ -2934,7 +2870,7 @@ export const saph23 = [
     },
 
  {         
-        "id":                84,
+        "id":                80,
         "wort":              "trinken",
         "silbenboegen":      ["g", "k"],
         "vokale":            ["i", "e"],
@@ -2950,7 +2886,7 @@ export const saph23 = [
     },
 
  {         
-        "id":                85,
+        "id":                81,
         "wort":              "turnen",
         "silbenboegen":      ["g", "k"],
         "vokale":            ["u", "e"],
@@ -2966,7 +2902,7 @@ export const saph23 = [
     },
 
  {         
-        "id":                86,
+        "id":                82,
         "wort":              "Vater",
         "silbenboegen":      ["g", "k"],
         "vokale":            ["a", "e"],
@@ -2982,7 +2918,7 @@ export const saph23 = [
     },
 
  {         
-        "id":                87,
+        "id":                83,
         "wort":              "Vogel",
         "silbenboegen":      ["g", "k"],
         "vokale":            ["o", "e"],
@@ -2998,7 +2934,7 @@ export const saph23 = [
     },
 
  {         
-        "id":                88,
+        "id":                84,
         "wort":              "warten",
         "silbenboegen":      ["g", "k"],
         "vokale":            ["a", "e"],
@@ -3014,7 +2950,7 @@ export const saph23 = [
     },
 
  {         
-        "id":                89,
+        "id":                85,
         "wort":              "waschen",
         "silbenboegen":      ["g", "k"],
         "vokale":            ["a", "e"],
@@ -3030,7 +2966,7 @@ export const saph23 = [
     },
 
  {         
-        "id":                90,
+        "id":                86,
         "wort":              "Wiese",
         "silbenboegen":      ["g", "k"],
         "vokale":            ["ie", "e"],
@@ -3046,7 +2982,7 @@ export const saph23 = [
     },
 
  {         
-        "id":                91,
+        "id":                87,
         "wort":              "Winter",
         "silbenboegen":      ["g", "k"],
         "vokale":            ["i", "e"],
@@ -3062,7 +2998,7 @@ export const saph23 = [
     },
 
  {         
-        "id":                92,
+        "id":                88,
         "wort":              "Woche",
         "silbenboegen":      ["g", "k"],
         "vokale":            ["o", "e"],
@@ -3078,7 +3014,7 @@ export const saph23 = [
     },
 
  {         
-        "id":                93,
+        "id":                89,
         "wort":              "wohnen",
         "silbenboegen":      ["g", "k"],
         "vokale":            ["o", "e"],
@@ -3094,7 +3030,7 @@ export const saph23 = [
     },
 
  {         
-        "id":                94,
+        "id":                90,
         "wort":              "Wurzel",
         "silbenboegen":      ["g", "k"],
         "vokale":            ["u", "e"],
@@ -3110,7 +3046,7 @@ export const saph23 = [
     },
 
  {         
-        "id":                95,
+        "id":                91,
         "wort":              "zeigen",
         "silbenboegen":      ["g", "k"],
         "vokale":            ["ei", "e"],
@@ -3126,7 +3062,7 @@ export const saph23 = [
     },
 
  {         
-        "id":                96,
+        "id":                92,
         "wort":              "Zwiebel",
         "silbenboegen":      ["g", "k"],
         "vokale":            ["ie", "e"],
@@ -3161,22 +3097,6 @@ export const saph123 = [
 
  {         
         "id":                2,
-        "wort":              "Gemüse",
-        "silbenboegen":      ["k", "g", "k"],
-        "vokale":            ["e", "ü", "e"],
-        "laenge":            ["k", "l", "k"],
-        "mainVokal":         "ü",
-        "mainLaenge":        "l",
-        "fabrik":            "123",
-        "nase":              "se",
-        "naseCK":            "se",
-        "kopierersilbe":     "ü",
-        "grossgeschrieben":  true,
-        "wortart":           "n"
-    },
-
- {         
-        "id":                3,
         "wort":              "Kalender",
         "silbenboegen":      ["k", "g", "k"],
         "vokale":            ["a", "e", "e"],
@@ -3192,7 +3112,7 @@ export const saph123 = [
     },
 
  {         
-        "id":                4,
+        "id":                3,
         "wort":              "Matratze",
         "silbenboegen":      ["k", "g", "k"],
         "vokale":            ["a", "a", "e"],
@@ -3208,7 +3128,7 @@ export const saph123 = [
     },
 
  {         
-        "id":                5,
+        "id":                4,
         "wort":              "Melone",
         "silbenboegen":      ["k", "g", "k"],
         "vokale":            ["e", "o", "e"],
@@ -3224,7 +3144,7 @@ export const saph123 = [
     },
 
  {         
-        "id":                6,
+        "id":                5,
         "wort":              "Minute",
         "silbenboegen":      ["k", "g", "k"],
         "vokale":            ["i", "u", "e"],
@@ -3240,7 +3160,7 @@ export const saph123 = [
     },
 
  {         
-        "id":                7,
+        "id":                6,
         "wort":              "Orange",
         "silbenboegen":      ["k", "g", "k"],
         "vokale":            ["O", "a", "e"],
@@ -3256,7 +3176,7 @@ export const saph123 = [
     },
 
  {         
-        "id":                8,
+        "id":                7,
         "wort":              "Pantoffeln",
         "silbenboegen":      ["k", "g", "k"],
         "vokale":            ["a", "o", "e"],
@@ -3272,7 +3192,7 @@ export const saph123 = [
     },
 
  {         
-        "id":                9,
+        "id":                8,
         "wort":              "Perücke",
         "silbenboegen":      ["k", "g", "k"],
         "vokale":            ["e", "ü", "e"],
@@ -3288,7 +3208,7 @@ export const saph123 = [
     },
 
  {         
-        "id":                10,
+        "id":                9,
         "wort":              "Pistole",
         "silbenboegen":      ["k", "g", "k"],
         "vokale":            ["i", "o", "e"],
@@ -3304,12 +3224,12 @@ export const saph123 = [
     },
 
  {         
-        "id":                11,
+        "id":                10,
         "wort":              "Posaune",
         "silbenboegen":      ["k", "g", "k"],
         "vokale":            ["o", "au", "e"],
         "laenge":            ["l", "l", "k"],
-        "mainVokal":         "au",
+        "mainVokal":         "Au",
         "mainLaenge":        "l",
         "fabrik":            "123",
         "nase":              "ne",
@@ -3320,7 +3240,7 @@ export const saph123 = [
     },
 
  {         
-        "id":                12,
+        "id":                11,
         "wort":              "Rakete",
         "silbenboegen":      ["k", "g", "k"],
         "vokale":            ["a", "e", "e"],
@@ -3336,7 +3256,7 @@ export const saph123 = [
     },
 
  {         
-        "id":                13,
+        "id":                12,
         "wort":              "Sekunde",
         "silbenboegen":      ["k", "g", "k"],
         "vokale":            ["e", "u", "e"],
@@ -3359,7 +3279,7 @@ export const saphx23 = [
         "silbenboegen":      ["k", "k", "g"],
         "vokale":            ["A", "o", "au"],
         "laenge":            ["k", "l", "l"],
-        "mainVokal":         "au",
+        "mainVokal":         "Au",
         "mainLaenge":        "l",
         "fabrik":            "12",
         "nase":              "",
@@ -3483,22 +3403,6 @@ export const saphx23 = [
 
  {         
         "id":                9,
-        "wort":              "Frühling",
-        "silbenboegen":      ["g", "k"],
-        "vokale":            ["ü", "i"],
-        "laenge":            ["l", "k"],
-        "mainVokal":         "ü",
-        "mainLaenge":        "l",
-        "fabrik":            "23",
-        "nase":              "ling",
-        "naseCK":            "ling",
-        "kopierersilbe":     "üh",
-        "grossgeschrieben":  true,
-        "wortart":           "n"
-    },
-
- {         
-        "id":                10,
         "wort":              "fünf",
         "silbenboegen":      ["g"],
         "vokale":            ["ü"],
@@ -3514,7 +3418,7 @@ export const saphx23 = [
     },
 
  {         
-        "id":                11,
+        "id":                10,
         "wort":              "gelb",
         "silbenboegen":      ["g"],
         "vokale":            ["e"],
@@ -3530,7 +3434,7 @@ export const saphx23 = [
     },
 
  {         
-        "id":                12,
+        "id":                11,
         "wort":              "Geld",
         "silbenboegen":      ["g"],
         "vokale":            ["e"],
@@ -3546,23 +3450,7 @@ export const saphx23 = [
     },
 
  {         
-        "id":                13,
-        "wort":              "gesund",
-        "silbenboegen":      ["k", "g"],
-        "vokale":            ["e", "u"],
-        "laenge":            ["k", "k"],
-        "mainVokal":         "u",
-        "mainLaenge":        "k",
-        "fabrik":            "12",
-        "nase":              "",
-        "naseCK":            "",
-        "kopierersilbe":     "und",
-        "grossgeschrieben":  false,
-        "wortart":           "a"
-    },
-
- {         
-        "id":                14,
+        "id":                12,
         "wort":              "Gitarre",
         "silbenboegen":      ["k", "g", "k"],
         "vokale":            ["i", "a", "e"],
@@ -3578,7 +3466,7 @@ export const saphx23 = [
     },
 
  {         
-        "id":                15,
+        "id":                13,
         "wort":              "Hand",
         "silbenboegen":      ["g"],
         "vokale":            ["a"],
@@ -3594,7 +3482,7 @@ export const saphx23 = [
     },
 
  {         
-        "id":                16,
+        "id":                14,
         "wort":              "Helikopter",
         "silbenboegen":      ["k", "k", "g", "k"],
         "vokale":            ["e", "i", "o", "e"],
@@ -3610,7 +3498,7 @@ export const saphx23 = [
     },
 
  {         
-        "id":                17,
+        "id":                15,
         "wort":              "Hemd",
         "silbenboegen":      ["g"],
         "vokale":            ["e"],
@@ -3626,7 +3514,7 @@ export const saphx23 = [
     },
 
  {         
-        "id":                18,
+        "id":                16,
         "wort":              "Hund",
         "silbenboegen":      ["g"],
         "vokale":            ["u"],
@@ -3642,7 +3530,7 @@ export const saphx23 = [
     },
 
  {         
-        "id":                19,
+        "id":                17,
         "wort":              "Kind",
         "silbenboegen":      ["g"],
         "vokale":            ["i"],
@@ -3658,7 +3546,7 @@ export const saphx23 = [
     },
 
  {         
-        "id":                20,
+        "id":                18,
         "wort":              "Kleid",
         "silbenboegen":      ["g"],
         "vokale":            ["ei"],
@@ -3674,7 +3562,7 @@ export const saphx23 = [
     },
 
  {         
-        "id":                21,
+        "id":                19,
         "wort":              "Krokodil",
         "silbenboegen":      ["k", "k", "g"],
         "vokale":            ["o", "o", "i"],
@@ -3690,7 +3578,7 @@ export const saphx23 = [
     },
 
  {         
-        "id":                22,
+        "id":                20,
         "wort":              "Limonade",
         "silbenboegen":      ["k", "k", "g", "k"],
         "vokale":            ["i", "o", "a", "e"],
@@ -3706,7 +3594,7 @@ export const saphx23 = [
     },
 
  {         
-        "id":                23,
+        "id":                21,
         "wort":              "Lineal",
         "silbenboegen":      ["k", "k", "g"],
         "vokale":            ["i", "e", "a"],
@@ -3722,7 +3610,7 @@ export const saphx23 = [
     },
 
  {         
-        "id":                24,
+        "id":                22,
         "wort":              "Lokomotive",
         "silbenboegen":      ["k", "k", "k", "g", "k"],
         "vokale":            ["o", "o", "o", "i", "e"],
@@ -3738,7 +3626,7 @@ export const saphx23 = [
     },
 
  {         
-        "id":                25,
+        "id":                23,
         "wort":              "Mädchen",
         "silbenboegen":      ["g", "k"],
         "vokale":            ["ä", "e"],
@@ -3754,7 +3642,7 @@ export const saphx23 = [
     },
 
  {         
-        "id":                26,
+        "id":                24,
         "wort":              "Marmelade",
         "silbenboegen":      ["k", "k", "g", "k"],
         "vokale":            ["a", "e", "a", "e"],
@@ -3770,7 +3658,7 @@ export const saphx23 = [
     },
 
  {         
-        "id":                27,
+        "id":                25,
         "wort":              "Maschine",
         "silbenboegen":      ["k", "g", "k"],
         "vokale":            ["a", "i", "e"],
@@ -3786,7 +3674,7 @@ export const saphx23 = [
     },
 
  {         
-        "id":                28,
+        "id":                26,
         "wort":              "Medizin",
         "silbenboegen":      ["k", "k", "g"],
         "vokale":            ["e", "i", "i"],
@@ -3802,7 +3690,7 @@ export const saphx23 = [
     },
 
  {         
-        "id":                29,
+        "id":                27,
         "wort":              "Mikrofon",
         "silbenboegen":      ["k", "k", "g"],
         "vokale":            ["i", "o", "o"],
@@ -3818,7 +3706,7 @@ export const saphx23 = [
     },
 
  {         
-        "id":                30,
+        "id":                28,
         "wort":              "Mikroskop",
         "silbenboegen":      ["k", "k", "g"],
         "vokale":            ["i", "o", "o"],
@@ -3834,7 +3722,7 @@ export const saphx23 = [
     },
 
  {         
-        "id":                31,
+        "id":                29,
         "wort":              "Mund",
         "silbenboegen":      ["g"],
         "vokale":            ["u"],
@@ -3850,7 +3738,7 @@ export const saphx23 = [
     },
 
  {         
-        "id":                32,
+        "id":                30,
         "wort":              "Pferd",
         "silbenboegen":      ["g"],
         "vokale":            ["e"],
@@ -3866,7 +3754,7 @@ export const saphx23 = [
     },
 
  {         
-        "id":                33,
+        "id":                31,
         "wort":              "Salamander",
         "silbenboegen":      ["k", "k", "g", "k"],
         "vokale":            ["a", "a", "a", "e"],
@@ -3882,7 +3770,7 @@ export const saphx23 = [
     },
 
  {         
-        "id":                34,
+        "id":                32,
         "wort":              "Sand",
         "silbenboegen":      ["g"],
         "vokale":            ["a"],
@@ -3898,7 +3786,7 @@ export const saphx23 = [
     },
 
  {         
-        "id":                35,
+        "id":                33,
         "wort":              "schön",
         "silbenboegen":      ["g"],
         "vokale":            ["ö"],
@@ -3914,7 +3802,7 @@ export const saphx23 = [
     },
 
  {         
-        "id":                36,
+        "id":                34,
         "wort":              "Sohn",
         "silbenboegen":      ["g"],
         "vokale":            ["O"],
@@ -3930,7 +3818,7 @@ export const saphx23 = [
     },
 
  {         
-        "id":                37,
+        "id":                35,
         "wort":              "üben",
         "silbenboegen":      ["g", "k"],
         "vokale":            ["ü", "e"],
@@ -3946,7 +3834,7 @@ export const saphx23 = [
     },
 
  {         
-        "id":                38,
+        "id":                36,
         "wort":              "Weg",
         "silbenboegen":      ["g"],
         "vokale":            ["e"],
@@ -3962,7 +3850,7 @@ export const saphx23 = [
     },
 
  {         
-        "id":                39,
+        "id":                37,
         "wort":              "weiß",
         "silbenboegen":      ["g"],
         "vokale":            ["ei"],
@@ -3978,7 +3866,7 @@ export const saphx23 = [
     },
 
  {         
-        "id":                40,
+        "id":                38,
         "wort":              "Wind",
         "silbenboegen":      ["g"],
         "vokale":            ["i"],
@@ -3994,7 +3882,7 @@ export const saphx23 = [
     },
 
  {         
-        "id":                41,
+        "id":                39,
         "wort":              "wünschen",
         "silbenboegen":      ["g", "k"],
         "vokale":            ["ü", "e"],
@@ -4010,7 +3898,7 @@ export const saphx23 = [
     },
 
  {         
-        "id":                42,
+        "id":                40,
         "wort":              "Zahl",
         "silbenboegen":      ["g"],
         "vokale":            ["a"],
@@ -4026,7 +3914,7 @@ export const saphx23 = [
     },
 
  {         
-        "id":                43,
+        "id":                41,
         "wort":              "Zahn",
         "silbenboegen":      ["g"],
         "vokale":            ["a"],
@@ -4042,7 +3930,7 @@ export const saphx23 = [
     },
 
  {         
-        "id":                44,
+        "id":                42,
         "wort":              "zehn",
         "silbenboegen":      ["g"],
         "vokale":            ["e"],
@@ -4058,7 +3946,7 @@ export const saphx23 = [
     },
 
  {         
-        "id":                45,
+        "id":                43,
         "wort":              "zwölf",
         "silbenboegen":      ["g"],
         "vokale":            ["ö"],
@@ -4361,38 +4249,6 @@ export const iekurz4 = [
         "kopierersilbe":     "ild",
         "grossgeschrieben":  false,
         "wortart":           "v"
-    },
-
- {         
-        "id":                19,
-        "wort":              "windig",
-        "silbenboegen":      ["g", "k"],
-        "vokale":            ["i", "i"],
-        "laenge":            ["k", "k"],
-        "mainVokal":         "i",
-        "mainLaenge":        "k",
-        "fabrik":            "23",
-        "nase":              "dig",
-        "naseCK":            "dig",
-        "kopierersilbe":     "in",
-        "grossgeschrieben":  false,
-        "wortart":           "a"
-    },
-
- {         
-        "id":                20,
-        "wort":              "witzig",
-        "silbenboegen":      ["g", "k"],
-        "vokale":            ["i", "i"],
-        "laenge":            ["k", "k"],
-        "mainVokal":         "i",
-        "mainLaenge":        "k",
-        "fabrik":            "23",
-        "nase":              "zig",
-        "naseCK":            "zig",
-        "kopierersilbe":     "it",
-        "grossgeschrieben":  false,
-        "wortart":           "a"
     },
 ];
 
@@ -4753,22 +4609,6 @@ export const ielang4 = [
 export const ieunbie4 = [
  {         
         "id":                1,
-        "wort":              "addieren",
-        "silbenboegen":      ["k", "g", "k"],
-        "vokale":            ["a", "ie", "e"],
-        "laenge":            ["k", "l", "k"],
-        "mainVokal":         "ie",
-        "mainLaenge":        "l",
-        "fabrik":            "123",
-        "nase":              "ren",
-        "naseCK":            "ren",
-        "kopierersilbe":     "ie",
-        "grossgeschrieben":  false,
-        "wortart":           "v"
-    },
-
- {         
-        "id":                2,
         "wort":              "dosieren",
         "silbenboegen":      ["k", "g", "k"],
         "vokale":            ["o", "ie", "e"],
@@ -4784,7 +4624,7 @@ export const ieunbie4 = [
     },
 
  {         
-        "id":                3,
+        "id":                2,
         "wort":              "Fantasie",
         "silbenboegen":      ["k", "k", "g"],
         "vokale":            ["a", "a", "ie"],
@@ -4800,7 +4640,7 @@ export const ieunbie4 = [
     },
 
  {         
-        "id":                4,
+        "id":                3,
         "wort":              "Genie",
         "silbenboegen":      ["k", "g"],
         "vokale":            ["e", "ie"],
@@ -4816,7 +4656,7 @@ export const ieunbie4 = [
     },
 
  {         
-        "id":                5,
+        "id":                4,
         "wort":              "Geometrie",
         "silbenboegen":      ["k", "k", "k", "g"],
         "vokale":            ["e", "o", "e", "ie"],
@@ -4832,7 +4672,7 @@ export const ieunbie4 = [
     },
 
  {         
-        "id":                6,
+        "id":                5,
         "wort":              "kapiert",
         "silbenboegen":      ["k", "g"],
         "vokale":            ["a", "ie"],
@@ -4848,7 +4688,7 @@ export const ieunbie4 = [
     },
 
  {         
-        "id":                7,
+        "id":                6,
         "wort":              "kariert",
         "silbenboegen":      ["k", "g"],
         "vokale":            ["a", "ie"],
@@ -4864,7 +4704,7 @@ export const ieunbie4 = [
     },
 
  {         
-        "id":                8,
+        "id":                7,
         "wort":              "Klavier",
         "silbenboegen":      ["k", "g"],
         "vokale":            ["a", "ie"],
@@ -4880,7 +4720,7 @@ export const ieunbie4 = [
     },
 
  {         
-        "id":                9,
+        "id":                8,
         "wort":              "Kopie",
         "silbenboegen":      ["k", "g"],
         "vokale":            ["o", "ie"],
@@ -4896,7 +4736,7 @@ export const ieunbie4 = [
     },
 
  {         
-        "id":                10,
+        "id":                9,
         "wort":              "Manieren",
         "silbenboegen":      ["k", "g", "k"],
         "vokale":            ["a", "ie", "e"],
@@ -4912,7 +4752,7 @@ export const ieunbie4 = [
     },
 
  {         
-        "id":                11,
+        "id":                10,
         "wort":              "motivieren",
         "silbenboegen":      ["k", "k", "g", "k"],
         "vokale":            ["o", "i", "ie", "e"],
@@ -4928,7 +4768,7 @@ export const ieunbie4 = [
     },
 
  {         
-        "id":                12,
+        "id":                11,
         "wort":              "notieren",
         "silbenboegen":      ["k", "g", "k"],
         "vokale":            ["o", "ie", "e"],
@@ -4944,7 +4784,7 @@ export const ieunbie4 = [
     },
 
  {         
-        "id":                13,
+        "id":                12,
         "wort":              "Papier",
         "silbenboegen":      ["k", "g"],
         "vokale":            ["a", "ie"],
@@ -4960,7 +4800,7 @@ export const ieunbie4 = [
     },
 
  {         
-        "id":                14,
+        "id":                13,
         "wort":              "Revier",
         "silbenboegen":      ["k", "g"],
         "vokale":            ["e", "ie"],
@@ -4976,7 +4816,7 @@ export const ieunbie4 = [
     },
 
  {         
-        "id":                15,
+        "id":                14,
         "wort":              "Scharnier",
         "silbenboegen":      ["k", "g"],
         "vokale":            ["a", "ie"],
@@ -4992,7 +4832,7 @@ export const ieunbie4 = [
     },
 
  {         
-        "id":                16,
+        "id":                15,
         "wort":              "Turnier",
         "silbenboegen":      ["k", "g"],
         "vokale":            ["u", "ie"],
@@ -5059,22 +4899,6 @@ export const ieunbregel4 = [
 
  {         
         "id":                4,
-        "wort":              "Cousine",
-        "silbenboegen":      ["k", "g", "k"],
-        "vokale":            ["ou", "i", "e"],
-        "laenge":            ["l", "l", "k"],
-        "mainVokal":         "i",
-        "mainLaenge":        "l",
-        "fabrik":            "123",
-        "nase":              "ne",
-        "naseCK":            "ne",
-        "kopierersilbe":     "i",
-        "grossgeschrieben":  true,
-        "wortart":           "n"
-    },
-
- {         
-        "id":                5,
         "wort":              "Delfin",
         "silbenboegen":      ["k", "g"],
         "vokale":            ["e", "i"],
@@ -5090,7 +4914,7 @@ export const ieunbregel4 = [
     },
 
  {         
-        "id":                6,
+        "id":                5,
         "wort":              "Detektiv",
         "silbenboegen":      ["k", "k", "g"],
         "vokale":            ["e", "e", "i"],
@@ -5106,7 +4930,7 @@ export const ieunbregel4 = [
     },
 
  {         
-        "id":                7,
+        "id":                6,
         "wort":              "Gardine",
         "silbenboegen":      ["k", "g", "k"],
         "vokale":            ["a", "i", "e"],
@@ -5122,7 +4946,7 @@ export const ieunbregel4 = [
     },
 
  {         
-        "id":                8,
+        "id":                7,
         "wort":              "Kabine",
         "silbenboegen":      ["k", "g", "k"],
         "vokale":            ["a", "i", "e"],
@@ -5138,7 +4962,7 @@ export const ieunbregel4 = [
     },
 
  {         
-        "id":                9,
+        "id":                8,
         "wort":              "Kamin",
         "silbenboegen":      ["k", "g"],
         "vokale":            ["a", "i"],
@@ -5154,7 +4978,7 @@ export const ieunbregel4 = [
     },
 
  {         
-        "id":                10,
+        "id":                9,
         "wort":              "kreativ",
         "silbenboegen":      ["k", "k", "g"],
         "vokale":            ["e", "a", "i"],
@@ -5170,7 +4994,7 @@ export const ieunbregel4 = [
     },
 
  {         
-        "id":                11,
+        "id":                10,
         "wort":              "Krokodil",
         "silbenboegen":      ["k", "k", "g"],
         "vokale":            ["o", "o", "i"],
@@ -5181,6 +5005,22 @@ export const ieunbregel4 = [
         "nase":              "",
         "naseCK":            "",
         "kopierersilbe":     "il",
+        "grossgeschrieben":  true,
+        "wortart":           "n"
+    },
+
+ {         
+        "id":                11,
+        "wort":              "Kusine",
+        "silbenboegen":      ["k", "g", "k"],
+        "vokale":            ["ou", "i", "e"],
+        "laenge":            ["l", "l", "k"],
+        "mainVokal":         "i",
+        "mainLaenge":        "l",
+        "fabrik":            "123",
+        "nase":              "ne",
+        "naseCK":            "ne",
+        "kopierersilbe":     "i",
         "grossgeschrieben":  true,
         "wortart":           "n"
     },
@@ -6644,43 +6484,11 @@ export const ck5 = [
         "grossgeschrieben":  true,
         "wortart":           "n"
     },
-
- {         
-        "id":                35,
-        "wort":              "zurück",
-        "silbenboegen":      ["k", "g"],
-        "vokale":            ["u", "ü"],
-        "laenge":            ["l", "k"],
-        "mainVokal":         "ü",
-        "mainLaenge":        "k",
-        "fabrik":            "12",
-        "nase":              "",
-        "naseCK":            "",
-        "kopierersilbe":     "ück",
-        "grossgeschrieben":  false,
-        "wortart":           ""
-    },
 ];
 
 export const tz5 = [
  {         
         "id":                1,
-        "wort":              "Differenz",
-        "silbenboegen":      ["k", "k", "g"],
-        "vokale":            ["i", "e", "e"],
-        "laenge":            ["k", "k", "k"],
-        "mainVokal":         "e",
-        "mainLaenge":        "k",
-        "fabrik":            "12",
-        "nase":              "",
-        "naseCK":            "",
-        "kopierersilbe":     "enz",
-        "grossgeschrieben":  true,
-        "wortart":           "n"
-    },
-
- {         
-        "id":                2,
         "wort":              "flitzen",
         "silbenboegen":      ["g", "k"],
         "vokale":            ["i", "e"],
@@ -6696,7 +6504,7 @@ export const tz5 = [
     },
 
  {         
-        "id":                3,
+        "id":                2,
         "wort":              "ganz",
         "silbenboegen":      ["g"],
         "vokale":            ["a"],
@@ -6712,7 +6520,7 @@ export const tz5 = [
     },
 
  {         
-        "id":                4,
+        "id":                3,
         "wort":              "Herz",
         "silbenboegen":      ["g"],
         "vokale":            ["e"],
@@ -6728,7 +6536,7 @@ export const tz5 = [
     },
 
  {         
-        "id":                5,
+        "id":                4,
         "wort":              "Holz",
         "silbenboegen":      ["g"],
         "vokale":            ["O"],
@@ -6744,7 +6552,7 @@ export const tz5 = [
     },
 
  {         
-        "id":                6,
+        "id":                5,
         "wort":              "jetzt",
         "silbenboegen":      ["g"],
         "vokale":            ["e"],
@@ -6760,7 +6568,7 @@ export const tz5 = [
     },
 
  {         
-        "id":                7,
+        "id":                6,
         "wort":              "Katze",
         "silbenboegen":      ["g", "k"],
         "vokale":            ["a", "e"],
@@ -6776,7 +6584,7 @@ export const tz5 = [
     },
 
  {         
-        "id":                8,
+        "id":                7,
         "wort":              "Kerze",
         "silbenboegen":      ["g", "k"],
         "vokale":            ["e", "e"],
@@ -6792,7 +6600,7 @@ export const tz5 = [
     },
 
  {         
-        "id":                9,
+        "id":                8,
         "wort":              "kitzeln",
         "silbenboegen":      ["g", "k"],
         "vokale":            ["i", "e"],
@@ -6808,7 +6616,7 @@ export const tz5 = [
     },
 
  {         
-        "id":                10,
+        "id":                9,
         "wort":              "kratzen",
         "silbenboegen":      ["g", "k"],
         "vokale":            ["a", "e"],
@@ -6824,7 +6632,7 @@ export const tz5 = [
     },
 
  {         
-        "id":                11,
+        "id":                10,
         "wort":              "kurz",
         "silbenboegen":      ["g"],
         "vokale":            ["u"],
@@ -6840,7 +6648,7 @@ export const tz5 = [
     },
 
  {         
-        "id":                12,
+        "id":                11,
         "wort":              "Mütze",
         "silbenboegen":      ["g", "k"],
         "vokale":            ["ü", "e"],
@@ -6856,7 +6664,7 @@ export const tz5 = [
     },
 
  {         
-        "id":                13,
+        "id":                12,
         "wort":              "Netz",
         "silbenboegen":      ["g"],
         "vokale":            ["e"],
@@ -6872,7 +6680,7 @@ export const tz5 = [
     },
 
  {         
-        "id":                14,
+        "id":                13,
         "wort":              "Panzer",
         "silbenboegen":      ["g", "k"],
         "vokale":            ["a", "e"],
@@ -6888,7 +6696,7 @@ export const tz5 = [
     },
 
  {         
-        "id":                15,
+        "id":                14,
         "wort":              "Pelz",
         "silbenboegen":      ["g"],
         "vokale":            ["e"],
@@ -6904,7 +6712,7 @@ export const tz5 = [
     },
 
  {         
-        "id":                16,
+        "id":                15,
         "wort":              "Pflanze",
         "silbenboegen":      ["g", "k"],
         "vokale":            ["a", "e"],
@@ -6920,7 +6728,7 @@ export const tz5 = [
     },
 
  {         
-        "id":                17,
+        "id":                16,
         "wort":              "Pfütze",
         "silbenboegen":      ["g", "k"],
         "vokale":            ["ü", "e"],
@@ -6936,7 +6744,7 @@ export const tz5 = [
     },
 
  {         
-        "id":                18,
+        "id":                17,
         "wort":              "Pilz",
         "silbenboegen":      ["g"],
         "vokale":            ["i"],
@@ -6952,7 +6760,7 @@ export const tz5 = [
     },
 
  {         
-        "id":                19,
+        "id":                18,
         "wort":              "Platz",
         "silbenboegen":      ["g"],
         "vokale":            ["a"],
@@ -6968,7 +6776,7 @@ export const tz5 = [
     },
 
  {         
-        "id":                20,
+        "id":                19,
         "wort":              "putzen",
         "silbenboegen":      ["g", "k"],
         "vokale":            ["u", "e"],
@@ -6984,7 +6792,7 @@ export const tz5 = [
     },
 
  {         
-        "id":                21,
+        "id":                20,
         "wort":              "Salz",
         "silbenboegen":      ["g"],
         "vokale":            ["a"],
@@ -7000,7 +6808,7 @@ export const tz5 = [
     },
 
  {         
-        "id":                22,
+        "id":                21,
         "wort":              "Satz",
         "silbenboegen":      ["g"],
         "vokale":            ["a"],
@@ -7016,7 +6824,7 @@ export const tz5 = [
     },
 
  {         
-        "id":                23,
+        "id":                22,
         "wort":              "Schatz",
         "silbenboegen":      ["g"],
         "vokale":            ["a"],
@@ -7032,7 +6840,7 @@ export const tz5 = [
     },
 
  {         
-        "id":                24,
+        "id":                23,
         "wort":              "Schmutz",
         "silbenboegen":      ["g"],
         "vokale":            ["u"],
@@ -7048,7 +6856,7 @@ export const tz5 = [
     },
 
  {         
-        "id":                25,
+        "id":                24,
         "wort":              "schützen",
         "silbenboegen":      ["g", "k"],
         "vokale":            ["ü", "e"],
@@ -7064,7 +6872,7 @@ export const tz5 = [
     },
 
  {         
-        "id":                26,
+        "id":                25,
         "wort":              "schwarz",
         "silbenboegen":      ["g"],
         "vokale":            ["a"],
@@ -7080,7 +6888,7 @@ export const tz5 = [
     },
 
  {         
-        "id":                27,
+        "id":                26,
         "wort":              "schwitzen",
         "silbenboegen":      ["g", "k"],
         "vokale":            ["i", "e"],
@@ -7096,7 +6904,7 @@ export const tz5 = [
     },
 
  {         
-        "id":                28,
+        "id":                27,
         "wort":              "sitzen",
         "silbenboegen":      ["g", "k"],
         "vokale":            ["i", "e"],
@@ -7112,7 +6920,7 @@ export const tz5 = [
     },
 
  {         
-        "id":                29,
+        "id":                28,
         "wort":              "spitz",
         "silbenboegen":      ["g"],
         "vokale":            ["i"],
@@ -7128,7 +6936,7 @@ export const tz5 = [
     },
 
  {         
-        "id":                30,
+        "id":                29,
         "wort":              "Spritze",
         "silbenboegen":      ["g", "k"],
         "vokale":            ["i", "e"],
@@ -7144,7 +6952,7 @@ export const tz5 = [
     },
 
  {         
-        "id":                31,
+        "id":                30,
         "wort":              "Tänzer",
         "silbenboegen":      ["g", "k"],
         "vokale":            ["ä", "e"],
@@ -7160,7 +6968,7 @@ export const tz5 = [
     },
 
  {         
-        "id":                32,
+        "id":                31,
         "wort":              "Tatze",
         "silbenboegen":      ["g", "k"],
         "vokale":            ["a", "e"],
@@ -7176,7 +6984,7 @@ export const tz5 = [
     },
 
  {         
-        "id":                33,
+        "id":                32,
         "wort":              "Wanze",
         "silbenboegen":      ["g", "k"],
         "vokale":            ["a", "e"],
@@ -7189,38 +6997,6 @@ export const tz5 = [
         "kopierersilbe":     "An",
         "grossgeschrieben":  true,
         "wortart":           "n"
-    },
-
- {         
-        "id":                34,
-        "wort":              "winzig",
-        "silbenboegen":      ["g", "k"],
-        "vokale":            ["i", "i"],
-        "laenge":            ["k", "k"],
-        "mainVokal":         "i",
-        "mainLaenge":        "k",
-        "fabrik":            "23",
-        "nase":              "zig",
-        "naseCK":            "zig",
-        "kopierersilbe":     "in",
-        "grossgeschrieben":  false,
-        "wortart":           "a"
-    },
-
- {         
-        "id":                35,
-        "wort":              "witzig",
-        "silbenboegen":      ["g", "k"],
-        "vokale":            ["i", "i"],
-        "laenge":            ["k", "k"],
-        "mainVokal":         "i",
-        "mainLaenge":        "k",
-        "fabrik":            "23",
-        "nase":              "zig",
-        "naseCK":            "zig",
-        "kopierersilbe":     "it",
-        "grossgeschrieben":  false,
-        "wortart":           "a"
     },
 ];
 
@@ -7291,22 +7067,6 @@ export const ss5 = [
 
  {         
         "id":                5,
-        "wort":              "fleißig",
-        "silbenboegen":      ["g", "k"],
-        "vokale":            ["ei", "i"],
-        "laenge":            ["l", "k"],
-        "mainVokal":         "ei",
-        "mainLaenge":        "l",
-        "fabrik":            "23",
-        "nase":              "ßig",
-        "naseCK":            "ßig",
-        "kopierersilbe":     "ei",
-        "grossgeschrieben":  false,
-        "wortart":           "a"
-    },
-
- {         
-        "id":                6,
         "wort":              "Fluss",
         "silbenboegen":      ["g"],
         "vokale":            ["u"],
@@ -7322,7 +7082,7 @@ export const ss5 = [
     },
 
  {         
-        "id":                7,
+        "id":                6,
         "wort":              "Füße",
         "silbenboegen":      ["g", "k"],
         "vokale":            ["ü", "e"],
@@ -7338,7 +7098,7 @@ export const ss5 = [
     },
 
  {         
-        "id":                8,
+        "id":                7,
         "wort":              "gießen",
         "silbenboegen":      ["g", "k"],
         "vokale":            ["ie", "e"],
@@ -7354,7 +7114,7 @@ export const ss5 = [
     },
 
  {         
-        "id":                9,
+        "id":                8,
         "wort":              "groß",
         "silbenboegen":      ["g"],
         "vokale":            ["O"],
@@ -7370,7 +7130,7 @@ export const ss5 = [
     },
 
  {         
-        "id":                10,
+        "id":                9,
         "wort":              "Grüße",
         "silbenboegen":      ["g", "k"],
         "vokale":            ["ü", "e"],
@@ -7386,7 +7146,7 @@ export const ss5 = [
     },
 
  {         
-        "id":                11,
+        "id":                10,
         "wort":              "Kasse",
         "silbenboegen":      ["g", "k"],
         "vokale":            ["a", "e"],
@@ -7402,7 +7162,7 @@ export const ss5 = [
     },
 
  {         
-        "id":                12,
+        "id":                11,
         "wort":              "Klasse",
         "silbenboegen":      ["g", "k"],
         "vokale":            ["a", "e"],
@@ -7418,7 +7178,7 @@ export const ss5 = [
     },
 
  {         
-        "id":                13,
+        "id":                12,
         "wort":              "Kuss",
         "silbenboegen":      ["g"],
         "vokale":            ["u"],
@@ -7434,7 +7194,7 @@ export const ss5 = [
     },
 
  {         
-        "id":                14,
+        "id":                13,
         "wort":              "lassen",
         "silbenboegen":      ["g", "k"],
         "vokale":            ["a", "e"],
@@ -7450,7 +7210,7 @@ export const ss5 = [
     },
 
  {         
-        "id":                15,
+        "id":                14,
         "wort":              "Lose",
         "silbenboegen":      ["g", "k"],
         "vokale":            ["o", "e"],
@@ -7466,7 +7226,7 @@ export const ss5 = [
     },
 
  {         
-        "id":                16,
+        "id":                15,
         "wort":              "messen",
         "silbenboegen":      ["g", "k"],
         "vokale":            ["e", "e"],
@@ -7482,7 +7242,7 @@ export const ss5 = [
     },
 
  {         
-        "id":                17,
+        "id":                16,
         "wort":              "nass",
         "silbenboegen":      ["g"],
         "vokale":            ["a"],
@@ -7498,23 +7258,7 @@ export const ss5 = [
     },
 
  {         
-        "id":                18,
-        "wort":              "Prinzessin",
-        "silbenboegen":      ["k", "g", "k"],
-        "vokale":            ["i", "e", "i"],
-        "laenge":            ["k", "k", "k"],
-        "mainVokal":         "e",
-        "mainLaenge":        "k",
-        "fabrik":            "123",
-        "nase":              "sin",
-        "naseCK":            "sin",
-        "kopierersilbe":     "es",
-        "grossgeschrieben":  true,
-        "wortart":           "n"
-    },
-
- {         
-        "id":                19,
+        "id":                17,
         "wort":              "Rüssel",
         "silbenboegen":      ["g", "k"],
         "vokale":            ["ü", "e"],
@@ -7530,7 +7274,7 @@ export const ss5 = [
     },
 
  {         
-        "id":                20,
+        "id":                18,
         "wort":              "Schloss",
         "silbenboegen":      ["g"],
         "vokale":            ["O"],
@@ -7546,7 +7290,7 @@ export const ss5 = [
     },
 
  {         
-        "id":                21,
+        "id":                19,
         "wort":              "Schlüssel",
         "silbenboegen":      ["g", "k"],
         "vokale":            ["ü", "e"],
@@ -7562,7 +7306,7 @@ export const ss5 = [
     },
 
  {         
-        "id":                22,
+        "id":                20,
         "wort":              "Schüssel",
         "silbenboegen":      ["g", "k"],
         "vokale":            ["ü", "e"],
@@ -7578,7 +7322,7 @@ export const ss5 = [
     },
 
  {         
-        "id":                23,
+        "id":                21,
         "wort":              "Sessel",
         "silbenboegen":      ["g", "k"],
         "vokale":            ["e", "e"],
@@ -7594,7 +7338,7 @@ export const ss5 = [
     },
 
  {         
-        "id":                24,
+        "id":                22,
         "wort":              "Soße",
         "silbenboegen":      ["g", "k"],
         "vokale":            ["o", "e"],
@@ -7610,7 +7354,7 @@ export const ss5 = [
     },
 
  {         
-        "id":                25,
+        "id":                23,
         "wort":              "Spaß",
         "silbenboegen":      ["g"],
         "vokale":            ["a"],
@@ -7626,7 +7370,7 @@ export const ss5 = [
     },
 
  {         
-        "id":                26,
+        "id":                24,
         "wort":              "stoßen",
         "silbenboegen":      ["g", "k"],
         "vokale":            ["o", "e"],
@@ -7642,7 +7386,7 @@ export const ss5 = [
     },
 
  {         
-        "id":                27,
+        "id":                25,
         "wort":              "Straße",
         "silbenboegen":      ["g", "k"],
         "vokale":            ["a", "e"],
@@ -7658,12 +7402,12 @@ export const ss5 = [
     },
 
  {         
-        "id":                28,
+        "id":                26,
         "wort":              "Strauß",
         "silbenboegen":      ["g"],
         "vokale":            ["au"],
         "laenge":            ["l"],
-        "mainVokal":         "au",
+        "mainVokal":         "Au",
         "mainLaenge":        "l",
         "fabrik":            "2",
         "nase":              "",
@@ -7674,7 +7418,7 @@ export const ss5 = [
     },
 
  {         
-        "id":                29,
+        "id":                27,
         "wort":              "süß",
         "silbenboegen":      ["g"],
         "vokale":            ["ü"],
@@ -7690,7 +7434,7 @@ export const ss5 = [
     },
 
  {         
-        "id":                30,
+        "id":                28,
         "wort":              "Tasse",
         "silbenboegen":      ["g", "k"],
         "vokale":            ["a", "e"],
@@ -7706,7 +7450,7 @@ export const ss5 = [
     },
 
  {         
-        "id":                31,
+        "id":                29,
         "wort":              "Vase",
         "silbenboegen":      ["g", "k"],
         "vokale":            ["a", "e"],
@@ -7722,7 +7466,7 @@ export const ss5 = [
     },
 
  {         
-        "id":                32,
+        "id":                30,
         "wort":              "Wiese",
         "silbenboegen":      ["g", "k"],
         "vokale":            ["ie", "e"],
@@ -9329,22 +9073,6 @@ export const su7 = [
 
  {         
         "id":                15,
-        "wort":              "Hoffnung",
-        "silbenboegen":      [],
-        "vokale":            [],
-        "laenge":            [],
-        "mainVokal":         "",
-        "mainLaenge":        "",
-        "fabrik":            "",
-        "nase":              "",
-        "naseCK":            "",
-        "kopierersilbe":     "",
-        "grossgeschrieben":  true,
-        "wortart":           "n"
-    },
-
- {         
-        "id":                16,
         "wort":              "Kindheit",
         "silbenboegen":      [],
         "vokale":            [],
@@ -9360,7 +9088,7 @@ export const su7 = [
     },
 
  {         
-        "id":                17,
+        "id":                16,
         "wort":              "Kleidung",
         "silbenboegen":      [],
         "vokale":            [],
@@ -9376,7 +9104,7 @@ export const su7 = [
     },
 
  {         
-        "id":                18,
+        "id":                17,
         "wort":              "Krankheit",
         "silbenboegen":      [],
         "vokale":            [],
@@ -9392,7 +9120,7 @@ export const su7 = [
     },
 
  {         
-        "id":                19,
+        "id":                18,
         "wort":              "langsam",
         "silbenboegen":      [],
         "vokale":            [],
@@ -9408,7 +9136,7 @@ export const su7 = [
     },
 
  {         
-        "id":                20,
+        "id":                19,
         "wort":              "lebhaft",
         "silbenboegen":      [],
         "vokale":            [],
@@ -9424,7 +9152,7 @@ export const su7 = [
     },
 
  {         
-        "id":                21,
+        "id":                20,
         "wort":              "machbar",
         "silbenboegen":      [],
         "vokale":            [],
@@ -9440,7 +9168,7 @@ export const su7 = [
     },
 
  {         
-        "id":                22,
+        "id":                21,
         "wort":              "Menschheit",
         "silbenboegen":      [],
         "vokale":            [],
@@ -9456,7 +9184,7 @@ export const su7 = [
     },
 
  {         
-        "id":                23,
+        "id":                22,
         "wort":              "mutig",
         "silbenboegen":      [],
         "vokale":            [],
@@ -9472,7 +9200,7 @@ export const su7 = [
     },
 
  {         
-        "id":                24,
+        "id":                23,
         "wort":              "neidisch",
         "silbenboegen":      [],
         "vokale":            [],
@@ -9488,7 +9216,7 @@ export const su7 = [
     },
 
  {         
-        "id":                25,
+        "id":                24,
         "wort":              "nützlich",
         "silbenboegen":      [],
         "vokale":            [],
@@ -9504,7 +9232,7 @@ export const su7 = [
     },
 
  {         
-        "id":                26,
+        "id":                25,
         "wort":              "ratsam",
         "silbenboegen":      [],
         "vokale":            [],
@@ -9520,7 +9248,7 @@ export const su7 = [
     },
 
  {         
-        "id":                27,
+        "id":                26,
         "wort":              "räuberisch",
         "silbenboegen":      [],
         "vokale":            [],
@@ -9536,7 +9264,7 @@ export const su7 = [
     },
 
  {         
-        "id":                28,
+        "id":                27,
         "wort":              "Reichtum",
         "silbenboegen":      [],
         "vokale":            [],
@@ -9552,7 +9280,7 @@ export const su7 = [
     },
 
  {         
-        "id":                29,
+        "id":                28,
         "wort":              "Rettung",
         "silbenboegen":      [],
         "vokale":            [],
@@ -9568,7 +9296,7 @@ export const su7 = [
     },
 
  {         
-        "id":                30,
+        "id":                29,
         "wort":              "Sauberkeit",
         "silbenboegen":      [],
         "vokale":            [],
@@ -9584,7 +9312,7 @@ export const su7 = [
     },
 
  {         
-        "id":                31,
+        "id":                30,
         "wort":              "schlaflos",
         "silbenboegen":      [],
         "vokale":            [],
@@ -9600,7 +9328,7 @@ export const su7 = [
     },
 
  {         
-        "id":                32,
+        "id":                31,
         "wort":              "sonnig",
         "silbenboegen":      [],
         "vokale":            [],
@@ -9616,7 +9344,7 @@ export const su7 = [
     },
 
  {         
-        "id":                33,
+        "id":                32,
         "wort":              "sorglos",
         "silbenboegen":      [],
         "vokale":            [],
@@ -9632,7 +9360,7 @@ export const su7 = [
     },
 
  {         
-        "id":                34,
+        "id":                33,
         "wort":              "sorgsam",
         "silbenboegen":      [],
         "vokale":            [],
@@ -9648,7 +9376,7 @@ export const su7 = [
     },
 
  {         
-        "id":                35,
+        "id":                34,
         "wort":              "sparsam",
         "silbenboegen":      [],
         "vokale":            [],
@@ -9664,7 +9392,7 @@ export const su7 = [
     },
 
  {         
-        "id":                36,
+        "id":                35,
         "wort":              "stürmisch",
         "silbenboegen":      [],
         "vokale":            [],
@@ -9680,7 +9408,7 @@ export const su7 = [
     },
 
  {         
-        "id":                37,
+        "id":                36,
         "wort":              "täglich",
         "silbenboegen":      [],
         "vokale":            [],
@@ -9696,7 +9424,7 @@ export const su7 = [
     },
 
  {         
-        "id":                38,
+        "id":                37,
         "wort":              "Tapferkeit",
         "silbenboegen":      [],
         "vokale":            [],
@@ -9712,7 +9440,7 @@ export const su7 = [
     },
 
  {         
-        "id":                39,
+        "id":                38,
         "wort":              "teilbar",
         "silbenboegen":      [],
         "vokale":            [],
@@ -9728,7 +9456,7 @@ export const su7 = [
     },
 
  {         
-        "id":                40,
+        "id":                39,
         "wort":              "tierisch",
         "silbenboegen":      [],
         "vokale":            [],
@@ -9744,7 +9472,7 @@ export const su7 = [
     },
 
  {         
-        "id":                41,
+        "id":                40,
         "wort":              "typisch",
         "silbenboegen":      [],
         "vokale":            [],
@@ -9760,7 +9488,7 @@ export const su7 = [
     },
 
  {         
-        "id":                42,
+        "id":                41,
         "wort":              "Wildnis",
         "silbenboegen":      [],
         "vokale":            [],
@@ -9776,7 +9504,7 @@ export const su7 = [
     },
 
  {         
-        "id":                43,
+        "id":                42,
         "wort":              "wohnhaft",
         "silbenboegen":      [],
         "vokale":            [],
@@ -9792,7 +9520,7 @@ export const su7 = [
     },
 
  {         
-        "id":                44,
+        "id":                43,
         "wort":              "wunderbar",
         "silbenboegen":      [],
         "vokale":            [],
@@ -9808,7 +9536,7 @@ export const su7 = [
     },
 
  {         
-        "id":                45,
+        "id":                44,
         "wort":              "Zählung",
         "silbenboegen":      [],
         "vokale":            [],
@@ -9824,7 +9552,7 @@ export const su7 = [
     },
 
  {         
-        "id":                46,
+        "id":                45,
         "wort":              "Zeitung",
         "silbenboegen":      [],
         "vokale":            [],
@@ -11351,38 +11079,6 @@ export const zusad7 = [
 
  {         
         "id":                24,
-        "wort":              "kerngesund",
-        "silbenboegen":      [],
-        "vokale":            [],
-        "laenge":            [],
-        "mainVokal":         "",
-        "mainLaenge":        "",
-        "fabrik":            "",
-        "nase":              "",
-        "naseCK":            "",
-        "kopierersilbe":     "",
-        "grossgeschrieben":  false,
-        "wortart":           "a"
-    },
-
- {         
-        "id":                25,
-        "wort":              "kerzengerade",
-        "silbenboegen":      [],
-        "vokale":            [],
-        "laenge":            [],
-        "mainVokal":         "",
-        "mainLaenge":        "",
-        "fabrik":            "",
-        "nase":              "",
-        "naseCK":            "",
-        "kopierersilbe":     "",
-        "grossgeschrieben":  false,
-        "wortart":           "a"
-    },
-
- {         
-        "id":                26,
         "wort":              "kinderleicht",
         "silbenboegen":      [],
         "vokale":            [],
@@ -11398,7 +11094,7 @@ export const zusad7 = [
     },
 
  {         
-        "id":                27,
+        "id":                25,
         "wort":              "knallhart",
         "silbenboegen":      [],
         "vokale":            [],
@@ -11414,7 +11110,7 @@ export const zusad7 = [
     },
 
  {         
-        "id":                28,
+        "id":                26,
         "wort":              "kugelrund",
         "silbenboegen":      [],
         "vokale":            [],
@@ -11430,7 +11126,7 @@ export const zusad7 = [
     },
 
  {         
-        "id":                29,
+        "id":                27,
         "wort":              "kuschelweich",
         "silbenboegen":      [],
         "vokale":            [],
@@ -11446,7 +11142,7 @@ export const zusad7 = [
     },
 
  {         
-        "id":                30,
+        "id":                28,
         "wort":              "messerscharf",
         "silbenboegen":      [],
         "vokale":            [],
@@ -11462,7 +11158,7 @@ export const zusad7 = [
     },
 
  {         
-        "id":                31,
+        "id":                29,
         "wort":              "neugierig",
         "silbenboegen":      [],
         "vokale":            [],
@@ -11478,7 +11174,7 @@ export const zusad7 = [
     },
 
  {         
-        "id":                32,
+        "id":                30,
         "wort":              "pechschwarz",
         "silbenboegen":      [],
         "vokale":            [],
@@ -11494,7 +11190,7 @@ export const zusad7 = [
     },
 
  {         
-        "id":                33,
+        "id":                31,
         "wort":              "pfeilschnell",
         "silbenboegen":      [],
         "vokale":            [],
@@ -11510,7 +11206,7 @@ export const zusad7 = [
     },
 
  {         
-        "id":                34,
+        "id":                32,
         "wort":              "pudelnass",
         "silbenboegen":      [],
         "vokale":            [],
@@ -11526,7 +11222,7 @@ export const zusad7 = [
     },
 
  {         
-        "id":                35,
+        "id":                33,
         "wort":              "randvoll",
         "silbenboegen":      [],
         "vokale":            [],
@@ -11542,7 +11238,7 @@ export const zusad7 = [
     },
 
  {         
-        "id":                36,
+        "id":                34,
         "wort":              "riesengroß",
         "silbenboegen":      [],
         "vokale":            [],
@@ -11558,7 +11254,7 @@ export const zusad7 = [
     },
 
  {         
-        "id":                37,
+        "id":                35,
         "wort":              "schneeweiß",
         "silbenboegen":      [],
         "vokale":            [],
@@ -11574,7 +11270,7 @@ export const zusad7 = [
     },
 
  {         
-        "id":                38,
+        "id":                36,
         "wort":              "schwerreich",
         "silbenboegen":      [],
         "vokale":            [],
@@ -11590,7 +11286,7 @@ export const zusad7 = [
     },
 
  {         
-        "id":                39,
+        "id":                37,
         "wort":              "sonnengelb",
         "silbenboegen":      [],
         "vokale":            [],
@@ -11606,7 +11302,7 @@ export const zusad7 = [
     },
 
  {         
-        "id":                40,
+        "id":                38,
         "wort":              "spiegelglatt",
         "silbenboegen":      [],
         "vokale":            [],
@@ -11622,7 +11318,7 @@ export const zusad7 = [
     },
 
  {         
-        "id":                41,
+        "id":                39,
         "wort":              "staubtrocken",
         "silbenboegen":      [],
         "vokale":            [],
@@ -11638,7 +11334,7 @@ export const zusad7 = [
     },
 
  {         
-        "id":                42,
+        "id":                40,
         "wort":              "steinalt",
         "silbenboegen":      [],
         "vokale":            [],
@@ -11654,7 +11350,7 @@ export const zusad7 = [
     },
 
  {         
-        "id":                43,
+        "id":                41,
         "wort":              "stinkfaul",
         "silbenboegen":      [],
         "vokale":            [],
@@ -11670,7 +11366,7 @@ export const zusad7 = [
     },
 
  {         
-        "id":                44,
+        "id":                42,
         "wort":              "stinkreich",
         "silbenboegen":      [],
         "vokale":            [],
@@ -11686,7 +11382,7 @@ export const zusad7 = [
     },
 
  {         
-        "id":                45,
+        "id":                43,
         "wort":              "stinksauer",
         "silbenboegen":      [],
         "vokale":            [],
@@ -11702,7 +11398,7 @@ export const zusad7 = [
     },
 
  {         
-        "id":                46,
+        "id":                44,
         "wort":              "streichzart",
         "silbenboegen":      [],
         "vokale":            [],
@@ -11718,7 +11414,7 @@ export const zusad7 = [
     },
 
  {         
-        "id":                47,
+        "id":                45,
         "wort":              "strohtrocken",
         "silbenboegen":      [],
         "vokale":            [],
@@ -11734,7 +11430,7 @@ export const zusad7 = [
     },
 
  {         
-        "id":                48,
+        "id":                46,
         "wort":              "taghell",
         "silbenboegen":      [],
         "vokale":            [],
@@ -11750,7 +11446,7 @@ export const zusad7 = [
     },
 
  {         
-        "id":                49,
+        "id":                47,
         "wort":              "tropfnass",
         "silbenboegen":      [],
         "vokale":            [],
@@ -11766,7 +11462,7 @@ export const zusad7 = [
     },
 
  {         
-        "id":                50,
+        "id":                48,
         "wort":              "urlaubsreif",
         "silbenboegen":      [],
         "vokale":            [],
@@ -11782,7 +11478,7 @@ export const zusad7 = [
     },
 
  {         
-        "id":                51,
+        "id":                49,
         "wort":              "waschecht",
         "silbenboegen":      [],
         "vokale":            [],
@@ -11798,7 +11494,7 @@ export const zusad7 = [
     },
 
  {         
-        "id":                52,
+        "id":                50,
         "wort":              "wildfremd",
         "silbenboegen":      [],
         "vokale":            [],
@@ -11814,7 +11510,7 @@ export const zusad7 = [
     },
 
  {         
-        "id":                53,
+        "id":                51,
         "wort":              "zuckersüß",
         "silbenboegen":      [],
         "vokale":            [],
