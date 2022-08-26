@@ -216,8 +216,8 @@
 						{/if}
 						<div class="col rythm__col height--auto">
 							<button class="btn btn-lg btn-light rythm__btn {inputs.fabrik[0] === '2' ? 'focus' : ''}" on:click={() => {popInput('fabrik');addInput('fabrik', '2');}} title="Das Wort hat nur eine Silbe, z.B. &quot;Hund&quot;."><i class="icon-rhythmus-2 icon-large"></i></button>
-							<button class="btn btn-lg btn-light rythm__btn {inputs.fabrik[0] === '23' ? 'focus' : ''}" on:click={() => {popInput('fabrik');addInput('fabrik', '23');}} title="Bei dem Wort wird die letzte Silbe betont (laut) gesprochen, z.B. &quot;paKET&quot;."><i class="icon-rhythmus-12 icon-large"></i></button>
-							<button class="btn btn-lg btn-light rythm__btn {inputs.fabrik[0] === '12' ? 'focus' : ''}" on:click={() => {popInput('fabrik');addInput('fabrik', '12');}}><i title="Das Wort hat zwei Silben, die betonte (laute) Silbe ist am Anfang, z.B. &quot;AUto&quot;."><span class="icon-rhythmus-23 icon-large"><span class="path1"></span><span class="path2"></span></span></i></button>
+							<button class="btn btn-lg btn-light rythm__btn {inputs.fabrik[0] === '23' ? 'focus' : ''}" on:click={() => {popInput('fabrik');addInput('fabrik', '23');}} title="Bei dem Wort wird die erste Silbe betont (laut) gesprochen, z.B. &quot;AUto&quot;."><i class="icon-rhythmus-12 icon-large"></i></button>
+							<button class="btn btn-lg btn-light rythm__btn {inputs.fabrik[0] === '12' ? 'focus' : ''}" on:click={() => {popInput('fabrik');addInput('fabrik', '12');}}><i title="Das Wort hat zwei Silben, die betonte (laute) Silbe ist am Ende, z.B. &quot;paKET&quot;."><span class="icon-rhythmus-23 icon-large"><span class="path1"></span><span class="path2"></span></span></i></button>
 							<button class="btn btn-lg btn-light rythm__btn {inputs.fabrik[0] === '123' ? 'focus' : ''}" on:click={() => {popInput('fabrik');addInput('fabrik', '123');}}><i title="Bei dem Wort wird die vorletzte Silbe betont (laut) gesprochen, z.B. &quot;heliKOPter&quot;."><span class="icon-rhythmus-123 icon-large"><span class="path1"></span><span class="path2"><span class="path3"></span></span></i></button>
 						</div>
 					</div>

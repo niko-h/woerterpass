@@ -236,9 +236,9 @@
 						{#if ['B'].indexOf($level) < 0}
 							<button class="btn btn-lg btn-light v-center m-2" on:click={(e) => {inputFabrik(e, '2')}} title="Das Wort hat nur eine Silbe, z.B. &quot;Hund&quot;."><i class="icon-rhythmus-2 icon-xlarge"></i> </button>
 						{/if}
-							<button class="btn btn-lg btn-light v-center m-2" on:click={(e) => {inputFabrik(e, '23')}} title="Bei dem Wort wird die letzte Silbe betont (laut) gesprochen, z.B. &quot;paKET&quot;."><i class="icon-rhythmus-12 icon-xlarge"></i> </button>
+							<button class="btn btn-lg btn-light v-center m-2" on:click={(e) => {inputFabrik(e, '23')}} title="Bei dem Wort wird die erste Silbe betont (laut) gesprochen, z.B. &quot;AUto&quot;."><i class="icon-rhythmus-12 icon-xlarge"></i> </button>
 						{#if ['A'].indexOf($level) < 0}
-							<button class="btn btn-lg btn-light v-center m-2" on:click={(e) => {inputFabrik(e, '12')}} title="Das Wort hat zwei Silben, die betonte (laute) Silbe ist am Anfang, z.B. &quot;AUto&quot;."><span class="icon-rhythmus-23 icon-xlarge"><span class="path1"></span><span class="path2"></span></span> </button>
+							<button class="btn btn-lg btn-light v-center m-2" on:click={(e) => {inputFabrik(e, '12')}} title="Das Wort hat zwei Silben, die betonte (laute) Silbe ist am Ende, z.B. &quot;paKET&quot;."><span class="icon-rhythmus-23 icon-xlarge"><span class="path1"></span><span class="path2"></span></span> </button>
 						{/if}
 						{#if ['A','B'].indexOf($level) < 0}
 							<button class="btn btn-lg btn-light v-center m-2" on:click={(e) => {inputFabrik(e, '123')}} title="Bei dem Wort wird die vorletzte Silbe betont (laut) gesprochen, z.B. &quot;heliKOPter&quot;."><span class="icon-rhythmus-123 icon-xlarge"><span class="path1"></span><span class="path2"><span class="path3"></span></span> </button>
